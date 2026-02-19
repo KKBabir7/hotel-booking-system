@@ -1,0 +1,2127 @@
+/* ==================== CSS Variables (Root/Global) ==================== */
+:root {
+    --primary-brand: #e0a13c;
+    --primary-red: #e0a13c;
+    /* Maintain for compatibility or replace throughout */
+    --primary-blue: #0067ff;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --bg-white: #ffffff;
+    --border-light: #f1f1f1;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    --navbar-height: 80px;
+    --navbar-scrolled-height: 60px;
+}
+
+/* ==================== Button Overrides ==================== */
+.btn-primary {
+    background-color: var(--primary-brand) !important;
+    border-color: var(--primary-brand) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #c98a2b !important;
+    border-color: #c98a2b !important;
+}
+
+.text-primary {
+    color: var(--primary-brand) !important;
+}
+
+/* ==================== Global Styles ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+}
+
+/* ==================== Navbar Styles ==================== */
+#main-nav {
+    background-color: transparent;
+    min-height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#main-nav.navbar-scrolled {
+    background-color: var(--bg-white);
+    min-height: var(--navbar-scrolled-height);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    /* Initial white */
+    transition: color 0.4s ease;
+}
+
+.navbar-logo {
+    height: 45px;
+    width: auto;
+    transition: all 0.4s ease;
+}
+
+#main-nav.navbar-scrolled .navbar-logo {
+    height: 38px;
+}
+
+#main-nav.navbar-scrolled .brand-text {
+    color: #2a2a2e;
+    /* Light black on scroll */
+}
+
+.nav-link-custom {
+    color: #2a2a2e;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link-custom:hover {
+    color: #0067ff;
+    /* Professional blue */
+}
+
+
+.btn-menu-toggle {
+    border: none;
+    background: transparent;
+    color: #2a2a2e;
+    padding: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==================== Animated Burger Icon ==================== */
+.burger-icon {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.animated-burger-btn.active .burger-icon span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.animated-burger-btn.active .burger-icon span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.animated-burger-btn.active .burger-icon span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+#main-nav .btn-menu-toggle {
+    color: #ffffff;
+    transition: color 0.4s ease;
+}
+
+#main-nav.navbar-scrolled .btn-menu-toggle {
+    color: #2a2a2e;
+}
+
+.btn-menu-toggle:hover {
+    color: var(--primary-brand);
+}
+
+/* ==================== Off-canvas Menu Styles ==================== */
+.offcanvas {
+    width: 320px !important;
+}
+
+.offcanvas-header {
+    background-color: var(--bg-white);
+    padding: 20px;
+}
+
+.offcanvas-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-brand);
+}
+
+.menu-list {
+    text-align: center;
+}
+
+.menu-list .nav-item {
+    width: 100%;
+}
+
+.menu-list .nav-link {
+    font-family: var(--font-heading);
+
+    font-size: 1rem;
+    color: #333333;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    align-items: center;
+}
+
+.menu-list .nav-link:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-brand);
+}
+
+.menu-list .nav-link.active {
+    color: var(--primary-brand);
+    font-weight: 600;
+}
+
+/* ==================== Desktop Menu Styles ==================== */
+.desktop-menu .nav-link {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: #ffffff;
+    /* Initial white */
+    padding: 0 8px;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+#main-nav.navbar-scrolled .desktop-menu .nav-link {
+    color: #2a2a2e;
+    /* Light black on scroll */
+}
+
+.desktop-menu .nav-link i {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.4s ease;
+}
+
+#main-nav.navbar-scrolled .desktop-menu .nav-link i {
+    color: #666;
+}
+
+#main-nav .desktop-menu .nav-link:hover,
+#main-nav .desktop-menu .nav-link:hover i {
+    color: var(--primary-brand) !important;
+}
+
+#main-nav .desktop-menu .nav-link.active,
+#main-nav .desktop-menu .nav-link.active i {
+    color: var(--primary-brand) !important;
+}
+
+.btn-signup {
+    background-color: var(--primary-brand);
+    border: none;
+    font-size: 0.85rem;
+    /* Smaller font */
+    font-weight: 600;
+    padding: 7px 17px 6px 17px;
+    /* Smaller padding */
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 4px 15px rgba(202, 160, 92, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.btn-signup i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-signup::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(30deg);
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.btn-signup:hover {
+    background-color: #c98a2b;
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(224, 161, 60, 0.4);
+}
+
+.btn-signup:hover i {
+    transform: translateX(2px);
+}
+
+.btn-signup:hover::after {
+    left: 140%;
+}
+
+/* ==================== Hero Button Sliding Text Animation ==================== */
+.btn-animated-text {
+    overflow: hidden !important;
+    position: relative;
+    padding: 0 !important;
+    height: 48px !important;
+    /* Smaller height for an elegant look */
+    line-height: 48px !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: none !important;
+    border-radius: 50px !important;
+}
+
+.btn-animated-text.btn-outline-light {
+    border: 2px solid #ffffff !important;
+    /* Prominent white border initially */
+}
+
+.btn-animated-text .btn-text-wrapper {
+    display: block;
+    width: 100%;
+    height: 96px;
+    /* 2x button height */
+    transition: transform 0.5s cubic-bezier(0.6, 0, 0.2, 1);
+}
+
+.btn-animated-text .btn-text {
+    display: block;
+    height: 48px;
+    /* Exactly match parent height */
+    width: 100%;
+    padding: 0 40px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0.9rem;
+    /* Smaller font as requested */
+    font-weight: 500;
+}
+
+.btn-animated-text:hover .btn-text-wrapper {
+    transform: translateY(-48px);
+    /* Slide exactly one line height */
+}
+
+/* ==================== Hero Button Enhanced Animations ==================== */
+.hero-content .btn {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shared Hover Effect for Hero Buttons */
+.hero-content .btn:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.hero-content .btn-primary:hover {
+    background-color: #c98a2b !important;
+    box-shadow: 0 15px 35px rgba(224, 161, 60, 0.5);
+}
+
+.hero-content .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #222 !important;
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.3);
+}
+
+/* Add a pulse effect to the primary button */
+@keyframes pulse-gold {
+    0% {
+        box-shadow: 0 0 0 0 rgba(202, 160, 92, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(202, 160, 92, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(202, 160, 92, 0);
+    }
+}
+
+.hero-content .btn-primary {
+    animation: pulse-gold 2s infinite;
+}
+
+/* ==================== Desktop Dropdown Styles & Animation ==================== */
+.desktop-dropdown {
+    position: relative;
+}
+
+.desktop-dropdown .dropdown-menu {
+    display: block !important;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    pointer-events: none;
+    border: none;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 15px 10px;
+    min-width: 250px;
+    margin-top: 25px !important;
+    background-color: #ffffff;
+    right: 0;
+    /* Align to right */
+    left: auto;
+    /* Clear left alignment */
+}
+
+.desktop-dropdown .dropdown-divider {
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+/* Submenu specific tweaks */
+.desktop-dropdown .dropdown-submenu {
+    position: relative;
+}
+
+.desktop-dropdown .dropdown-submenu .dropdown-menu {
+    top: 0;
+    right: 100%;
+    /* Position to the left of the parent */
+    left: auto;
+    margin-top: 0 !important;
+    margin-right: 10px;
+    min-width: 160px;
+    /* Much smaller width */
+    transform: translateX(10px);
+}
+
+.desktop-dropdown .dropdown-submenu .dropdown-menu.show {
+    transform: translateX(0);
+}
+
+.desktop-dropdown .dropdown-menu.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.desktop-dropdown .dropdown-item {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #444;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.desktop-dropdown .dropdown-item i {
+    font-size: 1.1rem;
+    width: 28px;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.desktop-dropdown .dropdown-item .lang-flag {
+    width: 22px;
+    height: auto;
+    border-radius: 3px;
+    object-fit: contain;
+    margin-right: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.desktop-dropdown .dropdown-item:hover {
+    background-color: rgba(224, 161, 60, 0.1);
+    color: var(--primary-brand);
+}
+
+.desktop-dropdown .dropdown-item:hover i,
+.desktop-dropdown .dropdown-item:hover .lang-flag {
+    color: var(--primary-brand);
+    transform: scale(1.1);
+}
+
+/* Submenu logic for desktop */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: -100%;
+    /* Position to the left */
+    margin-top: -1px;
+    display: none;
+    border-radius: 12px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle::after {
+    vertical-align: middle;
+}
+
+.nav-brand-link {
+    font-weight: 700;
+    font-size: 1.2rem !important;
+    padding: 15px 25px !important;
+    border-bottom: none !important;
+}
+
+/* ==================== Hero Section Styles ==================== */
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #000;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-diagonal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Slightly increased for better volume */
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    z-index: 10;
+    max-width: 1100px;
+    width: 90%;
+}
+
+.hero-text-slider {
+    margin-bottom: 2.5rem;
+    cursor: grab;
+}
+
+.hero-text-slider:active {
+    cursor: grabbing;
+}
+
+.hero-slide {
+    outline: none !important;
+}
+
+/* Staggered Reveal Animation */
+.animate-item-1,
+.animate-item-2,
+.animate-item-3 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Line 1 (2s transition feel) */
+.slick-active .animate-item-1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+/* Line 2 (4s transition feel - slower delay/reveal) */
+.slick-active .animate-item-2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+/* Subtitle (5s transition feel - longest delay) */
+.slick-active .animate-item-3 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
+}
+
+/* Slick Slide Hiding (Exit) */
+.hero-slide:not(.slick-active) .animate-item-1,
+.hero-slide:not(.slick-active) .animate-item-2,
+.hero-slide:not(.slick-active) .animate-item-3 {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 0.8s ease-in;
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    /* Slightly smaller/elegant */
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    /* Slightly smaller/elegant */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* ==================== Hero Search Bar ==================== */
+.hero-search-wrapper {
+    max-width: 850px;
+
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.hero-search-container {
+    padding: 12px 12px 12px 20px !important;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.search-item {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.2s ease;
+}
+
+.search-item:hover {
+    background-color: #f1f1f1;
+}
+
+.search-label {
+    color: #222;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.search-subtext {
+    color: #444;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    font-weight: 400 !important;
+}
+
+.search-divider {
+    width: 1px;
+    height: 32px;
+    background-color: #dddddd;
+    margin: 0 5px;
+}
+
+.search-submit-btn {
+    width: 52px;
+    height: 52px;
+    color: #fff;
+    min-width: 52px;
+    transform: scale(1);
+    background-color: var(--primary-brand) !important;
+    border-radius: 100px !important;
+    font-size: 1.2rem;
+    transition: all 0.2s ease !important;
+}
+
+.search-submit-btn:hover {
+    background-color: #c98a2d !important;
+    transform: scale(1.6) !important;
+    font-size: 14px;
+    border-radius: 0px 100px 100px 0px !important;
+}
+
+/* ==================== Functional Search Bar Styles ==================== */
+
+.search-item {
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 50px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.search-item:hover {
+    background-color: #f1f1f1;
+}
+
+.search-item.active-section {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.search-input-field {
+    font-size: 0.9rem;
+    color: #444;
+    font-weight: 400;
+    ;
+}
+
+.search-input-field:focus {
+    outline: none;
+}
+
+/* Base Panel Style */
+.search-panel {
+    position: absolute;
+    top: 62px;
+    /* Fixed distance from search bar */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    width: 450px;
+    z-index: 1000;
+    color: #222 !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: fadeIn 0.3s ease;
+}
+
+.search-clear-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f8f9fa;
+    color: #999;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.2s ease;
+    padding: 0;
+    cursor: pointer;
+}
+
+.search-clear-btn:hover {
+    background: #eee;
+    color: var(--primary-brand);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.search-clear-btn i {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.flatpickr-calendar {
+    position: absolute !important;
+    top: 75px !important;
+    /* Distance from top of wrapper */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: #ffffff !important;
+    width: 650px !important;
+    z-index: 1000 !important;
+    color: #222 !important;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-radius: 24px !important;
+    padding: 20px !important;
+    visibility: visible !important;
+}
+
+.search-panel.flip-top {
+    top: auto;
+    bottom: 62px;
+}
+
+.flatpickr-calendar.flip-top-calendar {
+    top: auto !important;
+    bottom: 75px !important;
+}
+
+/* Professional Dual-Month Header Styling */
+.flatpickr-months {
+    padding: 0 10px;
+    display: flex;
+}
+
+.flatpickr-month {
+    flex: 1;
+    height: 50px !important;
+    background: transparent !important;
+}
+
+.flatpickr-innerContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.flatpickr-current-month {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    padding: 10px 0 !important;
+}
+
+.flatpickr-weekday {
+    font-weight: 600 !important;
+    color: #888 !important;
+}
+
+/* Fix for Location/Guest panels specifically */
+.location-panel {
+    left: 0;
+    transform: none;
+}
+
+.guest-panel {
+    right: 0;
+    left: auto;
+    transform: none;
+}
+
+/* Flatpickr Internal Styling */
+.flatpickr-calendar::before,
+.flatpickr-calendar::after {
+    display: none !important;
+    /* Hide default arrows */
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+    background: var(--primary-brand) !important;
+    border-color: var(--primary-brand) !important;
+}
+
+.flatpickr-day.inRange {
+    box-shadow: -5px 0 0 rgba(224, 161, 60, 0.1), 5px 0 0 rgba(224, 161, 60, 0.1) !important;
+    background: rgba(224, 161, 60, 0.1) !important;
+}
+
+.location-panel {
+    left: 0;
+}
+
+.guest-panel {
+    right: 0;
+    left: auto;
+}
+
+/* Litepicker Internal Adjustments */
+.litepicker .container__main {
+    padding: 15px !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Location Suggestions */
+.suggestion-item {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.suggestion-item:hover {
+    background-color: #f8f9fa;
+}
+
+.suggestion-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Guest Counter Control */
+.counter-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #ddd;
+    color: #666;
+}
+
+.counter-btn:hover {
+    border-color: #222;
+    color: #222;
+    background: transparent;
+}
+
+.count-val {
+    min-width: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Litepicker Premium Customization */
+.litepicker {
+    font-family: 'Poppins', sans-serif !important;
+    border: none !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 20px !important;
+    padding: 20px !important;
+    margin-top: 15px !important;
+}
+
+.litepicker .container__months {
+    box-shadow: none !important;
+}
+
+.litepicker .container__days .day-item {
+    font-size: 0.9rem !important;
+}
+
+.litepicker .container__days .day-item.is-start-date,
+.litepicker .container__days .day-item.is-end-date {
+    background-color: #222 !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+}
+
+.litepicker .container__days .day-item.is-in-range {
+    background-color: #f1f1f1 !important;
+    color: #222 !important;
+}
+
+/* Responsive adjustment for search bar */
+@media (max-width: 768px) {
+    .hero-search-container {
+        flex-direction: column;
+        border-radius: 20px !important;
+        padding: 15px !important;
+    }
+
+    .search-divider {
+        display: none;
+    }
+
+    .search-item {
+        width: 100%;
+        text-align: center !important;
+        padding: 10px;
+    }
+
+    .search-submit-btn {
+        width: 100%;
+        border-radius: 50px !important;
+        margin-top: 10px;
+    }
+}
+
+/* ==================== Scroll Top ==================== */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 1000;
+    opacity: 0.8;
+}
+
+.scroll-top:hover {
+    opacity: 1;
+    color: white;
+}
+
+/* ==================== Featured Offers Section ==================== */
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+.max-w-400 {
+    max-width: 400px;
+}
+
+.extra-small {
+    font-size: 0.7rem;
+}
+
+.offers-section .section-header h2 {
+    color: #222;
+}
+
+.offer-card {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    position: relative;
+    cursor: pointer;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.offer-image-wrapper {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.offer-img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.offer-card:hover .offer-img {
+    transform: scale(1.08);
+}
+
+/* Wishlist Button */
+.wishlist-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 5;
+    transition: all 0.3s ease;
+    color: #444;
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.1);
+    color: #ff4757;
+}
+
+.wishlist-btn i {
+    font-size: 1.1rem;
+}
+
+/* Badges */
+.offer-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.offer-badge.top-pick {
+    background: var(--primary-brand);
+}
+
+.offer-badge.new-listing {
+    background: #2ecc71;
+}
+
+/* Booking.com Blue */
+.offer-badge.seasonal {
+    background: #3498db;
+}
+
+.offer-badge.exclusive {
+    background: #9b59b6;
+}
+
+/* Rating Block */
+.rating-box {
+    background: var(--primary-brand);
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 6px 6px 6px 0;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.rating-text {
+    font-size: 0.9rem;
+    color: #222;
+}
+
+.rating-count {
+    font-size: 0.75rem;
+}
+
+.offer-features {
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
+
+.offer-features i {
+    color: var(--primary-brand);
+    font-size: 0.8rem;
+}
+
+/* Footer & Pricing */
+.offer-footer {
+    margin-top: auto;
+}
+
+.price-old {
+    color: #eb2f06 !important;
+    font-size: 0.85rem;
+}
+
+.price-current {
+    font-size: 1.3rem;
+    color: #222;
+}
+
+/* Content Styling */
+.offer-title {
+    font-size: 1.25rem;
+    color: #222;
+}
+
+.offer-location {
+    letter-spacing: 0.3px;
+}
+
+.btn-check-availability {
+    background-color: var(--primary-brand) !important;
+    border-color: var(--primary-brand) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-check-availability:hover {
+    background-color: #c98a2d !important;
+    transform: scale(1.02);
+}
+
+.btn-check-availability .transition-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-check-availability:hover .transition-icon {
+    transform: translateX(5px);
+}
+
+/* Slick Custom Arrows */
+.offers-slider {
+    position: relative;
+    padding: 10px 0 30px;
+}
+
+.offers-slider .slick-prev,
+.offers-slider .slick-next {
+    width: 42px;
+    height: 42px;
+    background: #fff !important;
+    border-radius: 50% !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12) !important;
+    z-index: 10;
+    transition: all 0.3s ease;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.offers-slider .slick-prev:hover,
+.offers-slider .slick-next:hover {
+    background: #f8f9fa !important;
+    transform: scale(1.1);
+}
+
+.offers-slider .slick-prev:before,
+.offers-slider .slick-next:before {
+    display: none !important;
+    /* Hide Slick default icons */
+}
+
+.offers-slider .slick-prev i,
+.offers-slider .slick-next i {
+    color: #444;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.offers-slider .slick-prev {
+    left: -20px;
+}
+
+.offers-slider .slick-next {
+    right: -20px;
+}
+
+/* Remove dots navigation dots as requested */
+.offers-slider .slick-dots {
+    display: none !important;
+}
+
+.view-deal-link {
+    color: var(--primary-brand);
+    transition: all 0.3s ease;
+}
+
+.view-deal-link:hover {
+    color: #c98a2d;
+    padding-right: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .offers-slider .slick-prev {
+        left: 5px;
+    }
+
+    .offers-slider .slick-next {
+        right: 5px;
+    }
+}
+
+/* ==================== Conference Facilities Section ==================== */
+.max-w-600 {
+    max-width: 600px;
+}
+
+/* ==================== Conference Facilities Section (Gold Theme) ==================== */
+.conference-section {
+    background: #fff !important;
+    /* Forces white background as requested */
+}
+
+/* ==================== Trending Destinations Section ==================== */
+.trending-section {
+    background: #fff !important;
+    padding: 80px 0;
+}
+
+.trending-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.destination-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+    opacity: 0.85;
+}
+
+.trending-card:hover .destination-img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.card-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+    pointer-events: none;
+}
+
+.destination-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.destination-label span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+.destination-flag {
+    font-size: 1.4rem;
+}
+
+/* Large Card Height */
+.destination-card-lg {
+    height: 400px;
+}
+
+/* Small Card Height */
+.destination-card-sm {
+    height: 280px;
+}
+
+.trending-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Gallery Card Height */
+.destination-card-gallery {
+    height: 320px;
+}
+
+/* Featured Offers Section Background Fix */
+.offers-section {
+    background: #fff !important;
+}
+
+.conference-section .text-primary {
+    color: var(--primary-brand) !important;
+}
+
+.conference-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 16px !important;
+    border: 1px solid rgba(224, 161, 60, 0.1) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hall Description Clamp */
+.hall-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    /* Standard property */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 3rem;
+    /* Fixed height for 2 lines */
+    line-height: 1.5;
+}
+
+/* Hall Image Container */
+.hall-image-container {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hall-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.conference-card:hover .hall-img {
+    transform: scale(1.08);
+}
+
+/* Popular Badge Pill */
+.popular-badge-pill {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary-brand);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Capacity Badge Pill */
+.capacity-badge-pill {
+    background: rgba(224, 161, 60, 0.08);
+    color: var(--primary-brand);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(224, 161, 60, 0.2);
+}
+
+/* Feature List with Unique Icons */
+.conference-features {
+    padding-left: 0;
+    list-style: none;
+}
+
+.conference-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.feature-icon-box {
+    width: 28px;
+    height: 28px;
+    background: rgba(224, 161, 60, 0.1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.feature-icon-box i {
+    color: var(--primary-brand);
+    font-size: 1rem;
+}
+
+/* Button Layout Side-by-Side */
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.btn-view-360 {
+    flex: 1;
+    border: 1.5px solid #e0e0e0;
+    color: #666;
+    font-weight: 600;
+    background: #fff;
+    padding: 8px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-view-360:hover {
+    border-color: var(--primary-brand);
+    color: var(--primary-brand);
+    background: rgba(224, 161, 60, 0.05);
+}
+
+.btn-book-now {
+    flex: 1.25;
+    background: var(--primary-brand);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 8px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-book-now:hover {
+    background: #c98a2d;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(224, 161, 60, 0.3);
+}
+
+/* Facility Items Grid (Professional Refresh) */
+.facility-item {
+    background: #fff;
+    border: 1px solid rgba(224, 161, 60, 0.15) !important;
+    border-radius: 20px !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 130px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.facility-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-brand);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.facility-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-brand) !important;
+    box-shadow: 0 15px 30px rgba(224, 161, 60, 0.15);
+    background: #fff !important;
+}
+
+.facility-item:hover::after {
+    opacity: 1;
+}
+
+.facility-icon {
+    font-size: 2.2rem;
+    color: var(--primary-brand);
+    margin-bottom: 12px;
+    transition: transform 0.4s ease;
+}
+
+.facility-item:hover .facility-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.facility-item p {
+    font-size: 0.85rem;
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.facility-item:hover p {
+    color: var(--primary-brand);
+}
+
+/* Unique Card Tints */
+.facility-card-1 {
+    background: rgba(224, 161, 60, 0.03) !important;
+}
+
+.facility-card-2 {
+    background: rgba(184, 134, 11, 0.03) !important;
+}
+
+.facility-card-3 {
+    background: rgba(218, 165, 32, 0.03) !important;
+}
+
+.facility-card-4 {
+    background: rgba(255, 215, 0, 0.03) !important;
+}
+
+/* Booking Modal Integration */
+#bookingModal .modal-header {
+    background: linear-gradient(135deg, var(--primary-brand), #f0c674) !important;
+}
+
+#bookingModal .btn-primary {
+    background: var(--primary-brand) !important;
+    border: none;
+}
+
+/* Remove old components */
+.conference-icon,
+.featured-hall,
+.popular-badge,
+.view-360-overlay,
+.btn-indigo,
+.btn-outline-indigo {
+    display: none !important;
+}
+
+#bookingModal .modal-title {
+    color: #fff;
+}
+
+#bookingModal .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+#bookingModal .hall-info-display {
+    border-left: 4px solid var(--primary-brand);
+}
+
+#bookingModal .form-label {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+#bookingModal .form-label i {
+    color: var(--primary-brand);
+}
+
+#bookingModal .form-control,
+#bookingModal .form-select {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+#bookingModal .form-control:focus,
+#bookingModal .form-select:focus {
+    border-color: var(--primary-brand);
+    box-shadow: 0 0 0 0.2rem rgba(224, 161, 60, 0.15);
+}
+
+#bookingModal .btn-primary {
+    background: var(--primary-brand);
+    border: none;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+#bookingModal .btn-primary:hover {
+    background: #c98a2d;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(224, 161, 60, 0.3);
+}
+
+.conference-section {
+    background: #fff;
+}
+
+.conference-card {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    position: relative;
+}
+
+.conference-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Icon Wrapper */
+.conference-icon-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.conference-icon-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: var(--primary-brand);
+    opacity: 0.1;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.conference-card:hover .conference-icon-bg {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.15;
+}
+
+.conference-icon {
+    font-size: 4rem;
+    color: var(--primary-brand);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.conference-card:hover .conference-icon {
+    transform: scale(1.1);
+}
+
+/* Floor Badge */
+.floor-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-brand);
+    color: #fff;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+}
+
+/* Popular Badge */
+.popular-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #2ecc71;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Capacity Badge */
+.capacity-badge {
+    background: rgba(224, 161, 60, 0.1);
+    border: 2px solid var(--primary-brand);
+    color: var(--primary-brand);
+    font-size: 0.85rem;
+}
+
+.capacity-badge i {
+    font-size: 1.1rem;
+}
+
+/* Conference Title */
+.conference-title {
+    color: #222;
+    font-size: 1.35rem;
+}
+
+/* Feature Items */
+.conference-features .feature-item {
+    line-height: 1.6;
+}
+
+.conference-features i {
+    font-size: 1rem;
+    margin-top: 2px;
+}
+
+/* CTA Buttons */
+.conference-card .btn {
+    transition: all 0.3s ease;
+}
+
+.conference-card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.conference-card .btn i {
+    transition: transform 0.3s ease;
+}
+
+.conference-card .btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Featured Hall Styling */
+.featured-hall {
+    border: 2px solid var(--primary-brand) !important;
+}
+
+.featured-hall .conference-icon-wrapper {
+    background: linear-gradient(135deg, rgba(224, 161, 60, 0.05) 0%, rgba(224, 161, 60, 0.15) 100%) !important;
+}
+
+/* Use Cases Section */
+.use-case-badge {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.use-case-badge:hover {
+    background: var(--primary-brand) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.use-case-badge:hover i {
+    color: #fff !important;
+}
+
+.use-case-badge:hover span {
+    color: #fff !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .conference-icon {
+        font-size: 3rem;
+    }
+
+    .conference-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Dining Summary Section */
+.dining-summary-section {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.premium-title {
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    letter-spacing: -3px;
+    text-transform: capitalize;
+}
+
+.overlapping-image-container {
+    position: relative;
+    padding: 2rem;
+}
+
+.main-image {
+    width: 90%;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+/* Mirrored layout for images on the left */
+.image-left .main-image {
+    margin-left: auto;
+}
+
+.image-left .secondary-image {
+    right: auto;
+    left: -5%;
+}
+
+.secondary-image {
+    width: 60%;
+    position: absolute;
+    bottom: -15%;
+    right: -5%;
+    z-index: 2;
+    border-radius: 4px;
+    border: 12px solid #fff;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s ease;
+}
+
+.overlapping-image-container:hover .main-image {
+    transform: scale(1.02);
+}
+
+.overlapping-image-container:hover .secondary-image {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 1200px) {
+    .premium-title {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .premium-title {
+        font-size: 4rem;
+    }
+
+    .overlapping-image-container {
+        margin-top: 4rem;
+        padding: 0;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .secondary-image {
+        bottom: -10%;
+        right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .premium-title {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info-block {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 3.5rem;
+    border-radius: 12px;
+    height: 100%;
+    border: 1px solid transparent;
+}
+
+.contact-info-block.white-variant {
+    background: #fff;
+    color: #1a1a1a;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
+}
+
+.white-variant .contact-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.white-variant .contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-info-block h2,
+.contact-info-block h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-item-icon {
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    width: 30px;
+    text-align: center;
+    color: var(--primary-brand);
+}
+
+.contact-item-content h6 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item-content p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.contact-form-card {
+    background: #fff;
+    padding: 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
+    border-radius: 12px;
+}
+
+.contact-form-card h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.contact-form-card .form-control {
+    border: 1px solid #e0e0e0;
+    padding: 1rem 1.4rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: #fdfdfd;
+}
+
+.contact-form-card .form-control:focus {
+    background: #fff;
+    border-color: var(--primary-brand);
+    box-shadow: 0 8px 24px rgba(224, 161, 60, 0.12);
+    outline: none;
+}
+
+.contact-form-card textarea.form-control {
+    min-height: 150px;
+}
+
+/* Footer Styling */
+.site-footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 80px 0 0;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo span {
+    color: var(--primary-brand);
+}
+
+.footer-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-brand);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-brand);
+    padding-left: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--primary-brand);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    background: #111;
+    padding: 25px 0;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Map Section */
+.map-section {
+    line-height: 0;
+    overflow: hidden;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    filter: grayscale(0.2);
+}
+
+@media (max-width: 768px) {
+    .map-section iframe {
+        height: 350px;
+    }
+}
