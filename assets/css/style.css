@@ -18,12 +18,51 @@
 .btn-primary {
     background-color: var(--primary-brand) !important;
     border-color: var(--primary-brand) !important;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: #c98a2b !important;
     border-color: #c98a2b !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(224, 161, 60, 0.4) !important;
+}
+
+/* ==================== Modern Button Hover Effects ==================== */
+.btn-modern {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 500 !important;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.btn-modern::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.btn-modern:hover::after {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+.btn-modern i {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn-modern:hover i {
+    transform: translateX(8px);
 }
 
 .text-primary {
@@ -1237,12 +1276,22 @@ body {
 
 .view-deal-link {
     color: var(--primary-brand);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    display: inline-flex;
+    align-items: center;
 }
 
 .view-deal-link:hover {
     color: #c98a2d;
-    padding-right: 5px;
+    transform: translateX(5px);
+}
+
+.view-deal-link i {
+    transition: transform 0.3s ease;
+}
+
+.view-deal-link:hover i {
+    transform: translateX(3px);
 }
 
 /* Responsive Adjustments */
