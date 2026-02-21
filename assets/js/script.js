@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mode: "range",
         dateFormat: "Y-m-d",
         minDate: "today",
-        showMonths: 2,
+        showMonths: window.innerWidth < 768 ? 1 : 2,
         appendTo: document.querySelector('.hero-search-wrapper'),
         onOpen: function (selectedDates, dateStr, instance) {
             const wrapper = document.querySelector('.hero-search-wrapper');
@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Featured Offers Slider Initialization ---
-    $('.offers-slider').slick({
+    $('.offers-slider, .available-offers-slider').slick({
         dots: false,
         infinite: true,
         speed: 600,

@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Responsive Styles for Nice Guest House
+   ========================================================================== */
+
+/* Large Desktop (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .premium-title {
+        font-size: 4.5rem;
+    }
+}
+
+/* Tablet & Smaller Desktop (max-width: 991px) */
+@media (max-width: 991px) {
+    .offers-slider .slick-prev {
+        left: 5px;
+    }
+
+    .offers-slider .slick-next {
+        right: 5px;
+    }
+
+    .premium-title {
+        font-size: 4rem;
+    }
+
+    .overlapping-image-container {
+        margin-top: 4rem;
+        padding: 0;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .secondary-image {
+        bottom: -10%;
+        right: 0;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        padding-bottom: 25px;
+    }
+
+    .hero-content {
+        margin-top: 100px !important;
+    }
+
+    .hero-btns {
+        display: none !important;
+    }
+
+    .hero-text-slider {
+        margin-bottom: 1rem;
+    }
+
+    .search-submit-btn {
+        height: 35px;
+    }
+
+    .search-submit-btn:hover {
+        background-color: #d64036 !important;
+        transform: scale(1) !important;
+        font-size: 14px;
+        border-radius: 50px !important;
+        margin-top: 10px;
+    }
+
+    .search-input-field,
+    .search-subtext {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .hero-search-container {
+        flex-direction: column;
+        border-radius: 20px !important;
+        padding: 15px !important;
+    }
+
+    .search-divider {
+        display: none;
+    }
+
+    .search-item {
+        width: 100%;
+        text-align: center !important;
+        padding: 10px;
+    }
+
+    .search-submit-btn {
+        width: 100%;
+        border-radius: 50px !important;
+        margin-top: 10px;
+    }
+
+    /* Responsive Search Panels (Location, Guests) */
+    .search-panel {
+        width: calc(100vw - 40px) !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        max-width: calc(100vw - 40px) !important;
+    }
+
+    .location-panel,
+    .guest-panel {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+    }
+
+    /* Responsive Flatpickr Styling */
+    .flatpickr-calendar {
+        width: 90% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        min-width: unset !important;
+    }
+
+    .conference-icon {
+        font-size: 3rem;
+    }
+
+    .conference-title {
+        font-size: 1.2rem;
+    }
+
+    .map-section iframe {
+        height: 350px;
+    }
+}
+
+/* Extra Small Devices (max-width: 576px) */
+@media (max-width: 576px) {
+    .premium-title {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+}
