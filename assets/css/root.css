@@ -84,7 +84,9 @@ body {
     background-color: var(--bg-body);
     line-height: 1.6;
 }
-
+body,html{
+ overflow-x: hidden;
+}
 /* --- Global Utilities (Themed) --- */
 .text-primary {
     color: var(--primary-brand) !important;
