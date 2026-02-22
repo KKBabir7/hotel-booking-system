@@ -1,308 +1,9 @@
-﻿/* ==================== Button Overrides ==================== */
-.btn-primary {
-    background-color: var(--primary-brand) !important;
-    border-color: var(--primary-brand) !important;
-    transition: var(--transition-smooth) !important;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: var(--primary-dark) !important;
-    border-color: var(--primary-dark) !important;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px var(--primary-glow) !important;
-}
-
-/* ==================== Modern Button Hover Effects ==================== */
-.btn-modern {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    font-weight: 500 !important;
-    transition: var(--transition-smooth) !important;
-}
-
-/* ==================== Typography Styling ==================== */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.display-1,
-.display-2,
-.display-3,
-.display-4,
-.display-5,
-.display-6 {
-    text-transform: capitalize;
-}
-
-/* ==================== Navbar Styles ==================== */
-#main-nav {
-    background-color: transparent;
-    min-height: var(--navbar-height);
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid transparent;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#main-nav.navbar-scrolled {
-    background-color: var(--bg-white);
-    min-height: var(--navbar-scrolled-height);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    border-bottom: 1px solid var(--border-light);
-}
-
-.brand-text {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--bg-white);
-    /* Initial white */
-    transition: color 0.4s ease;
-}
-
-.navbar-logo {
-    height: 45px;
-    width: auto;
-    transition: all 0.4s ease;
-}
-
-#main-nav.navbar-scrolled .navbar-logo {
-    height: 38px;
-}
-
-#main-nav.navbar-scrolled .brand-text {
-    color: var(--text-dark-alt);
-    /* Light black on scroll */
-}
-
-.nav-link-custom {
-    color: var(--text-dark-alt);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.nav-link-custom:hover {
-    color: #0067ff;
-    /* Professional blue */
-}
-
-
-.btn-menu-toggle {
-    border: none;
-    background: transparent;
-    color: var(--text-dark-alt);
-    padding: 8px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ==================== Animated Burger Icon ==================== */
-.burger-icon {
-    width: 24px;
-    height: 18px;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.burger-icon span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: currentColor;
-    border-radius: 2px;
-    transition: all 0.3s ease-in-out;
-}
-
-.animated-burger-btn.active .burger-icon span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.animated-burger-btn.active .burger-icon span:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-10px);
-}
-
-.animated-burger-btn.active .burger-icon span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-
-#main-nav .btn-menu-toggle {
-    color: var(--bg-white);
-    transition: color 0.4s ease;
-}
-
-#main-nav.navbar-scrolled .btn-menu-toggle {
-    color: var(--text-dark-alt);
-}
-
-.btn-menu-toggle:hover {
-    color: var(--primary-brand);
-}
-
-/* ==================== Off-canvas Menu Styles ==================== */
-.offcanvas {
-    width: 320px !important;
-}
-
-.offcanvas-header {
-    background-color: var(--bg-white);
-    padding: 12px 20px;
-}
-
-.offcanvas-title {
-    display: flex;
-    align-items: center;
-}
-
-.offcanvas-logo {
-    height: 30px;
-    width: auto;
-}
-
-.menu-list {
-    text-align: left;
-}
-
-.menu-list .nav-item {
-    width: 100%;
-}
-
-.menu-list .nav-link {
-    font-family: var(--font-heading);
-    font-size: var(--fs-sm);
-    color: var(--text-main);
-    padding: 10px 20px;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid var(--border-light);
-    display: flex;
-    align-items: center;
-}
-
-.lang-flag {
-    width: 20px;
-    height: auto;
-    border-radius: 2px;
-}
-
-.menu-list .nav-link:hover {
-    background-color: #f8f9fa;
-    color: var(--primary-brand);
-}
-
-.menu-list .nav-link.active {
-    color: var(--primary-brand);
-    font-weight: 600;
-}
-
-/* ==================== Desktop Menu Styles ==================== */
-.desktop-menu .nav-link {
-    font-family: var(--font-heading);
-    font-size: var(--fs-sm);
-    color: var(--bg-white);
-    /* Initial white */
-    padding: 0 8px;
-    transition: all 0.4s ease;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-}
-
-#main-nav.navbar-scrolled .desktop-menu .nav-link {
-    color: var(--text-dark-alt);
-    /* Light black on scroll */
-}
-
-.desktop-menu .nav-link i {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
-    transition: color 0.4s ease;
-}
-
-#main-nav.navbar-scrolled .desktop-menu .nav-link i {
-    color: #666;
-}
-
-#main-nav .desktop-menu .nav-link:hover,
-#main-nav .desktop-menu .nav-link:hover i {
-    color: var(--primary-brand) !important;
-}
-
-#main-nav .desktop-menu .nav-link.active,
-#main-nav .desktop-menu .nav-link.active i {
-    color: var(--primary-brand) !important;
-}
-
-.btn-signup {
-    background-color: var(--primary-brand);
-    border: none;
-    font-size: 0.85rem;
-    /* Smaller font */
-    font-weight: 600;
-    padding: 7px 17px 6px 17px;
-    /* Smaller padding */
-    color: var(--bg-white);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: 0 4px 15px rgba(202, 160, 92, 0.2);
-    display: flex;
-    align-items: center;
-}
-
-.btn-signup i {
-    font-size: var(--fs-base);
-    transition: transform 0.3s ease;
-}
-
-.btn-signup::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -60%;
-    width: 20%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.4);
-    transform: rotate(30deg);
-    transition: all 0.6s ease;
-    z-index: -1;
-}
-
-.btn-signup:hover {
-    background-color: #c98a2b;
-    color: var(--bg-white);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(224, 161, 60, 0.4);
-}
-
-.btn-signup:hover i {
-    transform: translateX(2px);
-}
-
-.btn-signup:hover::after {
-    left: 140%;
-}
-
-/* ==================== Hero Button Sliding Text Animation ==================== */
+﻿/* ==================== Hero Button Sliding Text Animation ==================== */
 .btn-animated-text {
     overflow: hidden !important;
     position: relative;
     padding: 0 !important;
     height: 48px !important;
-    /* Smaller height for an elegant look */
     line-height: 48px !important;
     display: flex !important;
     flex-direction: column;
@@ -314,33 +15,28 @@ h6,
 
 .btn-animated-text.btn-outline-light {
     border: 2px solid var(--bg-white) !important;
-    /* Prominent white border initially */
 }
 
 .btn-animated-text .btn-text-wrapper {
     display: block;
     width: 100%;
     height: 96px;
-    /* 2x button height */
     transition: transform 0.5s cubic-bezier(0.6, 0, 0.2, 1);
 }
 
 .btn-animated-text .btn-text {
     display: block;
     height: 48px;
-    /* Exactly match parent height */
     width: 100%;
     padding: 0 40px;
     white-space: nowrap;
     text-align: center;
     font-size: 0.9rem;
-    /* Smaller font as requested */
     font-weight: 500;
 }
 
 .btn-animated-text:hover .btn-text-wrapper {
     transform: translateY(-48px);
-    /* Slide exactly one line height */
 }
 
 /* ==================== Hero Button Enhanced Animations ==================== */
@@ -350,7 +46,6 @@ h6,
     overflow: hidden;
 }
 
-/* Shared Hover Effect for Hero Buttons */
 .hero-content .btn:hover {
     transform: translateY(-5px) scale(1.05);
 }
@@ -366,7 +61,6 @@ h6,
     box-shadow: 0 15px 35px rgba(255, 255, 255, 0.3);
 }
 
-/* Add a pulse effect to the primary button */
 @keyframes pulse-gold {
     0% {
         box-shadow: 0 0 0 0 rgba(202, 92, 92, 0.4);
@@ -383,133 +77,6 @@ h6,
 
 .hero-content .btn-primary {
     animation: pulse-gold 2s infinite;
-}
-
-/* ==================== Desktop Dropdown Styles & Animation ==================== */
-.desktop-dropdown {
-    position: relative;
-}
-
-.desktop-dropdown .dropdown-menu {
-    display: block !important;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    pointer-events: none;
-    border: none;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
-    border-radius: 16px;
-    padding: 15px 10px;
-    min-width: 250px;
-    margin-top: 25px !important;
-    background-color: var(--bg-white);
-    right: 0;
-    /* Align to right */
-    left: auto;
-    /* Clear left alignment */
-}
-
-.desktop-dropdown .dropdown-divider {
-    border-top: 1px solid #eee;
-    margin: 10px 0;
-}
-
-/* Submenu specific tweaks */
-.desktop-dropdown .dropdown-submenu {
-    position: relative;
-}
-
-.desktop-dropdown .dropdown-submenu .dropdown-menu {
-    top: 0;
-    right: 100%;
-    /* Position to the left of the parent */
-    left: auto;
-    margin-top: 0 !important;
-    margin-right: 10px;
-    min-width: 160px;
-    /* Much smaller width */
-    transform: translateX(10px);
-}
-
-.desktop-dropdown .dropdown-submenu .dropdown-menu.show {
-    transform: translateX(0);
-}
-
-.desktop-dropdown .dropdown-menu.show {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.desktop-dropdown .dropdown-item {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #444;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-bottom: 2px;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.desktop-dropdown .dropdown-item i {
-    font-size: 1.1rem;
-    width: 28px;
-    color: #666;
-    transition: all 0.3s ease;
-}
-
-.desktop-dropdown .dropdown-item .lang-flag {
-    width: 22px;
-    height: auto;
-    border-radius: 3px;
-    object-fit: contain;
-    margin-right: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.desktop-dropdown .dropdown-item:hover {
-    background-color: rgba(224, 161, 60, 0.1);
-    color: var(--primary-brand);
-}
-
-.desktop-dropdown .dropdown-item:hover i,
-.desktop-dropdown .dropdown-item:hover .lang-flag {
-    color: var(--primary-brand);
-    transform: scale(1.1);
-}
-
-/* Submenu logic for desktop */
-.dropdown-submenu {
-    position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-    top: 0;
-    left: -100%;
-    /* Position to the left */
-    margin-top: -1px;
-    display: none;
-    border-radius: 12px;
-}
-
-.dropdown-submenu:hover>.dropdown-menu {
-    display: block;
-}
-
-.dropdown-toggle::after {
-    vertical-align: middle;
-}
-
-.nav-brand-link {
-    font-weight: 700;
-    font-size: 1.2rem !important;
-    padding: 15px 25px !important;
-    border-bottom: none !important;
 }
 
 /* ==================== Hero Section Styles ==================== */
@@ -961,27 +528,145 @@ h6,
 
 
 
-/* ==================== Scroll Top ==================== */
-.scroll-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary-red);
-    color: white;
-    border-radius: 50%;
-    text-decoration: none;
-    z-index: 1000;
+
+
+
+
+
+/* ==================== Unique Premium Service Cards ==================== */
+.services-section {
+    background-color: var(--bg-white);
+    position: relative;
+    z-index: 10;
+    padding: 60px 0;
+}
+.service-premium-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none !important;
+}
+
+.service-premium-card .service-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
     opacity: 0.8;
 }
 
-.scroll-top:hover {
+.service-premium-card:hover .service-bg-img {
+    transform: scale(1.1);
     opacity: 1;
-    color: white;
 }
 
-/* ==================== Featured Offers Section ==================== */
+.service-premium-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.5) 40%,
+            transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    color: var(--bg-white);
+    transition: all 0.4s ease;
+}
+
+.service-premium-card:hover .service-premium-overlay {
+    padding-bottom: 90px;
+}
+
+.service-premium-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary-brand);
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.4s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-premium-card:hover .service-premium-icon {
+    background: var(--bg-white);
+    transform: rotate(360deg);
+}
+
+.service-premium-content h4 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--bg-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.service-premium-content p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 0;
+    line-height: 1.4;
+    color: #eee;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.service-learn-more {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    background: var(--primary-brand);
+    color: var(--bg-white);
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translateY(100px);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.service-premium-card:hover .service-learn-more {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.service-learn-more:hover {
+    background: var(--bg-white);
+    color: var(--primary-brand);
+}
+
+
+
+
+/* ==================== Room and Suits  Section ==================== */
 .ls-2 {
     letter-spacing: 2px;
 }
@@ -1245,99 +930,236 @@ h6,
     transform: translateX(3px);
 }
 
-
-
-/* ==================== Conference Facilities Section ==================== */
-.max-w-600 {
-    max-width: 600px;
-}
-
-/* ==================== Conference Facilities Section (Gold Theme) ==================== */
-.conference-section {
-    background: var(--bg-white) !important;
-    /* Forces white background as requested */
-}
-
-/* ==================== Trending Destinations Section ==================== */
-.trending-section {
-    background: var(--bg-white) !important;
-    padding: 80px 0;
-}
-
-.trending-card {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-    background: #000;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.destination-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s ease;
-    opacity: 0.85;
-}
-
-.trending-card:hover .destination-img {
-    transform: scale(1.1);
-    opacity: 1;
-}
-
-.card-gradient-overlay {
+/* 360 Viewer Overlay */
+.view-360-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
-    pointer-events: none;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.destination-label {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 8px 16px;
-    border-radius: 12px;
+.icon-360-main {
+    width: 70px;
+    height: 70px;
+    background: var(--bg-white);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    color: var(--primary-brand);
+    font-size: 1.8rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(0.5);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.destination-label span {
+.view-360-overlay span {
     color: var(--bg-white);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: var(--fs-sm);
+    margin-top: 15px;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+}
+
+.offer-image-wrapper:hover .view-360-overlay,
+.hall-image-container:hover .view-360-overlay {
+    opacity: 1;
+}
+
+.offer-image-wrapper:hover .icon-360-main,
+.hall-image-container:hover .icon-360-main {
+    transform: scale(1);
+}
+
+.offer-image-wrapper:hover .view-360-overlay span,
+.hall-image-container:hover .view-360-overlay span {
+    transform: translateY(0);
+}
+
+/* Compact 360 Toggle (Near Price) */
+.btn-toggle-360 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-white);
+    border: 1px solid #eee;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: var(--fs-sm);
     font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: 0.5px;
+    color: #555;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.destination-flag {
-    font-size: 1.4rem;
+.btn-toggle-360:hover {
+    border-color: var(--primary-brand);
+    color: var(--primary-brand);
+    transform: translateX(3px);
+    box-shadow: 0 4px 12px rgba(247, 97, 86, 0.15);
 }
 
-/* Large Card Height */
-.destination-card-lg {
-    height: 400px;
+
+
+
+
+
+/* ==================== Restruent and  Conference Facilities Section ==================== */
+.max-w-600 {
+    max-width: 600px;
 }
 
-/* Small Card Height */
-.destination-card-sm {
-    height: 280px;
+.conference-section {
+    background: var(--bg-white) !important;
+    /* Forces white background as requested */
 }
 
-.trending-card:hover {
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+/* Conference Feature Cards */
+.conf-feature-card {
+    background: var(--bg-white);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.conf-feature-card i {
+    font-size: 1.6rem;
+    color: var(--primary-brand);
+    margin-bottom: 0.4rem;
+    transition: transform 0.4s ease;
+}
+
+.conf-feature-card span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #444;
+    transition: color 0.4s ease;
+}
+
+.conf-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-brand);
+    border-radius: 12px 12px 0 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: scaleX(0);
+}
+
+.conf-feature-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(247, 97, 86, 0.12);
+    border-color: rgba(247, 97, 86, 0.3);
 }
 
-/* Professional Offer Card Styles */
+.conf-feature-card:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+    height: 6px;
+}
+
+.conf-feature-card:hover i {
+    transform: scale(1.1);
+}
+
+.conf-feature-card:hover span {
+    color: var(--primary-brand);
+}
+
+
+
+/* restruent Summary Section */
+.dining-summary-section {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-white);
+}
+
+.premium-title {
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    letter-spacing: -3px;
+    text-transform: capitalize;
+}
+
+.overlapping-image-container {
+    position: relative;
+    padding: 2rem;
+}
+
+.main-image {
+    width: 90%;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+/* Mirrored layout for images on the left */
+.image-left .main-image {
+    margin-left: auto;
+}
+
+.image-left .secondary-image {
+    right: auto;
+    left: -5%;
+}
+
+.secondary-image {
+    width: 60%;
+    position: absolute;
+    bottom: -15%;
+    right: -5%;
+    z-index: 2;
+    border-radius: 4px;
+    border: 12px solid var(--bg-white);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s ease;
+}
+
+.overlapping-image-container:hover .main-image {
+    transform: scale(1.02);
+}
+
+.overlapping-image-container:hover .secondary-image {
+    transform: translateY(-10px);
+}
+
+/* ==================== Available Offers section ==================== */
 .offer-premium-card {
     position: relative;
     border-radius: 20px;
@@ -1500,689 +1322,9 @@ h6,
     background: var(--bg-white) !important;
 }
 
-.conference-section .text-primary {
-    color: var(--primary-brand) !important;
-}
 
-.conference-card {
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    overflow: hidden;
-    background: var(--bg-white);
-    border-radius: 16px !important;
-    border: 1px solid rgba(224, 161, 60, 0.1) !important;
-    display: flex;
-    flex-direction: column;
-}
 
-/* Hall Description Clamp */
-.hall-description {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    /* Standard property */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    height: 3rem;
-    /* Fixed height for 2 lines */
-    line-height: 1.5;
-}
 
-/* Hall Image Container */
-.hall-image-container {
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.hall-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.conference-card:hover .hall-img {
-    transform: scale(1.08);
-}
-
-/* Popular Badge Pill */
-.popular-badge-pill {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: var(--primary-brand);
-    color: var(--bg-white);
-    padding: 6px 14px;
-    border-radius: 50px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Capacity Badge Pill */
-.capacity-badge-pill {
-    background: rgba(224, 161, 60, 0.08);
-    color: var(--primary-brand);
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-size: var(--fs-sm);
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    border: 1px solid rgba(224, 161, 60, 0.2);
-}
-
-/* Feature List with Unique Icons */
-.conference-features {
-    padding-left: 0;
-    list-style: none;
-}
-
-.conference-features li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.feature-icon-box {
-    width: 28px;
-    height: 28px;
-    background: rgba(224, 161, 60, 0.1);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    flex-shrink: 0;
-}
-
-.feature-icon-box i {
-    color: var(--primary-brand);
-    font-size: var(--fs-base);
-}
-
-/* Button Layout Side-by-Side */
-.card-actions {
-    display: flex;
-    gap: 8px;
-    margin-top: auto;
-}
-
-.btn-view-360 {
-    flex: 1;
-    border: 1.5px solid #e0e0e0;
-    color: #666;
-    font-weight: 600;
-    background: var(--bg-white);
-    padding: 8px;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-}
-
-.btn-view-360:hover {
-    border-color: var(--primary-brand);
-    color: var(--primary-brand);
-    background: rgba(224, 161, 60, 0.05);
-}
-
-.btn-book-now {
-    flex: 1.25;
-    background: var(--primary-brand);
-    color: var(--bg-white);
-    border: none;
-    font-weight: 600;
-    padding: 8px;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-}
-
-.btn-book-now:hover {
-    background: var(--primary-dark);
-    color: var(--bg-white);
-    box-shadow: 0 5px 15px rgba(224, 161, 60, 0.3);
-}
-
-/* Facility Items Grid (Professional Refresh) */
-.facility-item {
-    background: var(--bg-white);
-    border: 1px solid rgba(224, 161, 60, 0.15) !important;
-    border-radius: 20px !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    min-height: 130px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-    position: relative;
-    overflow: hidden;
-}
-
-.facility-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--primary-brand);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.facility-item:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-brand) !important;
-    box-shadow: 0 15px 30px rgba(224, 161, 60, 0.15);
-    background: var(--bg-white) !important;
-}
-
-.facility-item:hover::after {
-    opacity: 1;
-}
-
-.facility-icon {
-    font-size: 2.2rem;
-    color: var(--primary-brand);
-    margin-bottom: 12px;
-    transition: transform 0.4s ease;
-}
-
-.facility-item:hover .facility-icon {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.facility-item p {
-    font-size: 0.85rem;
-    color: #444;
-    transition: color 0.3s ease;
-}
-
-.facility-item:hover p {
-    color: var(--primary-brand);
-}
-
-/* Unique Card Tints */
-.facility-card-1 {
-    background: rgba(224, 161, 60, 0.03) !important;
-}
-
-.facility-card-2 {
-    background: rgba(184, 134, 11, 0.03) !important;
-}
-
-.facility-card-3 {
-    background: rgba(218, 165, 32, 0.03) !important;
-}
-
-.facility-card-4 {
-    background: rgba(255, 215, 0, 0.03) !important;
-}
-
-/* Booking Modal Integration */
-#bookingModal .modal-header {
-    background: linear-gradient(135deg, var(--primary-brand), #f0c674) !important;
-}
-
-#bookingModal .btn-primary {
-    background: var(--primary-brand) !important;
-    border: none;
-}
-
-/* Room/Hall 360 Viewer Overlay */
-.view-360-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(5px);
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: pointer;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-360-main {
-    width: 70px;
-    height: 70px;
-    background: var(--bg-white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-brand);
-    font-size: 1.8rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transform: scale(0.5);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.view-360-overlay span {
-    color: var(--bg-white);
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    font-size: var(--fs-sm);
-    margin-top: 15px;
-    transform: translateY(10px);
-    transition: all 0.5s ease;
-}
-
-.offer-image-wrapper:hover .view-360-overlay,
-.hall-image-container:hover .view-360-overlay {
-    opacity: 1;
-}
-
-.offer-image-wrapper:hover .icon-360-main,
-.hall-image-container:hover .icon-360-main {
-    transform: scale(1);
-}
-
-.offer-image-wrapper:hover .view-360-overlay span,
-.hall-image-container:hover .view-360-overlay span {
-    transform: translateY(0);
-}
-
-/* Compact 360 Toggle (Near Price) */
-.btn-toggle-360 {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--bg-white);
-    border: 1px solid #eee;
-    padding: 5px 12px;
-    border-radius: 6px;
-    font-size: var(--fs-sm);
-    font-weight: 700;
-    color: #555;
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    margin-bottom: 4px;
-}
-
-.btn-toggle-360:hover {
-    border-color: var(--primary-brand);
-    color: var(--primary-brand);
-    transform: translateX(3px);
-    box-shadow: 0 4px 12px rgba(247, 97, 86, 0.15);
-}
-
-.btn-toggle-360 i {
-    font-size: var(--fs-base);
-}
-
-.offer-dates-wrapper {
-    flex: 1;
-}
-
-.offer-dates {
-    margin-top: 2px;
-}
-
-/* Remove old components (Restored 360 overlay) */
-.conference-icon,
-.featured-hall,
-.popular-badge,
-.btn-indigo,
-.btn-outline-indigo {
-    display: none !important;
-}
-
-#bookingModal .modal-title {
-    color: var(--bg-white);
-}
-
-#bookingModal .btn-close {
-    filter: brightness(0) invert(1);
-}
-
-#bookingModal .hall-info-display {
-    border-left: 4px solid var(--primary-brand);
-}
-
-#bookingModal .form-label {
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-#bookingModal .form-label i {
-    color: var(--primary-brand);
-}
-
-#bookingModal .form-control,
-#bookingModal .form-select {
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-    transition: all 0.3s ease;
-}
-
-#bookingModal .form-control:focus,
-#bookingModal .form-select:focus {
-    border-color: var(--primary-brand);
-    box-shadow: 0 0 0 0.2rem rgba(224, 161, 60, 0.15);
-}
-
-#bookingModal .btn-primary {
-    background: var(--primary-brand);
-    border: none;
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    transition: all 0.3s ease;
-}
-
-#bookingModal .btn-primary:hover {
-    background: var(--primary-dark);
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(224, 161, 60, 0.3);
-}
-
-.conference-section {
-    background: var(--bg-white);
-}
-
-.conference-card {
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    position: relative;
-}
-
-.conference-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Icon Wrapper */
-.conference-icon-wrapper {
-    position: relative;
-    overflow: hidden;
-}
-
-.conference-icon-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120px;
-    height: 120px;
-    background: var(--primary-brand);
-    opacity: 0.1;
-    border-radius: 50%;
-    transition: all 0.4s ease;
-}
-
-.conference-card:hover .conference-icon-bg {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 0.15;
-}
-
-.conference-icon {
-    font-size: 4rem;
-    color: var(--primary-brand);
-    position: relative;
-    z-index: 2;
-    transition: all 0.3s ease;
-}
-
-.conference-card:hover .conference-icon {
-    transform: scale(1.1);
-}
-
-/* Floor Badge */
-.floor-badge {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary-brand);
-    color: var(--bg-white);
-    padding: 4px 16px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    z-index: 3;
-}
-
-/* Popular Badge */
-.popular-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: #2ecc71;
-    color: var(--bg-white);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 10;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Capacity Badge */
-.capacity-badge {
-    background: rgba(224, 161, 60, 0.1);
-    border: 2px solid var(--primary-brand);
-    color: var(--primary-brand);
-    font-size: 0.85rem;
-}
-
-.capacity-badge i {
-    font-size: 1.1rem;
-}
-
-/* Conference Title */
-.conference-title {
-    color: #222;
-    font-size: 1.35rem;
-}
-
-/* Feature Items */
-.conference-features .feature-item {
-    line-height: 1.6;
-}
-
-.conference-features i {
-    font-size: var(--fs-base);
-    margin-top: 2px;
-}
-
-/* CTA Buttons */
-.conference-card .btn {
-    transition: all 0.3s ease;
-}
-
-.conference-card .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.conference-card .btn i {
-    transition: transform 0.3s ease;
-}
-
-.conference-card .btn:hover i {
-    transform: translateX(5px);
-}
-
-/* Featured Hall Styling */
-.featured-hall {
-    border: 2px solid var(--primary-brand) !important;
-}
-
-.featured-hall .conference-icon-wrapper {
-    background: linear-gradient(135deg, rgba(224, 161, 60, 0.05) 0%, rgba(224, 161, 60, 0.15) 100%) !important;
-}
-
-/* Use Cases Section */
-.use-case-badge {
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.use-case-badge:hover {
-    background: var(--primary-brand) !important;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.use-case-badge:hover i {
-    color: var(--bg-white) !important;
-}
-
-.use-case-badge:hover span {
-    color: var(--bg-white) !important;
-}
-
-
-
-/* Dining Summary Section */
-.dining-summary-section {
-    position: relative;
-    overflow: hidden;
-    background-color: var(--bg-white);
-}
-
-.premium-title {
-    line-height: 1;
-    font-weight: 800;
-    margin-bottom: 2rem;
-    color: #1a1a1a;
-    letter-spacing: -3px;
-    text-transform: capitalize;
-}
-
-.overlapping-image-container {
-    position: relative;
-    padding: 2rem;
-}
-
-.main-image {
-    width: 90%;
-    border-radius: 4px;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
-    display: block;
-}
-
-/* Mirrored layout for images on the left */
-.image-left .main-image {
-    margin-left: auto;
-}
-
-.image-left .secondary-image {
-    right: auto;
-    left: -5%;
-}
-
-.secondary-image {
-    width: 60%;
-    position: absolute;
-    bottom: -15%;
-    right: -5%;
-    z-index: 2;
-    border-radius: 4px;
-    border: 12px solid var(--bg-white);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-    transition: transform 0.5s ease;
-}
-
-.overlapping-image-container:hover .main-image {
-    transform: scale(1.02);
-}
-
-.overlapping-image-container:hover .secondary-image {
-    transform: translateY(-10px);
-}
-
-
-
-/* Conference Feature Cards */
-.conf-feature-card {
-    background: var(--bg-white);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
-    padding: 0.75rem 0.5rem;
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    height: 100%;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-}
-
-.conf-feature-card i {
-    font-size: 1.6rem;
-    color: var(--primary-brand);
-    margin-bottom: 0.4rem;
-    transition: transform 0.4s ease;
-}
-
-.conf-feature-card span {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #444;
-    transition: color 0.4s ease;
-}
-
-.conf-feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--primary-brand);
-    border-radius: 12px 12px 0 0;
-    opacity: 0;
-    transition: all 0.4s ease;
-    transform: scaleX(0);
-}
-
-.conf-feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(247, 97, 86, 0.12);
-    border-color: rgba(247, 97, 86, 0.3);
-}
-
-.conf-feature-card:hover::before {
-    opacity: 1;
-    transform: scaleX(1);
-    height: 6px;
-}
-
-.conf-feature-card:hover i {
-    transform: scale(1.1);
-}
-
-.conf-feature-card:hover span {
-    color: var(--primary-brand);
-}
 
 /* ==================== Honorable Clients Marquee ==================== */
 .clients-marquee-section {
@@ -2271,334 +1413,85 @@ h6,
     }
 }
 
-/* Contact Section */
-.contact-section {
-    position: relative;
-    overflow: hidden;
+
+
+
+
+/* ==================== Trending Destinations Section ==================== */
+.trending-section {
+    background: var(--bg-white) !important;
+    padding: 80px 0;
 }
 
-.contact-info-block {
-    background: #1a1a1a;
-    color: var(--bg-white);
-    padding: 3.5rem;
-    border-radius: 12px;
-    height: 100%;
-    border: 1px solid transparent;
-}
-
-.contact-info-block.white-variant {
-    background: var(--bg-white);
-    color: #1a1a1a;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
-}
-
-.white-variant .contact-item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.white-variant .contact-item:last-child {
-    border-bottom: none;
-}
-
-.contact-info-block h2,
-.contact-info-block h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.contact-item:last-child {
-    border-bottom: none;
-}
-
-.contact-item-icon {
-    font-size: 1.5rem;
-    margin-right: 1.5rem;
-    width: 30px;
-    text-align: center;
-    color: var(--primary-brand);
-}
-
-.contact-item-content h6 {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.contact-item-content p {
-    margin-bottom: 0;
-    line-height: 1.6;
-    opacity: 0.9;
-}
-
-.contact-form-card {
-    background: var(--bg-white);
-    padding: 3rem;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
-    border-radius: 12px;
-}
-
-.contact-form-card h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-}
-
-.contact-form-card .form-control {
-    border: 1px solid #e0e0e0;
-    padding: 1rem 1.4rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    background: #fdfdfd;
-}
-
-.contact-form-card .form-control:focus {
-    background: var(--bg-white);
-    border-color: var(--primary-brand);
-    box-shadow: 0 8px 24px rgba(224, 161, 60, 0.12);
-    outline: none;
-}
-
-.contact-form-card textarea.form-control {
-    min-height: 150px;
-}
-
-/* Footer Styling */
-.site-footer {
-    background: #1a1a1a;
-    color: var(--bg-white);
-    padding: 80px 0 0;
-}
-
-.footer-logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--bg-white);
-    text-decoration: none;
-    display: block;
-    margin-bottom: 1.5rem;
-}
-
-.footer-logo span {
-    color: var(--primary-brand);
-}
-
-.footer-heading {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-.footer-heading::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 30px;
-    height: 2px;
-    background: var(--primary-brand);
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li {
-    margin-bottom: 1rem;
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--primary-brand);
-    padding-left: 5px;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-link {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: var(--bg-white);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    background: var(--primary-brand);
-    transform: translateY(-3px);
-}
-
-.footer-bottom {
-    background: #111;
-    padding: 25px 0;
-    margin-top: 60px;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* Map Section */
-.map-section {
-    line-height: 0;
-    overflow: hidden;
-}
-
-.map-section iframe {
-    width: 100%;
-    height: 450px;
-    border: 0;
-    filter: grayscale(0.2);
-}
-
-
-
-/* ==================== Our Services Section ==================== */
-.services-section {
-    background-color: var(--bg-white);
-    position: relative;
-    z-index: 10;
-    padding: 60px 0;
-}
-
-/* ==================== Unique Premium Service Cards ==================== */
-.service-premium-card {
+.trending-card {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
     background: #000;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    height: 420px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: none !important;
 }
 
-.service-premium-card .service-bg-img {
+.destination-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s ease;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
-.service-premium-card:hover .service-bg-img {
+.trending-card:hover .destination-img {
     transform: scale(1.1);
     opacity: 1;
 }
 
-.service-premium-overlay {
+.card-gradient-overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top,
-            rgba(0, 0, 0, 0.95) 0%,
-            rgba(0, 0, 0, 0.5) 40%,
-            transparent 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 30px;
-    color: var(--bg-white);
-    transition: all 0.4s ease;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+    pointer-events: none;
 }
 
-.service-premium-card:hover .service-premium-overlay {
-    padding-bottom: 90px;
-}
-
-.service-premium-icon {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: var(--primary-brand);
-    margin-bottom: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.service-premium-content h4 {
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    color: var(--bg-white);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.service-premium-content p {
-    font-size: 0.95rem;
-    opacity: 0.85;
-    margin-bottom: 0;
-    line-height: 1.4;
-    color: #eee;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.service-learn-more {
+.destination-label {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
-    right: 30px;
-    background: var(--primary-brand);
-    color: var(--bg-white);
-    border: none;
-    padding: 12px;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
     border-radius: 12px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transform: translateY(100px);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    opacity: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-decoration: none;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.service-premium-card:hover .service-learn-more {
-    transform: translateY(0);
-    opacity: 1;
+.destination-label span {
+    color: var(--bg-white);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
 }
 
-.service-learn-more:hover {
-    background: var(--bg-white);
-    color: var(--primary-brand);
+.destination-flag {
+    font-size: 1.4rem;
+}
+
+/* Large Card Height */
+.destination-card-lg {
+    height: 400px;
+}
+
+/* Small Card Height */
+.destination-card-sm {
+    height: 280px;
+}
+
+.trending-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
 }

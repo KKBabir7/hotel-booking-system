@@ -103,3 +103,62 @@ body,html{
 .transition-all {
     transition: var(--transition-smooth);
 }
+/* ==================== Button Overrides ==================== */
+.btn-primary {
+    background-color: var(--primary-brand) !important;
+    border-color: var(--primary-brand) !important;
+    transition: var(--transition-smooth) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px var(--primary-glow) !important;
+}
+
+/* ==================== Modern Button Hover Effects ==================== */
+.btn-modern {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 500 !important;
+    transition: var(--transition-smooth) !important;
+}
+
+/* ==================== Typography Styling ==================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    text-transform: capitalize;
+}
+
+/* ==================== Scroll Top ==================== */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 1000;
+    opacity: 0.8;
+}
+
+.scroll-top:hover {
+    opacity: 1;
+    color: white;
+}

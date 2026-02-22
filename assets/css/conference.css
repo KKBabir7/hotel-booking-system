@@ -1,0 +1,371 @@
+/* ==========================================================================
+   Conference Page Styles
+   ========================================================================== */
+
+.conference-section {
+    background: var(--bg-white) !important;
+}
+
+.conference-section .text-primary {
+    color: var(--primary-brand) !important;
+}
+
+.conference-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-white);
+    border-radius: 16px !important;
+    border: 1px solid rgba(224, 161, 60, 0.1) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hall Description Clamp */
+.hall-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 3rem;
+    line-height: 1.5;
+}
+
+/* Hall Image Container */
+.hall-image-container {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hall-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.conference-card:hover .hall-img {
+    transform: scale(1.08);
+}
+
+/* Popular Badge Pill */
+.popular-badge-pill {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary-brand);
+    color: var(--bg-white);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Capacity Badge Pill */
+.capacity-badge-pill {
+    background: rgba(224, 161, 60, 0.08);
+    color: var(--primary-brand);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(224, 161, 60, 0.2);
+}
+
+
+/* Booking Modal Integration */
+#bookingModal .modal-header {
+    background: linear-gradient(135deg, var(--primary-brand), #f0c674) !important;
+}
+
+#bookingModal .modal-title {
+    color: var(--bg-white);
+}
+
+#bookingModal .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+#bookingModal .hall-info-display {
+    border-left: 4px solid var(--primary-brand);
+}
+
+#bookingModal .form-label {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+#bookingModal .form-label i {
+    color: var(--primary-brand);
+}
+
+#bookingModal .form-control,
+#bookingModal .form-select {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+#bookingModal .form-control:focus,
+#bookingModal .form-select:focus {
+    border-color: var(--primary-brand);
+    box-shadow: 0 0 0 0.2rem rgba(224, 161, 60, 0.15);
+}
+
+#bookingModal .btn-primary {
+    background: var(--primary-brand) !important;
+    border: none;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+#bookingModal .btn-primary:hover {
+    background: var(--primary-dark) !important;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(224, 161, 60, 0.3);
+}
+
+/* 360 Viewer Overlay */
+.view-360-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-360-main {
+    width: 70px;
+    height: 70px;
+    background: var(--bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-brand);
+    font-size: 1.8rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(0.5);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.view-360-overlay span {
+    color: var(--bg-white);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: var(--fs-sm);
+    margin-top: 15px;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+}
+
+.offer-image-wrapper:hover .view-360-overlay,
+.hall-image-container:hover .view-360-overlay {
+    opacity: 1;
+}
+
+.offer-image-wrapper:hover .icon-360-main,
+.hall-image-container:hover .icon-360-main {
+    transform: scale(1);
+}
+
+.offer-image-wrapper:hover .view-360-overlay span,
+.hall-image-container:hover .view-360-overlay span {
+    transform: translateY(0);
+}
+
+/* Compact 360 Toggle (Near Price) */
+.btn-toggle-360 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-white);
+    border: 1px solid #eee;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: #555;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.btn-toggle-360:hover {
+    border-color: var(--primary-brand);
+    color: var(--primary-brand);
+    transform: translateX(3px);
+    box-shadow: 0 4px 12px rgba(247, 97, 86, 0.15);
+}
+
+/* Feature List with Unique Icons */
+.conference-features {
+    padding-left: 0;
+    list-style: none;
+}
+
+.conference-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.feature-icon-box {
+    width: 28px;
+    height: 28px;
+    background: rgba(224, 161, 60, 0.1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.feature-icon-box i {
+    color: var(--primary-brand);
+    font-size: var(--fs-base);
+}
+
+/* Button Layout Side-by-Side */
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.btn-view-360 {
+    flex: 1;
+    border: 1.5px solid #e0e0e0;
+    color: #666;
+    font-weight: 600;
+    background: var(--bg-white);
+    padding: 8px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-view-360:hover {
+    border-color: var(--primary-brand);
+    color: var(--primary-brand);
+    background: rgba(224, 161, 60, 0.05);
+}
+
+.btn-book-now {
+    flex: 1.25;
+    background: var(--primary-brand);
+    color: var(--bg-white);
+    border: none;
+    font-weight: 600;
+    padding: 8px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-book-now:hover {
+    background: var(--primary-dark);
+    color: var(--bg-white);
+    box-shadow: 0 5px 15px rgba(224, 161, 60, 0.3);
+}
+
+/* Facility Items Grid (Professional Refresh) */
+.facility-item {
+    background: var(--bg-white);
+    border: 1px solid rgba(224, 161, 60, 0.15) !important;
+    border-radius: 20px !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 130px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.facility-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-brand);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.facility-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-brand) !important;
+    box-shadow: 0 15px 30px rgba(224, 161, 60, 0.15);
+    background: var(--bg-white) !important;
+}
+
+.facility-item:hover::after {
+    opacity: 1;
+}
+
+.facility-icon {
+    font-size: 2.2rem;
+    color: var(--primary-brand);
+    margin-bottom: 12px;
+    transition: transform 0.4s ease;
+}
+
+.facility-item:hover .facility-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.facility-item p {
+    font-size: 0.85rem;
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.facility-item:hover p {
+    color: var(--primary-brand);
+}
+
+/* Unique Card Tints */
+.facility-card-1 {
+    background: rgba(224, 161, 60, 0.03) !important;
+}
+
+.facility-card-2 {
+    background: rgba(184, 134, 11, 0.03) !important;
+}
+
+.facility-card-3 {
+    background: rgba(218, 165, 32, 0.03) !important;
+}
+
+.facility-card-4 {
+    background: rgba(255, 215, 0, 0.03) !important;
+}

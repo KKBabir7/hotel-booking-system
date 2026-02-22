@@ -28,14 +28,17 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/root.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/conference.css">
+    <link rel="stylesheet" href="assets/css/footer.css" />
+
     <link rel="stylesheet" href="assets/css/responsive.css" />
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top py-4 transition-all" id="main-nav">
+    <nav class="navbar navbar-expand-lg fixed-top py-2 py-md-4 transition-all subpage-nav" id="main-nav">
         <div class="container-fluid px-md-5">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="assets/img/logo/logo2.png" alt="Logo" class="navbar-logo">
@@ -48,17 +51,14 @@
                         <a href="index.html" class="nav-link"><i class="bi bi-house-door me-1"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="restaurants.html" class="nav-link"><i class="bi bi-egg-fried me-1"></i> Restaurants</a>
+                        <a href="#" class="nav-link"><i class="bi bi-egg-fried me-1"></i> Restaurants</a>
                     </li>
                     <li class="nav-item">
                         <a href="conference.html" class="nav-link active"><i class="bi bi-building me-1"></i> Conference
                             Hall</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link"><i class="bi bi-envelope me-1"></i> Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="rooms.html" class="nav-link"><i class="bi bi-door-closed me-1"></i> Rooms</a>
+                        <a href="#" class="nav-link"><i class="bi bi-door-closed me-1"></i> Rooms</a>
                     </li>
                 </ul>
 
@@ -66,8 +66,52 @@
                 <a href="#" class="btn btn-primary rounded-pill btn-signup ms-3">
                     <i class="bi bi-person-plus me-2"></i>Sign Up
                 </a>
+
+                <!-- Desktop Dropdown Menu -->
+                <div class="dropdown desktop-dropdown d-none d-lg-block ms-2">
+                    <button class="btn btn-menu-toggle animated-burger-btn" type="button" id="desktopMenuDropdown"
+                        aria-expanded="false">
+                        <div class="burger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0 py-3 mt-3 p-0"
+                        aria-labelledby="desktopMenuDropdown">
+                        <li><a class="dropdown-item py-2 px-4" href="#"><i class="bi bi-info-circle me-2"></i> About
+                                Us</a></li>
+                        <li><a class="dropdown-item py-2 px-4" href="#"><i class="bi bi-people me-2"></i> Honorable
+                                Clients</a></li>
+                        <li><a class="dropdown-item py-2 px-4" href="contact.html"><i class="bi bi-envelope me-2"></i>
+                                Contact</a>
+                        </li>
+                        <li><a class="dropdown-item py-2 px-4" href="#"><i class="bi bi-images me-2"></i> Gallery</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider mx-3">
+                        </li>
+                        <li class="dropdown-submenu px-3">
+                            <a class="dropdown-item dropdown-toggle py-2 px-2 d-flex align-items-center justify-content-between"
+                                href="#" id="languageMenu">
+                                <span><i class="bi bi-translate me-2"></i> Language</span>
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 py-2 p-0">
+                                <li><a class="dropdown-item py-2 px-4" href="#"><img
+                                            src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2">
+                                        English</a></li>
+                                <li><a class="dropdown-item py-2 px-4" href="#"><img
+                                            src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2">
+                                        Bengali</a></li>
+                                <li><a class="dropdown-item py-2 px-4" href="#"><img
+                                            src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2">
+                                        Hindi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!-- Mobile Menu Toggle -->
+
             <div class="d-flex align-items-center d-lg-none ms-auto">
                 <button class="btn btn-menu-toggle animated-burger-btn" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
@@ -376,8 +420,73 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container py-5 text-center">
-            <p class="mb-0">&copy; 2026 Nice Guest House. All rights reserved.</p>
+        <div class="container">
+            <div class="row g-5 pb-5">
+                <!-- Branding column -->
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-logo">NICE<span>GUESTHOUSE</span></a>
+                    <p class="text-white-50 mb-4 pe-lg-4">
+                        Committed to serving you with our expert team members. Experience a touch of home and excellence
+                        in the
+                        heart of Noakhali since 2007.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-heading">Navigate</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Rooms</a></li>
+                        <li><a href="#">Restaurants</a></li>
+                        <li><a href="conference.html">Conference</a></li>
+                    </ul>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-heading">Useful Info</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Summary -->
+                <div class="col-md-6 col-lg-4">
+                    <h5 class="footer-heading">Stay Connected</h5>
+                    <p class="text-white-50 mb-4">Subscribe to our newsletter for latest offers and news.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control bg-dark border-0 text-white" placeholder="Enter email"
+                            style="padding: 12px 20px;">
+                        <button class="btn btn-primary px-4" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; 2026 Nice Guest House & Training Hall. All rights reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed for Excellence | Powered by <a href="#" class="text-white-50 text-decoration-none">NGH
+                            Team</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
