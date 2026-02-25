@@ -540,6 +540,7 @@
     z-index: 10;
     padding: 60px 0;
 }
+
 .service-premium-card {
     position: relative;
     border-radius: 20px;
@@ -691,8 +692,8 @@
 }
 
 .offer-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
 }
 
 .offer-image-wrapper {
@@ -700,6 +701,31 @@
     overflow: hidden;
     position: relative;
 }
+
+/* 360 Viewer Overlay - Restored Hover Behaviorddd
+.view-360-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(0px);
+    opacity: 1;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.offer-image-wrapper:hover .view-360-overlay {
+    opacity: 1;
+}
+
 
 .offer-img {
     height: 100%;
@@ -710,6 +736,7 @@
 .offer-card:hover .offer-img {
     transform: scale(1.08);
 }
+
 
 /* Wishlist Button */
 .wishlist-btn {
@@ -725,7 +752,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    z-index: 5;
+    z-index: 6;
     transition: all 0.3s ease;
     color: #444;
 }
@@ -750,7 +777,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    z-index: 2;
+    z-index: 7;
     color: var(--bg-white);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -938,8 +965,8 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(5px);
-    opacity: 0;
+    backdrop-filter: blur(0px);
+    opacity: 1;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
     z-index: 5;
@@ -1494,4 +1521,71 @@
 .trending-card:hover {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     transform: translateY(-5px);
+}
+
+/* ==================== 360 Orbit Animation ==================== */
+.orbit-360-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px;
+}
+
+.orbit-360-outer {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #1da1dc;
+    border-radius: 50%;
+}
+
+.orbit-360-system {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    animation: orbitRotate 10s linear infinite;
+}
+
+.orbit-ring {
+    position: absolute;
+    inset: 3px;
+    border: 3px solid #f2b705;
+    border-radius: 50%;
+}
+
+.orbit-ring.one {
+    transform: rotateX(65deg);
+}
+
+.orbit-ring.two {
+    transform: rotateY(65deg);
+}
+
+.orbit-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1da1dc;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes orbitRotate {
+    from {
+        transform: rotateX(20deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(20deg) rotateY(360deg);
+    }
 }
