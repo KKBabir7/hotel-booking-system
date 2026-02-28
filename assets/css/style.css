@@ -779,24 +779,24 @@
     letter-spacing: 0.5px;
     z-index: 7;
     color: var(--bg-white);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background: #7f8c8d; /* Default gray for any undefined badges */
 }
 
-.offer-badge.top-pick {
-    background: var(--primary-brand);
+.offer-badge.exclusive,
+.offer-badge.genius {
+    background: #9b59b6; /* Purple */
 }
 
-.offer-badge.new-listing {
-    background: #2ecc71;
+.offer-badge.new-listing,
+.offer-badge.new-luxury {
+    background: #2ecc71; /* Green */
 }
 
-/* Booking.com Blue */
-.offer-badge.seasonal {
-    background: #3498db;
-}
-
-.offer-badge.exclusive {
-    background: #9b59b6;
+/* Early 2026 Deal / Seasonal */
+.offer-badge.seasonal,
+.offer-badge.early-deal {
+    background: #3498db; /* Blue */
 }
 
 /* Rating Block */
@@ -1587,5 +1587,132 @@
 
     to {
         transform: rotateX(20deg) rotateY(360deg);
+    }
+}
+
+/* ==================== Rooms Page Specific Styles ==================== */
+.rooms-hero {
+    background: var(--bg-light);
+    padding: 60px 0;
+    margin-top: 80px;
+}
+
+/* Sidebar Filters */
+.filter-sidebar {
+    background: var(--bg-white);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+}
+
+.filter-section {
+    margin-bottom: 30px;
+}
+
+.filter-section:last-child {
+    margin-bottom: 0;
+}
+
+.filter-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.filter-item input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary-brand);
+}
+
+.filter-item label {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.filter-item .count {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Price Range Slider */
+.price-range-slider {
+    padding: 10px 0;
+}
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Room Grid Section */
+.results-header {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort-select {
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+/* Orbit Animation override for Grid */
+.rooms-grid .orbit-360-container {
+    width: 60px;
+    height: 60px;
+}
+
+.rooms-grid .orbit-label {
+    font-size: 12px;
+}
+
+/* Mobile Filter Toggle */
+.mobile-filter-btn {
+    display: none;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 991.98px) {
+    .mobile-filter-btn {
+        display: block;
+    }
+    
+    .filter-sidebar {
+        display: none;
+    }
+    
+    .filter-sidebar.show {
+        display: block;
+        margin-bottom: 30px;
     }
 }
