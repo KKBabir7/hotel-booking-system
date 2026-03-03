@@ -11,6 +11,12 @@
 
 /* Tablet & Smaller Desktop (max-width: 991px) */
 @media (max-width: 991px) {
+    /* .offers-slider .slick-next, .available-offers-slider .slick-next{
+        right: 16px;
+    }
+    .offers-slider .slick-prev, .available-offers-slider .slick-prev{
+        left: 16px;
+    } */
     .offers-slider .slick-prev {
         left: 5px;
     }

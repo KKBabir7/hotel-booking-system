@@ -41,13 +41,17 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
+<style>
+  body,html{
+    overflow-x: hidden;
+  }
+</style>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top py-2 py-md-4 transition-all" id="main-nav">
     <div class="container-fluid px-md-5">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="assets/img/logo/logo2.png" alt="Logo" class="navbar-logo">
       </a>
 
@@ -55,10 +59,13 @@
       <div class="d-none d-lg-flex flex-grow-1 justify-content-end align-items-center desktop-menu">
         <ul class="nav">
           <li class="nav-item">
-            <a href="#" class="nav-link active"><i class="bi bi-house-door me-1"></i> Home</a>
+            <a href="index.html" class="nav-link active"><i class="bi bi-house-door me-1"></i> Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link"><i class="bi bi-egg-fried me-1"></i> Restaurants</a>
+            <a href="properties.html" class="nav-link"><i class="bi bi-geo-alt me-1"></i> Properties</a>
+          </li>
+          <li class="nav-item">
+            <a href="restaurant.html" class="nav-link"><i class="bi bi-egg-fried me-1"></i> Restaurants</a>
           </li>
           <li class="nav-item">
             <a href="conference.html" class="nav-link"><i class="bi bi-building me-1"></i> Conference Hall</a>
@@ -68,10 +75,14 @@
           </li>
         </ul>
 
-        <!-- Sign Up Button -->
-        <a href="#" class="btn btn-primary rounded-pill btn-signup ms-3">
-          <i class="bi bi-person-plus me-2"></i>Sign Up
-        </a>
+        <!-- Auth Button (dynamic via JS) -->
+        <div id="auth-btn-wrapper" class="d-flex align-items-center">
+          <div class="btn btn-primary rounded-pill btn-signup ms-3 d-flex align-items-center gap-1 p-0 overflow-hidden ps-3 pe-3">
+            <a href="signup.html" class="text-white text-decoration-none px-1 py-2"><i class="bi bi-person-plus me-1"></i> Sign Up</a>
+            <span class="text-white-50">|</span>
+            <a href="signin.html" class="text-white text-decoration-none px-1 py-2"><i class="bi bi-box-arrow-in-right me-1"></i> Log In</a>
+          </div>
+        </div>
 
         <!-- Desktop Dropdown Menu -->
         <div class="dropdown desktop-dropdown d-none d-lg-block ms-2">
@@ -181,9 +192,9 @@
             class="hero-search-container d-flex align-items-center bg-white shadow-lg rounded-pill p-1 position-relative">
             <!-- Where Section -->
             <div class="search-item flex-grow-1 text-start px-4 py-2" id="search-where">
-              <div class="search-label fw-bold">Location</div>
+              <div class="search-label fw-bold">Select Property</div>
               <input type="text" class="search-input-field border-0 bg-transparent w-100 p-0" id="location-input"
-                placeholder="Search destinations" autocomplete="off">
+                placeholder="Choose Guest House" readonly autocomplete="off">
               <button class="search-clear-btn d-none" id="clear-where">
                 <i class="bi bi-x"></i>
               </button>
@@ -194,25 +205,24 @@
                   <span class="text-muted small fw-bold uppercase">Suggested destinations</span>
                 </div>
                 <div class="panel-body py-2" id="location-results">
-                  <!-- Nearby Item -->
-                  <div class="suggestion-item d-flex align-items-center px-4 py-3" data-location="nearby">
+                  <!-- Property 1 -->
+                  <div class="suggestion-item d-flex align-items-center px-4 py-3" data-location="Main Branch">
                     <div class="suggestion-icon me-3 bg-light rounded-3 p-2">
-                      <i class="bi bi-cursor text-primary"></i>
+                      <i class="bi bi-building text-primary"></i>
                     </div>
                     <div>
-                      <div class="suggestion-title fw-bold">Nearby</div>
-                      <div class="suggestion-subtitle text-muted small">Find what's around you</div>
+                      <div class="suggestion-title fw-bold">Nice Guest House (Main Branch)</div>
+                      <div class="suggestion-subtitle text-muted small">Uzzalpur, Maijdee Court</div>
                     </div>
                   </div>
-                  <!-- Static Destinations for BD -->
-                  <div class="suggestion-item d-flex align-items-center px-4 py-3"
-                    data-location="Cox's Bazar, Bangladesh">
+                  <!-- Property 2 -->
+                  <div class="suggestion-item d-flex align-items-center px-4 py-3" data-location="Branch Two">
                     <div class="suggestion-icon me-3 bg-light rounded-3 p-2">
-                      <i class="bi bi-geo-alt text-success"></i>
+                      <i class="bi bi-house-heart text-success"></i>
                     </div>
                     <div>
-                      <div class="suggestion-title fw-bold">Cox's Bazar, Bangladesh</div>
-                      <div class="suggestion-subtitle text-muted small">The world's longest natural sea beach</div>
+                      <div class="suggestion-title fw-bold">Nice Guest House (Branch Two)</div>
+                      <div class="suggestion-subtitle text-muted small">Main Road, Uzzalpur</div>
                     </div>
                   </div>
                 </div>
@@ -360,7 +370,7 @@
                 <h4>Restaurant & Dining</h4>
                 <p>3 Multi-cuisine specialized restaurants featuring Thai, Indian, Chinese & Deshi flavors.</p>
               </div>
-              <a href="restaurants.html" class="service-learn-more">
+              <a href="restaurant.html" class="service-learn-more">
                 Explore Menu <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -380,7 +390,7 @@
                 <h4>Guest House & Rooms</h4>
                 <p>58 luxury 3-star rooms in the heart of the city with 24/7 security and elite comfort.</p>
               </div>
-              <a href="#" class="service-learn-more">
+              <a href="rooms.html" class="service-learn-more">
                 View Rooms <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -432,12 +442,15 @@
                 <i class="bi bi-geo-alt me-1"></i> Maldives, Indian Ocean
               </p>
 
-              <div class="d-flex align-items-center mb-2">
-                <div class="rating-box me-2">9.8</div>
-                <div class="rating-info">
-                  <div class="rating-text fw-bold">Exceptional</div>
-                  <div class="rating-count text-muted">120 genuine reviews</div>
+              <div class="rating-stars-wrapper d-flex align-items-center gap-2 mb-2">
+                <div class="stars text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
+                <span class="rating-text-condensed text-muted small">(9.8 · 120 reviews)</span>
               </div>
 
               <div class="offer-features d-flex gap-2 text-muted extra-small mb-3">
@@ -460,9 +473,11 @@
                   </div>
                 </div>
                 <div class="offer-pricing text-end">
-                  <div class="price-old text-decoration-line-through text-muted small">$350</div>
-                  <div class="price-current fw-bold text-dark h5 mb-2">$299</div>
-                  <a href="#" class="view-deal-link text-decoration-none fw-bold small">
+                  <div class="d-flex align-items-center justify-content-end gap-2 mb-1">
+                    <div class="price-old text-decoration-line-through text-muted small">$350</div>
+                    <div class="price-current fw-bold text-dark h5 mb-0">$299</div>
+                  </div>
+                  <a href="room-details.html" class="view-deal-link text-decoration-none fw-bold small">
                     View deal <i class="bi bi-chevron-right ms-1"></i>
                   </a>
                 </div>
@@ -498,12 +513,15 @@
                 <i class="bi bi-geo-alt me-1"></i> Central Park, New York
               </p>
 
-              <div class="d-flex align-items-center mb-2">
-                <div class="rating-box me-2">4.8</div>
-                <div class="rating-info">
-                  <div class="rating-text fw-bold">Very Good</div>
-                  <div class="rating-count text-muted">85 genuine reviews</div>
+              <div class="rating-stars-wrapper d-flex align-items-center gap-2 mb-2">
+                <div class="stars text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
+                <span class="rating-text-condensed text-muted small">(4.8 · 85 reviews)</span>
               </div>
 
               <div class="offer-features d-flex gap-2 text-muted extra-small mb-3">
@@ -526,8 +544,10 @@
                   </div>
                 </div>
                 <div class="offer-pricing text-end">
-                  <div class="price-old text-decoration-line-through text-muted small">$520</div>
-                  <div class="price-current fw-bold text-dark h5 mb-2">$450</div>
+                  <div class="d-flex align-items-center justify-content-end gap-2 mb-1">
+                    <div class="price-old text-decoration-line-through text-muted small">$520</div>
+                    <div class="price-current fw-bold text-dark h5 mb-0">$450</div>
+                  </div>
                   <a href="#" class="view-deal-link text-decoration-none fw-bold small">
                     View deal <i class="bi bi-chevron-right ms-1"></i>
                   </a>
@@ -564,12 +584,15 @@
                 <i class="bi bi-geo-alt me-1"></i> Zermatt, Switzerland
               </p>
 
-              <div class="d-flex align-items-center mb-2">
-                <div class="rating-box me-2">5.0</div>
-                <div class="rating-info">
-                  <div class="rating-text fw-bold">Wonderful</div>
-                  <div class="rating-count text-muted">54 genuine reviews</div>
+              <div class="rating-stars-wrapper d-flex align-items-center gap-2 mb-2">
+                <div class="stars text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
+                <span class="rating-text-condensed text-muted small">(5.0 · 54 reviews)</span>
               </div>
 
               <div class="offer-features d-flex gap-2 text-muted extra-small mb-3">
@@ -592,8 +615,10 @@
                   </div>
                 </div>
                 <div class="offer-pricing text-end">
-                  <div class="price-old text-decoration-line-through text-muted small">$410</div>
-                  <div class="price-current fw-bold text-dark h5 mb-2">$320</div>
+                  <div class="d-flex align-items-center justify-content-end gap-2 mb-1">
+                    <div class="price-old text-decoration-line-through text-muted small">$410</div>
+                    <div class="price-current fw-bold text-dark h5 mb-0">$320</div>
+                  </div>
                   <a href="#" class="view-deal-link text-decoration-none fw-bold small">
                     View deal <i class="bi bi-chevron-right ms-1"></i>
                   </a>
@@ -630,12 +655,15 @@
                 <i class="bi bi-geo-alt me-1"></i> Dubai, UAE
               </p>
 
-              <div class="d-flex align-items-center mb-2">
-                <div class="rating-box me-2">4.7</div>
-                <div class="rating-info">
-                  <div class="rating-text fw-bold">Great</div>
-                  <div class="rating-count text-muted">92 genuine reviews</div>
+              <div class="rating-stars-wrapper d-flex align-items-center gap-2 mb-2">
+                <div class="stars text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
+                <span class="rating-text-condensed text-muted small">(4.7 · 92 reviews)</span>
               </div>
 
               <div class="offer-features d-flex gap-2 text-muted extra-small mb-3">
@@ -658,8 +686,10 @@
                   </div>
                 </div>
                 <div class="offer-pricing text-end">
-                  <div class="price-old text-decoration-line-through text-muted small">$310</div>
-                  <div class="price-current fw-bold text-dark h5 mb-2">$275</div>
+                  <div class="d-flex align-items-center justify-content-end gap-2 mb-1">
+                    <div class="price-old text-decoration-line-through text-muted small">$310</div>
+                    <div class="price-current fw-bold text-dark h5 mb-0">$275</div>
+                  </div>
                   <a href="#" class="view-deal-link text-decoration-none fw-bold small">
                     View deal <i class="bi bi-chevron-right ms-1"></i>
                   </a>
@@ -671,7 +701,7 @@
       </div>
 
       <div class="text-center mt-5">
-        <a href="#" class="btn btn-primary btn-modern btn-lg px-5 py-3 rounded-3 shadow-sm fw-bold">
+        <a href="rooms.html" class="btn btn-primary btn-modern btn-lg px-5 py-3 rounded-3 shadow-sm fw-bold">
           See More Room <i class="bi bi-arrow-right ms-2"></i>
         </a>
       </div>
@@ -742,7 +772,7 @@
               </div>
             </div>
           </div>
-          <a href="restaurants.html" class="btn btn-primary btn-modern btn-lg px-5 py-3 rounded-3 shadow-sm">
+          <a href="restaurant.html" class="btn btn-primary btn-modern btn-lg px-5 py-3 rounded-3 shadow-sm">
             Explore Our Dining <i class="bi bi-arrow-right ms-2"></i>
           </a>
         </div>
@@ -1403,13 +1433,16 @@
           <a class="nav-link active" href="index.html"><i class="bi bi-house-door me-2"></i> Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="properties.html"><i class="bi bi-geo-alt me-2"></i> Properties</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="conference.html"><i class="bi bi-building me-2"></i> Conference Hall</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="rooms.html"><i class="bi bi-door-closed me-2"></i> Rooms</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-egg-fried me-2"></i> Restaurants</a>
+          <a class="nav-link" href="restaurant.html"><i class="bi bi-egg-fried me-2"></i> Restaurants</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><i class="bi bi-people me-2"></i> Our Honorable Clients</a>

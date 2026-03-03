@@ -45,7 +45,10 @@
                         <a href="index.html" class="nav-link"><i class="bi bi-house-door me-1"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="bi bi-egg-fried me-1"></i> Restaurants</a>
+                        <a href="properties.html" class="nav-link"><i class="bi bi-geo-alt me-1"></i> Properties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="restaurant.html" class="nav-link"><i class="bi bi-egg-fried me-1"></i> Restaurants</a>
                     </li>
                     <li class="nav-item">
                         <a href="conference.html" class="nav-link"><i class="bi bi-building me-1"></i> Conference
@@ -56,10 +59,14 @@
                     </li>
                 </ul>
 
-                <!-- Sign Up Button -->
-                <a href="#" class="btn btn-primary rounded-pill btn-signup ms-3">
-                    <i class="bi bi-person-plus me-2"></i>Sign Up
-                </a>
+                <!-- Auth Button (dynamic via JS) -->
+                <div id="auth-btn-wrapper" class="d-flex align-items-center">
+                  <div class="btn btn-primary rounded-pill btn-signup ms-3 d-flex align-items-center gap-1 p-0 overflow-hidden ps-3 pe-3">
+                    <a href="signup.html" class="text-white text-decoration-none px-1 py-2"><i class="bi bi-person-plus me-1"></i> Sign Up</a>
+                    <span class="text-white-50">|</span>
+                    <a href="signin.html" class="text-white text-decoration-none px-1 py-2"><i class="bi bi-box-arrow-in-right me-1"></i> Log In</a>
+                  </div>
+                </div>
 
                 <!-- Desktop Dropdown Menu -->
                 <div class="dropdown desktop-dropdown d-none d-lg-block ms-2">
@@ -119,107 +126,103 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="subpage-hero py-5 mt-5">
-        <div class="container py-5 mt-5 text-center">
-            <h6 class="text-primary fw-bold text-uppercase ls-2 mb-2">Get in Touch</h6>
-            <h1 class="display-3 fw-bold mb-3">Contact Us</h1>
-            <p class="lead text-muted max-w-700 mx-auto mb-0">
-                Experience the warmth of our hospitality. Whether you have a question or want to book a stay, our team
-                is always here to assist you.
-            </p>
+    <!-- Hero Section (Matches Conference Page Elite Style) -->
+    <header class="conference-hero contact-hero-sync">
+        <div class="conference-hero-content container">
+            <span class="conference-hero-tagline" data-aos="fade-up">Get In Touch</span>
+            <h1 class="conference-hero-title" data-aos="fade-up" data-aos-delay="100">Contact Us &<br>Support Team</h1>
         </div>
-    </section>
+    </header>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section py-5 bg-white">
-        <div class="container py-md-5">
-            <div class="row g-5 align-items-center">
-                <!-- Contact Info (Modern White Box) -->
-                <div class="col-lg-5">
-                    <div class="contact-info-block white-variant shadow-sm border">
-                        <h3 class="fw-bold mb-4">Our Presence</h3>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                            <div class="contact-item-content">
-                                <h6>Main Branch (NGH-1)</h6>
-                                <p>Uzzalpur, Maijdee Court, Sadar<br>Noakhali, Bangladesh.</p>
+    <section id="contact" class="contact-section pb-5 bg-white">
+        <div class="container contact-grid-overlap">
+                <!-- Contact Info Cards -->
+                <div class="col-lg-12 mb-5">
+                    <div class="row g-4">
+                        <!-- Location 1: Main Branch -->
+                        <div class="col-md-6">
+                            <div class="contact-feature-card shadow-sm h-100 p-4 rounded-4 text-center border">
+                                <div class="icon-box mx-auto">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <h5 class="fw-bold mb-3">Main Branch</h5>
+                                <p class="text-muted small mb-0">Uzzalpur, Maijdee Court, Sadar<br>Noakhali-3800, Bangladesh.</p>
+                                <a href="https://maps.google.com" target="_blank" class="btn btn-link text-primary mt-3 p-0 fw-bold small text-decoration-none">View on Map <i class="bi bi-arrow-right ms-1"></i></a>
                             </div>
                         </div>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-geo-alt"></i></div>
-                            <div class="contact-item-content">
-                                <h6>Guesthouse-2 (NGH-2)</h6>
-                                <p>Main Road, Uzzalpur, Maijdee Court<br>Sadar, Noakhali.</p>
+                        <!-- Location 2: Branch Two -->
+                        <div class="col-md-6">
+                            <div class="contact-feature-card shadow-sm h-100 p-4 rounded-4 text-center border">
+                                <div class="icon-box mx-auto">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <h5 class="fw-bold mb-3">Branch Two</h5>
+                                <p class="text-muted small mb-0">Main Road, Uzzalpur, Maijdee Court<br>Sadar, Noakhali, Bangladesh.</p>
+                                <a href="https://maps.google.com" target="_blank" class="btn btn-link text-primary mt-3 p-0 fw-bold small text-decoration-none">View on Map <i class="bi bi-arrow-right ms-1"></i></a>
                             </div>
                         </div>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-telephone-fill"></i></div>
-                            <div class="contact-item-content">
-                                <h6>Call Us</h6>
-                                <p>+880-0321-61658</p>
-                                <p>+880-1711-781340</p>
-                                <p>+8801622277023</p>
+                        <!-- Support & Email (Full Width Row) -->
+                        <div class="col-md-6">
+                            <div class="contact-feature-card shadow-sm h-100 p-4 rounded-4 text-center border active-card">
+                                <div class="icon-box mx-auto">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <h5 class="fw-bold mb-3">Contact Support</h5>
+                                <p class="text-muted small mb-0">+880-321-61658 (Main Branch)<br>01622277023 (Branch Two)</p>
+                                <p class="text-primary small fw-bold mt-2 mb-0">Available 24/7</p>
                             </div>
                         </div>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-envelope-fill"></i></div>
-                            <div class="contact-item-content">
-                                <h6>Email Us</h6>
-                                <p>niceguesthouse.th@gmail.com</p>
-                                <p>niceguesthouse2.th@gmail.com</p>
+                        <div class="col-md-6">
+                            <div class="contact-feature-card shadow-sm h-100 p-4 rounded-4 text-center border">
+                                <div class="icon-box mx-auto">
+                                    <i class="bi bi-envelope-heart"></i>
+                                </div>
+                                <h5 class="fw-bold mb-3">Official Email</h5>
+                                <p class="text-muted extra-small mb-0">niceguesthouse.th@gmail.com (Main)<br>niceguesthouse2.th@gmail.com (Br-2)</p>
+                                <a href="mailto:niceguesthouse.th@gmail.com" class="btn btn-link text-primary mt-3 p-0 fw-bold small text-decoration-none">Send Email <i class="bi bi-send ms-1"></i></a>
                             </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-link-45deg"></i></div>
-                            <div class="contact-item-content">
-                                <h6>Website</h6>
-                                <p>www.niceguesthouse.info</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-4">
-                            <p class="mb-0 small"><i class="bi bi-clock me-2"></i> Reception: 24h Available</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Form -->
-                <div class="col-lg-7">
-                    <div class="contact-form-card shadow-sm border p-4 p-md-5 rounded-4 bg-white">
-                        <div class="mb-4">
+                <!-- Contact Form Redesigned -->
+                <div class="col-lg-8 mx-auto mt-4">
+                    <div class="contact-form-premium shadow p-4 p-md-5 rounded-4 bg-white border-top border-5">
+                        <div class="text-center mb-5">
                             <h3 class="fw-bold mb-2">Send us a message</h3>
                             <p class="text-muted">Fill out the form below and we'll get back to you shortly.</p>
                         </div>
 
                         <form action="#">
-                            <div class="row g-3">
+                            <div class="row g-4">
                                 <div class="col-md-6">
-                                    <label class="form-label fw-semibold">Your name</label>
-                                    <input type="text" class="form-control py-3" placeholder="John Doe">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="contactName" placeholder="John Doe">
+                                        <label for="contactName">Your Name</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label fw-semibold">Your e-mail</label>
-                                    <input type="email" class="form-control py-3" placeholder="john@example.com">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="contactEmail" placeholder="john@example.com">
+                                        <label for="contactEmail">Email Address</label>
+                                    </div>
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label fw-semibold">Subject</label>
-                                    <input type="text" class="form-control py-3" placeholder="How can we help?">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="contactSubject" placeholder="Inquiry">
+                                        <label for="contactSubject">Subject</label>
+                                    </div>
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label fw-semibold">Message</label>
-                                    <textarea class="form-control py-3" rows="5"
-                                        placeholder="Write your message here..."></textarea>
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control" id="contactMessage" placeholder="Message" style="height: 150px"></textarea>
+                                        <label for="contactMessage">Your Message</label>
+                                    </div>
                                 </div>
-                                <div class="col-12 pt-3">
-                                    <button type="submit"
-                                        class="btn btn-primary btn-modern btn-lg w-100 rounded-3 py-3">
-                                        Send Message <i class="bi bi-send ms-2"></i>
+                                <div class="col-12 text-center pt-2">
+                                    <button type="submit" class="btn btn-primary btn-cta-premium rounded-pill px-5 py-3 fw-bold">
+                                        Submit Inquiry <i class="bi bi-arrow-right ms-2 transition-transform"></i>
                                     </button>
                                 </div>
                             </div>
@@ -337,13 +340,16 @@
                     <a class="nav-link" href="index.html"><i class="bi bi-house-door me-2"></i> Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="properties.html"><i class="bi bi-geo-alt me-2"></i> Properties</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="conference.html"><i class="bi bi-building me-2"></i> Conference Hall</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="rooms.html"><i class="bi bi-door-closed me-2"></i> Rooms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-egg-fried me-2"></i> Restaurants</a>
+                    <a class="nav-link" href="restaurant.html"><i class="bi bi-egg-fried me-2"></i> Restaurants</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="bi bi-people me-2"></i> Our Honorable Clients</a>

@@ -473,3 +473,60 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// =============================================================
+// --- Demo Auth State Management ---
+// =============================================================
+function updateNavbarAuthState() {
+    const isLoggedIn = localStorage.getItem('ngh_logged_in') === 'true';
+    const userName = localStorage.getItem('ngh_user_name') || 'Account';
+    const userInitial = userName.charAt(0).toUpperCase();
+
+    const authBtnWrapper = document.getElementById('auth-btn-wrapper');
+    if (!authBtnWrapper) return;
+
+    if (isLoggedIn) {
+        authBtnWrapper.innerHTML = `
+            <div class="dropdown">
+                <button class="btn btn-primary rounded-pill btn-signup ms-3 d-flex align-items-center gap-2 px-3 py-2 text-white"
+                    type="button" id="accountNavDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border:none;">
+                    <i class="bi bi-person-circle fs-6"></i>
+                    <span class="fw-medium">${userName}</span>
+                    <i class="bi bi-chevron-down ms-1" style="font-size:0.75rem;"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow border-0 py-2 mt-3" aria-labelledby="accountNavDropdown" style="min-width:190px;border-radius:14px;">
+                    <li class="px-3 pt-2 pb-3 border-bottom mb-1">
+                        <div class="d-flex align-items-center">
+                            <div style="width:38px;height:38px;background:linear-gradient(135deg,#f76156,#ff9a8b);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;flex-shrink:0;">${userInitial}</div>
+                            <div class="ms-2">
+                                <div class="fw-bold" style="font-size:0.88rem;">${userName}</div>
+                                <div class="text-muted" style="font-size:0.72rem;">NGH Member</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 px-3" style="font-size:0.88rem;" href="account.html"><i class="bi bi-speedometer2 me-2 text-primary"></i>Dashboard</a></li>
+                    <li><a class="dropdown-item py-2 px-3" style="font-size:0.88rem;" href="account.html?tab=bookings"><i class="bi bi-calendar-check me-2 text-primary"></i>My Bookings</a></li>
+                    <li><a class="dropdown-item py-2 px-3" style="font-size:0.88rem;" href="account.html?tab=favorites"><i class="bi bi-heart me-2 text-danger"></i>Favorites</a></li>
+                    <li><hr class="dropdown-divider my-1"></li>
+                    <li><a class="dropdown-item py-2 px-3 text-danger" style="font-size:0.88rem;" href="#" id="signOutBtn"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</a></li>
+                </ul>
+            </div>`;
+
+        document.getElementById('signOutBtn')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('ngh_logged_in');
+            localStorage.removeItem('ngh_user_name');
+            localStorage.removeItem('ngh_user_email');
+            window.location.href = 'index.html';
+        });
+    } else {
+        authBtnWrapper.innerHTML = `
+            <div class="btn btn-primary rounded-pill btn-signup ms-3 d-flex align-items-center gap-1 p-0 overflow-hidden ps-3 pe-3">
+                <a href="signup.html" class="text-white text-decoration-none px-1 py-2"><i class="bi bi-person-plus me-1"></i> Sign Up</a>
+                <span class="text-white-50">|</span>
+                <a href="signin.html" class="text-white text-decoration-none px-1 py-2"><i class="bi bi-box-arrow-in-right me-1"></i> Log In</a>
+            </div>`;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', updateNavbarAuthState);
