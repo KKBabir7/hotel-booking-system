@@ -345,6 +345,15 @@
   transform: scale(1.1);
 }
 
+.desktop-dropdown .dropdown-item.active {
+  background-color: rgba(247, 97, 86, 0.1) !important;
+  color: var(--primary-brand) !important;
+}
+
+.desktop-dropdown .dropdown-item.active i {
+  color: var(--primary-brand) !important;
+}
+
 .dropdown-submenu {
   position: relative;
 }
