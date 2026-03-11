@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Honorable Clients - Nice Guest House</title>
+  
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Animation (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/root.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/clients.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top py-2 py-md-4 transition-all" id="main-nav">
+    <div class="container-fluid px-md-5">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/img/logo/logo-2.png" alt="Logo" class="navbar-logo">
+      </a>
+
+      <!-- Desktop Horizontal Menu -->
+      <div class="d-none d-lg-flex flex-grow-1 justify-content-end align-items-center desktop-menu">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link"><i class="bi bi-house-door me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="restaurant.html" class="nav-link"><i class="bi bi-egg-fried me-1"></i> Restaurants</a>
+          </li>
+          <li class="nav-item">
+            <a href="conference.html" class="nav-link"><i class="bi bi-building me-1"></i> Conference Hall</a>
+          </li>
+          <li class="nav-item">
+            <a href="rooms.html" class="nav-link"><i class="bi bi-door-closed me-1"></i> Rooms</a>
+          </li>
+        </ul>
+
+        <!-- Auth Button -->
+        <div id="auth-btn-wrapper" class="d-flex align-items-center">
+          <div class="btn btn-primary rounded-pill btn-signup ms-3 d-flex align-items-center gap-1 p-0 overflow-hidden ps-3 pe-3">
+            <a href="signup.html" class="text-white text-decoration-none px-1 py-2"><i class="bi bi-person-plus me-1"></i> Sign Up</a>
+            <span class="text-white-50">|</span>
+            <a href="signin.html" class="text-white text-decoration-none px-1 py-2"><i class="bi bi-box-arrow-in-right me-1"></i> Log In</a>
+          </div>
+        </div>
+
+        <!-- Desktop Dropdown -->
+        <div class="dropdown desktop-dropdown d-none d-lg-block ms-2">
+          <button class="btn btn-menu-toggle animated-burger-btn" type="button" id="desktopMenuDropdown">
+            <div class="burger-icon">
+              <span></span><span></span><span></span>
+            </div>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow border-0 py-3 mt-3 p-0">
+            <li><a class="dropdown-item py-2 px-4" href="index.html#about"><i class="bi bi-info-circle me-2"></i> About Us</a></li>
+            <li><a class="dropdown-item py-2 px-4 active" href="our-honorable-clients.html"><i class="bi bi-people me-2"></i> Honorable Clients</a></li>
+            <li><a class="dropdown-item py-2 px-4" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="clients-hero">
+    <div class="container clients-hero-content">
+      <nav aria-label="breadcrumb" data-aos="fade-up">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Home</a></li>
+          <li class="breadcrumb-item active text-white" aria-current="page">Our Honorable Clients</li>
+        </ol>
+      </nav>
+      <h1 class="clients-hero-title mb-4" data-aos="fade-up" data-aos-delay="100">Our Honorable<br>Clients</h1>
+      <p class="lead opacity-75" data-aos="fade-up" data-aos-delay="200">A legacy of trust and prestige built over 18+ years.</p>
+    </div>
+  </header>
+
+  <!-- Stats Grid -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="stat-card text-center">
+            <div class="stat-icon"><i class="bi bi-calendar-check"></i></div>
+            <div class="stat-number">18+ Years</div>
+            <div class="text-muted fw-medium">of Experience since 2007</div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-card text-center">
+            <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+            <div class="stat-number">Thousands</div>
+            <div class="text-muted fw-medium">of Happy Guests served</div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="stat-card text-center">
+            <div class="stat-icon"><i class="bi bi-globe-americas"></i></div>
+            <div class="stat-number">Global Trust</div>
+            <div class="text-muted fw-medium">by International NGOs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="content-block">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="fw-bold mb-4">🌟 Since 2007: A Journey of Excellence</h2>
+          <p class="text-muted mb-4 lead">Nice Guest House has proudly served thousands of guests, becoming a trusted name in hospitality. Our long-standing reputation reflects our commitment to quality, reliability, and professional service.</p>
+          <div class="service-highlight p-4">
+            <div class="service-highlight-pattern"></div>
+            <h4 class="fw-bold mb-3"><i class="bi bi-rocket-takeoff me-2"></i> Continuously Improving</h4>
+            <p class="mb-0 opacity-90">From upgraded rooms and modern conference halls to multi-cuisine restaurants and rooftop experiences — we’re always enhancing our services to exceed expectations.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="rounded-4 overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1571624436279-b272afd75d4a?auto=format&fit=crop&w=800&q=80" alt="Hospitality" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Section -->
+  <section class="category-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h6 class="text-primary fw-bold text-uppercase ls-wide">Trusted Organizations</h6>
+        <h2 class="fw-bold">Client Categories & Partners</h2>
+        <div class="title-divider mx-auto"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Category 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="client-category-card">
+            <div class="category-icon-box"><i class="bi bi-globe"></i></div>
+            <h4 class="fw-bold">UN Agencies</h4>
+            <p class="text-muted small">Global leaders who trust our security and comfort.</p>
+            <div class="client-list-tags">
+              <span class="client-tag">WFP</span>
+              <span class="client-tag">USAID</span>
+              <span class="client-tag">UN Migration</span>
+            </div>
+          </div>
+        </div>
+        <!-- Category 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="client-category-card">
+            <div class="category-icon-box"><i class="bi bi-shield-check"></i></div>
+            <h4 class="fw-bold">International NGOs</h4>
+            <p class="text-muted small">Collaborating for development and humanitarian aid.</p>
+            <div class="client-list-tags">
+              <span class="client-tag">Save the Children</span>
+              <span class="client-tag">ActionAid</span>
+              <span class="client-tag">Solidaridad</span>
+              <span class="client-tag">JICA</span>
+            </div>
+          </div>
+        </div>
+        <!-- Category 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="client-category-card">
+            <div class="category-icon-box"><i class="bi bi-capsule"></i></div>
+            <h4 class="fw-bold">Pharmaceuticals</h4>
+            <p class="text-muted small">The giants of the medicine industry in Bangladesh.</p>
+            <div class="client-list-tags">
+              <span class="client-tag">Square</span>
+              <span class="client-tag">Renata</span>
+              <span class="client-tag">Radiant</span>
+              <span class="client-tag">Aristopharma</span>
+            </div>
+          </div>
+        </div>
+        <!-- Category 4 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="client-category-card">
+            <div class="category-icon-box"><i class="bi bi-briefcase"></i></div>
+            <h4 class="fw-bold">Industry Leaders</h4>
+            <p class="text-muted small">Corporate partners for high-end business stays.</p>
+            <div class="client-list-tags">
+              <span class="client-tag">Grameenphone</span>
+              <span class="client-tag">Robi</span>
+              <span class="client-tag">Walton</span>
+              <span class="client-tag">Suzuki</span>
+              <span class="client-tag">City Bank</span>
+            </div>
+          </div>
+        </div>
+        <!-- Category 5 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="client-category-card">
+            <div class="category-icon-box"><i class="bi bi-diagram-3"></i></div>
+            <h4 class="fw-bold">Development Partners</h4>
+            <p class="text-muted small">National NGOs and agencies for training and stay.</p>
+            <div class="client-list-tags">
+              <span class="client-tag">DRC</span>
+              <span class="client-tag">RIC</span>
+              <span class="client-tag">PSTC</span>
+              <span class="client-tag">IWM</span>
+              <span class="client-tag">Abul Khair Group</span>
+            </div>
+          </div>
+        </div>
+        <!-- CTA Card -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="client-category-card bg-primary text-white">
+            <div class="category-icon-box bg-white text-primary"><i class="bi bi-chat-heart"></i></div>
+            <h4 class="fw-bold">Join Our Legacy</h4>
+            <p class="text-white-50">Experience the hospitality trusted by global leaders.</p>
+            <a href="contact.html" class="btn btn-light rounded-pill mt-3 px-4 fw-bold">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5 pb-5">
+        <div class="col-lg-4">
+          <a href="#" class="footer-logo">NICE<span>GUESTHOUSE</span></a>
+          <p class="text-white-50 mb-4 pe-lg-4">Committed to serving you with our expert team members. Experience a touch of home and excellence in the heart of Noakhali since 2007.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Navigate</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <li><a href="restaurant.html">Restaurants</a></li>
+            <li><a href="conference.html">Conference</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Useful Info</h5>
+          <ul class="footer-links">
+            <li><a href="our-honorable-clients.html">Honorable Clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h5 class="footer-heading">Stay Connected</h5>
+          <p class="text-white-50 mb-4">Subscribe to our newsletter for latest offers and news.</p>
+          <div class="input-group">
+            <input type="email" class="form-control bg-dark border-0 text-white" placeholder="Enter email">
+            <button class="btn btn-primary px-4" type="button">Join</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        &copy; 2026 Nice Guest House. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+
+</html>
