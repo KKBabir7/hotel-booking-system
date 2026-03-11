@@ -169,32 +169,42 @@
 
 .cuisine-card {
     background: #fff;
-    border-radius: 20px;
-    padding: 40px;
+    border-radius: 24px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: all 0.4s ease;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     height: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
 }
 
 .cuisine-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
 }
 
-.cuisine-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
+.cuisine-img-wrapper {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
 }
 
-.cuisine-card.chinese .cuisine-icon { color: #e44d26; }
-.cuisine-card.indian .cuisine-icon { color: #f06529; }
-.cuisine-card.english .cuisine-icon { color: #2965f1; }
-.cuisine-card.deshi .cuisine-icon { color: #006837; }
+.cuisine-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
 
-.cuisine-card h4 {
-    font-weight: 700;
-    margin-bottom: 15px;
+.cuisine-card:hover .cuisine-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.cuisine-content h4 {
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark-alt);
 }
 
 /* Rooftop Section */
