@@ -215,13 +215,13 @@
 }
 
 .cuisine-card-content {
-    padding: 2.5rem 2rem;
-    text-align: center;
+    padding: 1.5rem 1.5rem 2rem;
+    text-align: left;
 }
 
 .cuisine-card h4 {
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 12px;
     color: var(--text-dark-alt);
     position: relative;
@@ -231,17 +231,50 @@
 .cuisine-card h4::after {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -4px;
+    left: 0;
     width: 30px;
-    height: 2px;
+    height: 3px;
     background: var(--primary-brand);
     transition: width 0.4s ease;
 }
 
 .cuisine-card:hover h4::after {
-    width: 60px;
+    width: 50px;
+}
+
+.cuisine-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.cuisine-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    padding-top: 1.5rem;
+}
+
+.cuisine-menu-list li {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cuisine-card:hover .cuisine-menu-list li {
+    transform: translateX(5px);
+}
+
+.cuisine-menu-list li i {
+    color: var(--primary-brand);
+    font-size: 0.75rem;
 }
 
 /* Rooftop Section */
