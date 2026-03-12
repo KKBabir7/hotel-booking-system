@@ -119,8 +119,9 @@
 /* Partner Showcase Slider */
 .partner-showcase-section {
     padding: 100px 0;
-    background: #fff;
+    background: #fcfcfc;
     border-bottom: 1px solid rgba(0,0,0,0.03);
+    position: relative;
 }
 
 .partner-card {
@@ -182,16 +183,38 @@
     color: var(--primary-brand);
 }
 
-/* Slick Customization */
-.slick-dots {
-    bottom: -50px;
+/* Slick Customization - Arrows */
+.slider-nav {
+    display: flex;
+    gap: 15px;
 }
 
-.slick-dots li button:before {
-    color: var(--primary-brand);
-    font-size: 10px;
+.slider-arrow {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: var(--text-dark-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.slick-dots li.slick-active button:before {
-    color: var(--primary-brand);
+.slider-arrow:hover {
+    background: var(--primary-brand);
+    color: #fff;
+    border-color: var(--primary-brand);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(247, 97, 86, 0.2);
+}
+
+.title-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--primary-brand);
+    border-radius: 2px;
 }
