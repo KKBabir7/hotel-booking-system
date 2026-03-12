@@ -47,8 +47,14 @@
 
 /* Category Grid */
 .category-section {
-    padding: 100px 0;
+    padding-bottom: 80px;
     background: #fff;
+}
+
+.clients-grid-overlap {
+    margin-top: -100px;
+    position: relative;
+    z-index: 10;
 }
 
 .client-category-card {
@@ -115,6 +121,13 @@
     transform: translateY(-2px);
 }
 
+/* Partner Grid (Static) */
+.partner-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 /* Partner Showcase Slider */
 .partner-showcase-section {
     padding: 100px 0;
@@ -130,17 +143,18 @@
 }
 
 .partner-logo-box {
-    background: #fff;
+    background: #fbfbfb;
     border: 1px solid rgba(0,0,0,0.05);
-    padding: 40px 20px;
     border-radius: 20px;
+    padding: 30px 20px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-    height: 180px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 100%;
 }
 
 .partner-logo-box img {
@@ -182,34 +196,7 @@
     color: var(--primary-brand);
 }
 
-/* Slick Customization - Arrows */
-.slider-nav {
-    display: flex;
-    gap: 15px;
-}
 
-.slider-arrow {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #fff;
-    border: 1px solid rgba(0,0,0,0.1);
-    color: var(--text-dark-alt);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.slider-arrow:hover {
-    background: var(--primary-brand);
-    color: #fff;
-    border-color: var(--primary-brand);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(247, 97, 86, 0.2);
-}
 
 
 @media (max-width: 768px) {

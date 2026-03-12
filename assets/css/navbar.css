@@ -251,7 +251,10 @@
 .btn-signup:hover::after {
   left: 140%;
 }
-
+#auth-btn-wrapper .dropdown-item.active, .dropdown-item:active{
+ background: none !important;
+ color: #212529;;
+}
 /* ==================== Desktop Dropdown Styles & Animation ==================== */
 .desktop-dropdown {
   position: relative;
@@ -431,4 +434,51 @@
   .burger-icon
   span {
   background-color: var(--primary-brand) !important;
+}
+
+/* ==================== Mobile Auth Dashboard Button ==================== */
+.mobile-dashboard-btn {
+  background: linear-gradient(135deg, #f76156, #ff9a8b);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 14px rgba(247, 97, 86, 0.35);
+  transition: all 0.3s ease;
+}
+
+.mobile-dashboard-btn:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(247, 97, 86, 0.45);
+}
+
+/* ==================== Mobile Book Now Button (beside hamburger) ==================== */
+.btn-book-now-mobile {
+  background: linear-gradient(135deg, #f76156, #ff9a8b);
+  color: #fff !important;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 14px rgba(247, 97, 86, 0.35);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-book-now-mobile:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(247, 97, 86, 0.45);
 }

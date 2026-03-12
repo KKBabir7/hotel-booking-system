@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .account-section {
-    padding-top: 110px;
+    padding-top: 140px;
     padding-bottom: 80px;
     background-color: #f4f6f8;
     min-height: 100vh;
@@ -166,37 +166,65 @@
 .fav-item {
     display: flex;
     align-items: center;
-    padding: 16px 0;
-    border-bottom: 1px solid #f5f5f5;
-    transition: all 0.2s ease;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    background: #fff;
+    margin-bottom: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fav-item:last-child { border-bottom: none; }
+.fav-item:last-child { margin-bottom: 0; }
 
-.fav-item:hover { transform: translateX(4px); }
+.fav-item:hover {
+    border-color: #f76156;
+    box-shadow: 0 10px 25px rgba(247, 97, 86, 0.08);
+    transform: translateY(-2px);
+}
 
 .fav-img {
-    width: 64px;
-    height: 64px;
-    border-radius: 14px;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
     object-fit: cover;
-    margin-right: 16px;
+    margin-right: 20px;
     flex-shrink: 0;
 }
 
-.btn-remove-fav {
-    color: #ccc;
-    background: transparent;
-    border: none;
-    font-size: 1rem;
+.fav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 15px;
+}
+
+.btn-view-fav {
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
     transition: all 0.2s ease;
-    padding: 6px;
-    border-radius: 8px;
+}
+
+.btn-remove-fav {
+    width: 36px;
+    height: 36px;
+    color: #888;
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border-radius: 50%;
 }
 
 .btn-remove-fav:hover {
-    color: #ef4444;
-    background: #fef2f2;
+    color: #fff;
+    background: #ef4444;
+    border-color: #ef4444;
+    transform: rotate(15deg);
 }
 
 /* Save Changes Button */

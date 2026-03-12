@@ -17,6 +17,9 @@
     .offers-slider .slick-prev, .available-offers-slider .slick-prev{
         left: 16px;
     } */
+     .hero-search-container{
+        margin-top: 50px;
+     }
     .offers-slider .slick-prev {
         left: 5px;
     }
@@ -41,21 +44,24 @@
         bottom: -10%;
         right: 0;
     }
+    .results-header {
+    margin-top: 20px;
+}
 }
 
 /* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
     .hero-section {
-        height: auto;
+        /* height: auto; */
         padding-bottom: 25px;
     }
 
     .hero-content {
-        margin-top: 100px !important;
+        margin-top: 45px !important;
     }
 
     .hero-btns {
-        display: none !important;
+        /* display: none !important; */
     }
 
     .hero-text-slider {
@@ -135,6 +141,80 @@
 
     .map-section iframe {
         height: 350px;
+    }
+
+    .hero-search-wrapper {
+        display: none;
+    }
+
+    body.search-modal-open {
+        overflow: hidden;
+    }
+
+    body.search-modal-open .hero-search-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--ngh-bg-light, #f8f9fa);
+        z-index: 1050;
+        padding: 4rem 1rem 1rem 1rem;
+        overflow-y: auto;
+        display: block;
+    }
+
+    body.search-modal-open .hero-search-wrapper {
+        display: block;
+        position: static;
+        width: 100%;
+        margin-top: 0 !important;
+    }
+
+    body.search-modal-open .hero-search-container {
+        flex-direction: column;
+        border-radius: 1.5rem !important;
+        background: #fff;
+        padding: 1.5rem 1rem !important;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+    }
+
+    body.search-modal-open .search-item {
+        width: 100%;
+        text-align: left !important;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #eee;
+    }
+    
+    body.search-modal-open .search-item:last-of-type {
+        border-bottom: none;
+    }
+
+    body.search-modal-open .search-divider {
+        display: none;
+    }
+
+    body.search-modal-open .search-submit-btn {
+        width: 100%;
+        border-radius: 50px !important;
+        margin-top: 1rem;
+    }
+
+    body.search-modal-open .mobile-search-close {
+        display: block !important;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        z-index: 1051;
+        width: 32px;
+        height: 32px;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    body.search-modal-open .mobile-search-close.d-none {
+        display: block !important;
     }
 
     /* Refined Button Responsiveness */

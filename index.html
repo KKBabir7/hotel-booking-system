@@ -143,7 +143,7 @@
       <div class="hero-content mt-5 text-white">
         <div class="hero-text-slider">
           <div class="hero-slide">
-            <h1 class="hero-title fw-bold mb-4">
+            <h1 class="hero-title fw-bold mb-4 mt-3 mt-sm-5">
               <span class="d-block animate-item-1">Welcome to</span>
               <span class="d-block animate-item-2">NICE GUEST HOUSE</span>
             </h1>
@@ -151,7 +151,7 @@
               you will find at NGH.</p>
           </div>
           <div class="hero-slide">
-            <h1 class="hero-title fw-bold mb-4">
+            <h1 class="hero-title fw-bold mb-4 mt-3 mt-sm-5">
               <span class="d-block animate-item-1">The Warmth of</span>
               <span class="d-block animate-item-2">Our Hospitality</span>
             </h1>
@@ -159,7 +159,7 @@
               surroundings and friendly service.</p>
           </div>
           <div class="hero-slide">
-            <h1 class="hero-title fw-bold mb-4">
+            <h1 class="hero-title fw-bold mb-4 mt-3 mt-sm-5">
               <span class="d-block animate-item-1">Relaxed &</span>
               <span class="d-block animate-item-2">Rejuvenated</span>
             </h1>
@@ -167,25 +167,31 @@
               ensure you leave with a refreshed spirit.</p>
           </div>
         </div>
-        <div class="hero-btns mt-4 d-flex gap-3 justify-content-center">
+        <div class="hero-btns mt-1 d-flex gap-3 justify-content-center">
           <a href="#booking" class="btn btn-primary btn-lg rounded-pill px-5 btn-animated-text">
             <span class="btn-text-wrapper">
               <span class="btn-text">Book Now</span>
               <span class="btn-text">Book Now</span>
             </span>
           </a>
-          <a href="#rooms" class="btn btn-outline-light btn-lg rounded-pill px-5 btn-animated-text">
+          <!-- <a href="#rooms" class="btn btn-outline-light btn-lg rounded-pill px-5 btn-animated-text">
             <span class="btn-text-wrapper">
               <span class="btn-text">View Rooms</span>
               <span class="btn-text">View Rooms</span>
             </span>
-          </a>
+          </a> -->
+          <!-- Mobile Search Icon Trigger -->
+          <button class="btn btn-outline-light rounded-circle btn-mobile-search d-block d-md-none" id="mobileSearchTrigger" style="width: 50px; height: 50px;">
+            <i class="bi bi-search"></i>
+          </button>
         </div>
 
         <!-- Pill-shaped Search Bar -->
         <div class="hero-search-wrapper mx-auto mt-4 position-relative">
-          <div
-            class="hero-search-container d-flex align-items-center bg-white shadow-lg rounded-pill p-1 position-relative">
+          <div class="hero-search-overlay">
+            <div class="hero-search-container d-flex align-items-center bg-white shadow-lg rounded-pill p-1 position-relative">
+              <!-- Mobile Close Button -->
+              <button class="btn btn-close d-none mobile-search-close" id="mobileSearchClose" aria-label="Close" style="position: absolute; right: 20px; top: 20px; z-index: 1051;"></button>
             <!-- Where Section -->
             <div class="search-item flex-grow-1 text-start px-4 py-2" id="search-where">
               <div class="search-label fw-bold">Select Property</div>
@@ -219,7 +225,7 @@
 
             <!-- When Section -->
             <div class="search-item flex-grow-1 text-start px-4 py-2" id="search-when">
-              <div class="search-label fw-bold">Check-in / Check-out</div>
+              <div class="search-label fw-bold">Stay Period</div>
               <div class="search-subtext text-muted small" id="date-display">Add dates</div>
               <input type="text" id="date-range-picker" style="display: none;">
               <button class="search-clear-btn d-none" id="clear-when">
@@ -1344,21 +1350,21 @@
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header border-bottom">
       <div class="offcanvas-title" id="offcanvasMenuLabel">
-        <img src="assets/img/logo/logo2.png" alt="Logo" class="offcanvas-logo">
+        <img src="assets/img/logo/logo-2.png" alt="Logo" class="offcanvas-logo">
       </div>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body p-0">
-      <div class="p-3 border-bottom d-lg-none">
+      <div class="p-3 border-bottom" id="mobile-auth-section">
         <div class="row g-2">
           <div class="col-6">
-            <a href="#" class="btn btn-primary rounded-pill w-100 btn-sm py-2">
+            <a href="signup.html" class="btn btn-primary rounded-pill w-100 btn-sm py-2">
               <i class="bi bi-person-plus me-1"></i> Sign Up
             </a>
           </div>
           <div class="col-6">
-            <a href="#" class="btn btn-primary rounded-pill w-100 btn-sm py-2">
-              <i class="bi bi-calendar-check me-1"></i> Book Now
+            <a href="signin.html" class="btn btn-outline-secondary rounded-pill w-100 btn-sm py-2">
+              <i class="bi bi-box-arrow-in-right me-1"></i> Log In
             </a>
           </div>
         </div>
@@ -1385,14 +1391,15 @@
           <a class="nav-link" href="our-clients.html"><i class="bi bi-people me-2"></i> Our Honorable Clients</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-images me-2"></i> Gallery</a>
+          <a class="nav-link" href="gallery.html"><i class="bi bi-images me-2"></i> Gallery</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-info-circle me-2"></i> About Us</a>
+          <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-2"></i> About Us</a>
         </li>
+        
         <li class="nav-item">
           <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
             href="#mobileLangMenu" role="button" aria-expanded="false" aria-controls="mobileLangMenu">
@@ -1418,6 +1425,9 @@
               </li>
             </ul>
           </div>
+        </li>
+        <li class="nav-item" id="mobile-signout-item" style="display:none;">
+          <a class="nav-link text-danger fw-bold" id="mobileSignOut" href="#"><i class="bi bi-box-arrow-right me-2"></i> Sign Out</a>
         </li>
       </ul>
     </div>

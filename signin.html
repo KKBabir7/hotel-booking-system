@@ -31,7 +31,7 @@
   <nav class="navbar navbar-expand-lg fixed-top py-2 py-md-4 transition-all sticky-nav-dark" id="main-nav">
     <div class="container-fluid px-md-5">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/img/logo/logo2.png" alt="Logo" class="navbar-logo">
+        <img src="assets/img/logo/logo-2.png" alt="Logo" class="navbar-logo">
       </a>
 
       <!-- Desktop Horizontal Menu -->
@@ -92,7 +92,8 @@
         </div>
       </div>
 
-      <div class="d-flex align-items-center d-lg-none ms-auto">
+      <div class="d-flex align-items-center d-lg-none ms-auto gap-2">
+        <a href="rooms.html" class="btn-book-now-mobile"><i class="bi bi-door-open"></i> Book Now</a>
         <button class="btn btn-menu-toggle animated-burger-btn" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
           <div class="burger-icon">
@@ -162,11 +163,25 @@
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header border-bottom">
       <div class="offcanvas-title" id="offcanvasMenuLabel">
-        <img src="assets/img/logo/logo2.png" alt="Logo" class="offcanvas-logo" style="height: 40px;">
+        <img src="assets/img/logo/logo-2.png" alt="Logo" class="offcanvas-logo" style="height: 40px;">
       </div>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body p-0">
+      <div class="p-3 border-bottom" id="mobile-auth-section">
+        <div class="row g-2">
+          <div class="col-6">
+            <a href="signup.html" class="btn btn-primary rounded-pill w-100 btn-sm py-2">
+              <i class="bi bi-person-plus me-1"></i> Sign Up
+            </a>
+          </div>
+          <div class="col-6">
+            <a href="signin.html" class="btn btn-outline-secondary rounded-pill w-100 btn-sm py-2">
+              <i class="bi bi-box-arrow-in-right me-1"></i> Log In
+            </a>
+          </div>
+        </div>
+      </div>
       <ul class="nav flex-column menu-list">
         <li class="nav-item">
           <a class="nav-link" href="index.html"><i class="bi bi-house-door me-2"></i> Home</a>
@@ -217,6 +232,9 @@
               </li>
             </ul>
           </div>
+        </li>
+        <li class="nav-item" id="mobile-signout-item" style="display:none;">
+          <a class="nav-link text-danger fw-bold" id="mobileSignOut" href="#"><i class="bi bi-box-arrow-right me-2"></i> Sign Out</a>
         </li>
       </ul>
     </div>

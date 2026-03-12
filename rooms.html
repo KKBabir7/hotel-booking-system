@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="assets/css/navbar.css" />
   <link rel="stylesheet" href="assets/css/footer.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/resle.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
 
   <style>
@@ -49,6 +50,17 @@
       color: white;
       text-align: center;
     }
+    .hero-search-container{
+      margin-top: -60px;
+    }
+    @media (max-width: 991.98px) {
+    .hero-search-wrapper
+ {
+        margin-top: 15px !important;
+        width: 100%;
+        padding: 0 0px;
+    }
+}
   </style>
 </head>
 
@@ -58,7 +70,7 @@
   <nav class="navbar navbar-expand-lg fixed-top py-2 py-md-4 transition-all" id="main-nav">
     <div class="container-fluid px-md-5">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/img/logo/logo2.png" alt="Logo" class="navbar-logo">
+        <img src="assets/img/logo/logo-2.png" alt="Logo" class="navbar-logo">
       </a>
 
       <!-- Desktop Horizontal Menu -->
@@ -126,7 +138,8 @@
         </div>
       </div>
 
-      <div class="d-flex align-items-center d-lg-none ms-auto">
+      <div class="d-flex align-items-center d-lg-none ms-auto gap-2">
+        <a href="rooms.html" class="btn-book-now-mobile"><i class="bi bi-door-open"></i> Book Now</a>
         <button class="btn btn-menu-toggle animated-burger-btn" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
           <div class="burger-icon">
@@ -143,20 +156,27 @@
   <section class="hero-rooms">
     <div class="container">
       <h1 class="display-3 fw-bold mb-3">Explore Our Rooms</h1>
-      <nav aria-label="breadcrumb">
+      <!-- <nav aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-center">
           <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
           <li class="breadcrumb-item active text-white" aria-current="page">Rooms</li>
         </ol>
-      </nav>
+      </nav> -->
     </div>
   </section>
 
   <!-- Availability Bar (Home Style) -->
   <section class="hero-search-section">
-    <div class="container">
+    <div class="container relative-trigger-container">
+      <!-- Mobile Search Icon Trigger -->
+      <button class="btn btn-primary rounded-circle btn-mobile-search shadow d-flex d-md-none position-absolute" id="mobileSearchTriggerRooms" style="width: 50px; height: 50px; top: -25px; right: 15px; z-index: 10; align-items: center; justify-content: center;">
+        <i class="bi bi-search text-white"></i>
+      </button>
       <div class="hero-search-wrapper mx-auto mt-4 position-relative ">
-      <div class="hero-search-container d-flex align-items-center bg-white shadow-lg rounded-pill p-1 position-relative">
+        <div class="hero-search-overlay">
+          <div class="hero-search-container d-flex align-items-center bg-white shadow-lg rounded-pill p-1 position-relative">
+            <!-- Mobile Close Button -->
+            <button class="btn btn-close d-none mobile-search-close" id="mobileSearchCloseRooms" aria-label="Close" style="position: absolute; right: 20px; top: 20px; z-index: 1051;"></button>
         <!-- Where Section -->
         <div class="search-item flex-grow-1 text-start px-4 py-2" id="search-where">
           <div class="search-label fw-bold">Select Property</div>
@@ -190,7 +210,7 @@
 
         <!-- When Section -->
         <div class="search-item flex-grow-1 text-start px-4 py-2" id="search-when">
-          <div class="search-label fw-bold">Check-in</div>
+          <div class="search-label fw-bold">Stay Period</div>
           <div class="search-subtext text-muted small" id="date-display">Add dates</div>
           <input type="text" id="date-range-picker" style="display: none;">
           <button class="search-clear-btn d-none" id="clear-when">
@@ -1458,21 +1478,29 @@
   <!-- Off-canvas Mobile Menu -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header border-bottom">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/img/logo/logo2.png" alt="Logo" class="offcanvas-logo">
-      </a>
+      <div class="offcanvas-title" id="offcanvasMenuLabel">
+        <img src="assets/img/logo/logo-2.png" alt="Logo" class="offcanvas-logo">
+      </div>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body p-0">
+      <div class="p-3 border-bottom" id="mobile-auth-section">
+        <div class="row g-2">
+          <div class="col-6">
+            <a href="signup.html" class="btn btn-primary rounded-pill w-100 btn-sm py-2">
+              <i class="bi bi-person-plus me-1"></i> Sign Up
+            </a>
+          </div>
+          <div class="col-6">
+            <a href="signin.html" class="btn btn-outline-secondary rounded-pill w-100 btn-sm py-2">
+              <i class="bi bi-box-arrow-in-right me-1"></i> Log In
+            </a>
+          </div>
+        </div>
+      </div>
       <ul class="nav flex-column menu-list">
         <li class="nav-item">
           <a class="nav-link" href="index.html"><i class="bi bi-house-door me-2"></i> Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-2"></i> About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="restaurant.html"><i class="bi bi-egg-fried me-2"></i> Restaurants</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="conference.html"><i class="bi bi-building me-2"></i> Conference Hall</a>
@@ -1481,17 +1509,38 @@
           <a class="nav-link active" href="rooms.html"><i class="bi bi-door-closed me-2"></i> Rooms</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact Us</a>
+          <a class="nav-link" href="restaurant.html"><i class="bi bi-egg-fried me-2"></i> Restaurants</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="our-clients.html"><i class="bi bi-people me-2"></i> Our Honorable Clients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html"><i class="bi bi-images me-2"></i> Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-2"></i> About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+            href="#mobileLangMenu" role="button" aria-expanded="false" aria-controls="mobileLangMenu">
+            <span><i class="bi bi-translate me-2"></i> Language</span>
+            <i class="bi bi-chevron-down small"></i>
+          </a>
+          <div class="collapse" id="mobileLangMenu">
+            <ul class="nav flex-column bg-light ps-4">
+              <li class="nav-item"><a class="nav-link py-2" href="#"><img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English</a></li>
+              <li class="nav-item"><a class="nav-link py-2" href="#"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali</a></li>
+              <li class="nav-item"><a class="nav-link py-2" href="#"><img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" id="mobile-signout-item" style="display:none;">
+          <a class="nav-link text-danger fw-bold" id="mobileSignOut" href="#"><i class="bi bi-box-arrow-right me-2"></i> Sign Out</a>
         </li>
       </ul>
-      <div class="p-3 mt-4 border-top">
-        <a href="#" class="btn btn-primary w-100 rounded-pill mb-3">Sign Up</a>
-        <div class="dropdown">
-          <button class="btn btn-outline-secondary w-100 dropdown-toggle d-flex align-items-center justify-content-center" type="button" id="mobileLang">
-            <img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> Language
-          </button>
-        </div>
-      </div>
     </div>
   </div>
 

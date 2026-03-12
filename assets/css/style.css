@@ -127,7 +127,7 @@
 }
 
 .hero-text-slider {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     cursor: grab;
 }
 
@@ -206,11 +206,12 @@
     max-width: 1170px;
     /* Increased width to match hero content */
     width: 100%;
-    margin-top: -65px !important;
+    /* margin-top: -65px !important; */
     /* 50% overlap with hero section */
 }
 
 .hero-search-container {
+    /* margin-top: 60px; */
     padding: 12px 12px 12px 20px !important;
     background-color: var(--bg-white);
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -787,6 +788,7 @@
 
 /* Image 360 Button */
 .image-360-btn {
+    display: none !important;
     position: absolute;
     top: 55px; /* Positioned below wishlist button */
     right: 12px;

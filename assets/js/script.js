@@ -530,3 +530,92 @@ function updateNavbarAuthState() {
 }
 
 document.addEventListener('DOMContentLoaded', updateNavbarAuthState);
+
+// =========================================================
+// Mobile Off-Canvas Auth Section (mirrors desktop)
+// =========================================================
+function updateMobileAuthSection() {
+    const isLoggedIn = localStorage.getItem('ngh_logged_in') === 'true';
+    const userName = localStorage.getItem('ngh_user_name') || 'Account';
+    const userInitial = userName.charAt(0).toUpperCase();
+    const mobileAuthSection = document.getElementById('mobile-auth-section');
+    const mobileSignOutItem = document.getElementById('mobile-signout-item');
+
+    if (!mobileAuthSection) return;
+
+    if (isLoggedIn) {
+        mobileAuthSection.innerHTML = `
+            <div class="d-flex align-items-center gap-3 py-1">
+                <div style="width:42px;height:42px;background:linear-gradient(135deg,#f76156,#ff9a8b);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;flex-shrink:0;">${userInitial}</div>
+                <div>
+                    <div class="fw-bold" style="font-size:0.9rem;">${userName}</div>
+                    <div class="text-muted" style="font-size:0.75rem;">NGH Member</div>
+                </div>
+                <a href="account.html" class="mobile-dashboard-btn ms-auto">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+            </div>`;
+        if (mobileSignOutItem) mobileSignOutItem.style.display = '';
+        const mobileSignOutBtn = document.getElementById('mobileSignOut');
+        if (mobileSignOutBtn) {
+            mobileSignOutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.removeItem('ngh_logged_in');
+                localStorage.removeItem('ngh_user_name');
+                localStorage.removeItem('ngh_user_email');
+                window.location.href = 'index.html';
+            });
+        }
+    } else {
+        mobileAuthSection.innerHTML = `
+            <div class="row g-2">
+                <div class="col-6">
+                    <a href="signup.html" class="btn btn-primary rounded-pill w-100 btn-sm py-2">
+                        <i class="bi bi-person-plus me-1"></i> Sign Up
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="signin.html" class="btn btn-outline-secondary rounded-pill w-100 btn-sm py-2">
+                        <i class="bi bi-box-arrow-in-right me-1"></i> Log In
+                    </a>
+                </div>
+            </div>`;
+        if (mobileSignOutItem) mobileSignOutItem.style.display = 'none';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', updateMobileAuthSection);
+
+// =========================================================
+// Mobile Search Modal Logic
+// =========================================================
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileSearchTrigger = document.getElementById('mobileSearchTrigger');
+    const mobileSearchTriggerRooms = document.getElementById('mobileSearchTriggerRooms');
+    const mobileSearchClose = document.getElementById('mobileSearchClose');
+    const mobileSearchCloseRooms = document.getElementById('mobileSearchCloseRooms');
+
+    function openSearchModal() {
+        document.body.classList.add('search-modal-open');
+    }
+
+    function closeSearchModal() {
+        document.body.classList.remove('search-modal-open');
+    }
+
+    if (mobileSearchTrigger) {
+        mobileSearchTrigger.addEventListener('click', openSearchModal);
+    }
+    
+    if (mobileSearchTriggerRooms) {
+        mobileSearchTriggerRooms.addEventListener('click', openSearchModal);
+    }
+
+    if (mobileSearchClose) {
+        mobileSearchClose.addEventListener('click', closeSearchModal);
+    }
+    
+    if (mobileSearchCloseRooms) {
+        mobileSearchCloseRooms.addEventListener('click', closeSearchModal);
+    }
+});
