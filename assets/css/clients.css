@@ -36,14 +36,13 @@
 }
 
 .clients-hero-tagline {
-    font-size: 1.1rem;
-    font-weight: 400;
+    font-size: 1.25rem;
+    font-weight: 300;
     opacity: 0.9;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     display: block;
     margin-bottom: 15px;
-    color: var(--primary-brand);
 }
 
 /* Category Grid */
