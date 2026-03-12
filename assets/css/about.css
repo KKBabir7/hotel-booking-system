@@ -33,6 +33,16 @@
     text-transform: uppercase;
     letter-spacing: -1px;
     text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-top: 10px;
+}
+
+.about-hero-tagline {
+    font-size: 1.25rem;
+    font-weight: 300;
+    opacity: 0.9;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
 }
 
 /* Info Cards */
