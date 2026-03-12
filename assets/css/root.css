@@ -163,3 +163,16 @@ h6,
     opacity: 1;
     color: white;
 }
+
+/* ==================== Global Utilities ==================== */
+.title-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--primary-brand);
+    border-radius: 2px;
+    margin-top: 1rem;
+}
+
+.ls-2 {
+    letter-spacing: 2px;
+}
