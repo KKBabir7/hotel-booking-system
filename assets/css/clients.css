@@ -1,115 +1,119 @@
 /* Honorable Clients Page Specific Styles */
 
 .clients-hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: white;
+    overflow: hidden;
 }
 
-.clients-hero-content .breadcrumb {
-    justify-content: center;
+.clients-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    z-index: 1;
+}
+
+.clients-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    max-width: 900px;
 }
 
 .clients-hero-title {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.clients-hero-tagline {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Stats Section */
-.stats-section {
-    margin-top: -80px;
-    position: relative;
-    z-index: 10;
-}
-
-.stat-card {
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    transition: all 0.4s ease;
-    border-bottom: 4px solid transparent;
-}
-
-.stat-card:hover {
-    transform: translateY(-10px);
-    border-bottom-color: var(--primary-color);
-}
-
-.stat-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-}
-
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--dark-color);
-    margin-bottom: 0.5rem;
+    display: block;
+    margin-bottom: 15px;
+    color: var(--primary-brand);
 }
 
 /* Category Grid */
 .category-section {
-    padding: 80px 0;
-    background: #f8f9fa;
+    padding: 100px 0;
+    background: #fff;
 }
 
 .client-category-card {
     background: white;
-    padding: 2.5rem;
+    padding: 3rem 2.5rem;
     border-radius: 24px;
     height: 100%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
 }
 
 .client-category-card:hover {
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--primary-brand);
 }
 
 .category-icon-box {
-    width: 70px;
-    height: 70px;
-    background: rgba(var(--primary-rgb), 0.1);
-    color: var(--primary-color);
-    border-radius: 18px;
+    width: 65px;
+    height: 65px;
+    background: rgba(var(--primary-rgb), 0.08);
+    color: var(--primary-brand);
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.client-category-card:hover .category-icon-box {
+    background: var(--primary-brand);
+    color: #fff;
+    transform: rotate(10deg);
 }
 
 .client-list-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 1.5rem;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 1.5rem;
 }
 
 .client-tag {
-    background: #f1f3f5;
-    padding: 6px 15px;
+    background: #f8f9fa;
+    padding: 6px 14px;
     border-radius: 50px;
-    font-size: 0.85rem;
-    color: #495057;
-    font-weight: 500;
-    transition: all 0.2s;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid transparent;
 }
 
 .client-tag:hover {
-    background: var(--primary-color);
-    color: white;
+    background: #fff;
+    border-color: var(--primary-brand);
+    color: var(--primary-brand);
+    transform: translateY(-2px);
 }
 
 /* Content Blocks */
