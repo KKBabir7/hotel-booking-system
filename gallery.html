@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="assets/css/navbar.css">
   <link rel="stylesheet" href="assets/css/gallery.css">
   <link rel="stylesheet" href="assets/css/footer.css">
+
+  <!-- PhotoSwipe CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe.min.css">
 </head>
 
 <body>
@@ -61,6 +64,17 @@
             <li><a class="dropdown-item py-2 px-4" href="our-clients.html"><i class="bi bi-people me-2"></i> Honorable Clients</a></li>
             <li><a class="dropdown-item py-2 px-4" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact</a></li>
             <li><a class="dropdown-item py-2 px-4 active" href="gallery.html"><i class="bi bi-images me-2"></i> Gallery</a></li>
+            <li><hr class="dropdown-divider mx-3"></li>
+            <li class="dropdown-submenu px-3">
+              <a class="dropdown-item dropdown-toggle py-2 px-2 d-flex align-items-center justify-content-between" href="#" id="languageMenu">
+                <span><i class="bi bi-translate me-2"></i> Language</span>
+              </a>
+              <ul class="dropdown-menu shadow border-0 py-2 p-0">
+                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English</a></li>
+                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali</a></li>
+                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -93,50 +107,201 @@
     </div>
   </section>
 
-  <!-- Story & Grid Section -->
+  <!-- Story Section -->
   <section class="gallery-story-section">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <!-- Text Column -->
-        <div class="col-lg-5" data-aos="fade-right">
-          <div class="story-content">
-            <h2 class="display-6 fw-bold">NGH is the best guest house of Noakhali.</h2>
-            <p class="text-muted">
-              The warmth of our hospitality, combined with good food, comfortable surroundings, and friendly, helpful service, along with the convenience of high-speed internet access, will ensure that you leave with memories of a stay that has both relaxed and rejuvenated your spirit.
-            </p>
-            <div class="mt-5">
-              <a href="contact.html" class="btn btn-primary rounded-pill px-5 py-3 fw-bold">Book Your Stay</a>
-            </div>
-          </div>
+    <div class="container text-center">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-8">
+          <h2 class="display-6 fw-bold">NGH is the best guest house of Noakhali.</h2>
+          <p class="text-muted mb-4">
+            The warmth of our hospitality, combined with good food, comfortable surroundings, and friendly, helpful service, along with the convenience of high-speed internet access, will ensure that you leave with memories of a stay that has both relaxed and rejuvenated your spirit.
+          </p>
+          <div class="title-divider mx-auto"></div>
         </div>
-        <!-- Grid Column -->
-        <div class="col-lg-7" data-aos="fade-left">
-          <div class="image-grid-premium">
-            <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Room">
-              <div class="grid-overlay"><i class="bi bi-plus-lg"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Elite Gallery Showcase -->
+  <section class="gallery-showcase-section py-5">
+    <div class="container">
+      <!-- Filter Buttons -->
+      <div class="gallery-filters mb-5 p-2" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All Showcase</button>
+        <button class="filter-btn" data-filter="rooms">Our Rooms</button>
+        <button class="filter-btn" data-filter="dining">Dining & Food</button>
+        <button class="filter-btn" data-filter="events">Events & Halls</button>
+        <button class="filter-btn" data-filter="amenities">Amenities</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div id="elite-gallery" class="gallery-grid-v2" data-aos="fade-up">
+        <!-- Item 1: Room -->
+        <div class="gallery-item-wrapper" data-category="rooms">
+          <a href="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Executive Suite">
+              <div class="card-content">
+                <span class="category-tag">Rooms</span>
+                <h4 class="card-title">Executive Suite</h4>
+              </div>
             </div>
-            <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Restaurant">
-              <div class="grid-overlay"><i class="bi bi-plus-lg"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 2: Dining -->
+        <div class="gallery-item-wrapper" data-category="dining">
+          <a href="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Fine Dining">
+              <div class="card-content">
+                <span class="category-tag">Dining</span>
+                <h4 class="card-title">The Royal Platter</h4>
+              </div>
             </div>
-            <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80" alt="Exterior">
-              <div class="grid-overlay"><i class="bi bi-plus-lg"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 3: Events -->
+        <div class="gallery-item-wrapper" data-category="events">
+          <a href="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Grand Hall">
+              <div class="card-content">
+                <span class="category-tag">Events</span>
+                <h4 class="card-title">NGH Grand Ballroom</h4>
+              </div>
             </div>
-            <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Lobby">
-              <div class="grid-overlay"><i class="bi bi-plus-lg"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 4: Amenities -->
+        <div class="gallery-item-wrapper" data-category="amenities">
+          <a href="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80" alt="Rooftop Pool">
+              <div class="card-content">
+                <span class="category-tag">Amenities</span>
+                <h4 class="card-title">Serenity Pool</h4>
+              </div>
             </div>
-            <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Room 2">
-              <div class="grid-overlay"><i class="bi bi-plus-lg"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 5: Room -->
+        <div class="gallery-item-wrapper" data-category="rooms">
+          <a href="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Deluxe Room">
+              <div class="card-content">
+                <span class="category-tag">Rooms</span>
+                <h4 class="card-title">Deluxe Experience</h4>
+              </div>
             </div>
-            <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80" alt="Pool">
-              <div class="grid-overlay"><i class="bi bi-plus-lg"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 6: Dining -->
+        <div class="gallery-item-wrapper" data-category="dining">
+          <a href="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Breakfast">
+              <div class="card-content">
+                <span class="category-tag">Dining</span>
+                <h4 class="card-title">Morning Feast</h4>
+              </div>
             </div>
-          </div>
+          </a>
+        </div>
+
+        <!-- Item 7: Events -->
+        <div class="gallery-item-wrapper" data-category="events">
+          <a href="https://images.unsplash.com/photo-1505373633519-c2900720ded4?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1505373633519-c2900720ded4?auto=format&fit=crop&w=800&q=80" alt="Meeting Room">
+              <div class="card-content">
+                <span class="category-tag">Events</span>
+                <h4 class="card-title">Business Conference</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item 8: Amenities -->
+        <div class="gallery-item-wrapper" data-category="amenities">
+          <a href="https://images.unsplash.com/photo-1540555700478-4be289aefcf1?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289aefcf1?auto=format&fit=crop&w=800&q=80" alt="Spa">
+              <div class="card-content">
+                <span class="category-tag">Amenities</span>
+                <h4 class="card-title">Wellness Spa</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item 9: Rooms -->
+        <div class="gallery-item-wrapper" data-category="rooms">
+          <a href="https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&w=800&q=80" alt="Double Room">
+              <div class="card-content">
+                <span class="category-tag">Rooms</span>
+                <h4 class="card-title">Comfort Double</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item 10: Dining -->
+        <div class="gallery-item-wrapper" data-category="dining">
+          <a href="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Local Food">
+              <div class="card-content">
+                <span class="category-tag">Dining</span>
+                <h4 class="card-title">Traditional Flavors</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item 11: Events -->
+        <div class="gallery-item-wrapper" data-category="events">
+          <a href="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Wedding">
+              <div class="card-content">
+                <span class="category-tag">Events</span>
+                <h4 class="card-title">Celebration Moments</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item 12: Amenities -->
+        <div class="gallery-item-wrapper" data-category="amenities">
+          <a href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80" 
+             data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym">
+              <div class="card-content">
+                <span class="category-tag">Amenities</span>
+                <h4 class="card-title">Fitness Center</h4>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -145,12 +310,13 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="row g-5 pb-5">
+      <div class="row g-5 pb-5 pt-5">
         <!-- Branding column -->
         <div class="col-lg-4">
-          <a href="index.html" class="footer-logo">NICE<span>GUESTHOUSE</span></a>
+          <a href="#" class="footer-logo">NICE<span>GUESTHOUSE</span></a>
           <p class="text-white-50 mb-4 pe-lg-4">
-            Committed to serving you with our expert team members. Experience a touch of home and excellence in the heart of Noakhali since 2007.
+            Committed to serving you with our expert team members. Experience a touch of home and excellence in the
+            heart of Noakhali since 2007.
           </p>
           <div class="social-links">
             <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
@@ -176,11 +342,11 @@
         <div class="col-6 col-md-3 col-lg-2">
           <h5 class="footer-heading">Useful Info</h5>
           <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
 
@@ -189,7 +355,8 @@
           <h5 class="footer-heading">Stay Connected</h5>
           <p class="text-white-50 mb-4">Subscribe to our newsletter for latest offers and news.</p>
           <div class="input-group">
-            <input type="email" class="form-control bg-dark border-0 text-white" placeholder="Enter email" style="padding: 12px 20px;">
+            <input type="email" class="form-control bg-dark border-0 text-white" placeholder="Enter email"
+              style="padding: 12px 20px;">
             <button class="btn btn-primary px-4" type="button">Join</button>
           </div>
         </div>
@@ -279,8 +446,43 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/script.js"></script>
+  <!-- PhotoSwipe Module -->
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe-lightbox.esm.min.js';
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#elite-gallery',
+      children: 'a',
+      pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe.esm.min.js')
+    });
+    lightbox.init();
+  </script>
+
   <script>
     AOS.init({ duration: 1000, once: true });
+
+    $(document).ready(function() {
+      // Gallery Filtering Logic
+      $('.filter-btn').on('click', function() {
+        const filter = $(this).data('filter');
+        
+        // Update active button
+        $('.filter-btn').removeClass('active');
+        $(this).addClass('active');
+
+        // Filter items
+        if (filter === 'all') {
+          $('.gallery-item-wrapper').removeClass('hide').addClass('show');
+        } else {
+          $('.gallery-item-wrapper').each(function() {
+            if ($(this).data('category') === filter) {
+              $(this).removeClass('hide').addClass('show');
+            } else {
+              $(this).removeClass('show').addClass('hide');
+            }
+          });
+        }
+      });
+    });
   </script>
 </body>
 

@@ -40,9 +40,7 @@
           <li class="nav-item">
             <a href="index.html" class="nav-link"><i class="bi bi-house-door me-1"></i> Home</a>
           </li>
-          <!-- <li class="nav-item">
-            <a href="properties.html" class="nav-link"><i class="bi bi-geo-alt me-1"></i> Properties</a>
-          </li> -->
+
           <li class="nav-item">
             <a href="restaurant.html" class="nav-link"><i class="bi bi-egg-fried me-1"></i> Restaurants</a>
           </li>
@@ -75,11 +73,21 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow border-0 py-3 mt-3 p-0"
             aria-labelledby="desktopMenuDropdown">
-            <li><a class="dropdown-item py-2 px-4" href="#"><i class="bi bi-info-circle me-2"></i> About Us</a></li>
+            <li><a class="dropdown-item py-2 px-4" href="about.html"><i class="bi bi-info-circle me-2"></i> About Us</a></li>
             <li><a class="dropdown-item py-2 px-4" href="our-clients.html"><i class="bi bi-people me-2"></i> Honorable Clients</a></li>
-            <li><a class="dropdown-item py-2 px-4" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact</a>
+            <li><a class="dropdown-item py-2 px-4" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact</a></li>
+            <li><a class="dropdown-item py-2 px-4" href="gallery.html"><i class="bi bi-images me-2"></i> Gallery</a></li>
+            <li><hr class="dropdown-divider mx-3"></li>
+            <li class="dropdown-submenu px-3">
+              <a class="dropdown-item dropdown-toggle py-2 px-2 d-flex align-items-center justify-content-between" href="#" id="languageMenu">
+                <span><i class="bi bi-translate me-2"></i> Language</span>
+              </a>
+              <ul class="dropdown-menu shadow border-0 py-2 p-0">
+                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English</a></li>
+                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali</a></li>
+                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi</a></li>
+              </ul>
             </li>
-            <li><a class="dropdown-item py-2 px-4" href="#"><i class="bi bi-images me-2"></i> Gallery</a></li>
           </ul>
         </div>
       </div>
@@ -173,12 +181,56 @@
     </div>
     <div class="offcanvas-body p-0">
       <ul class="nav flex-column menu-list">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <!-- <li class="nav-item"><!-- <a class="nav-link" href="properties.html">Properties</a> --></li> -->
-        <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurants</a></li>
-        <li class="nav-item"><a class="nav-link" href="conference.html">Conference</a></li>
-        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"><i class="bi bi-house-door me-2"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="conference.html"><i class="bi bi-building me-2"></i> Conference Hall</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="rooms.html"><i class="bi bi-door-closed me-2"></i> Rooms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="restaurant.html"><i class="bi bi-egg-fried me-2"></i> Restaurants</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="our-clients.html"><i class="bi bi-people me-2"></i> Our Honorable Clients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html"><i class="bi bi-images me-2"></i> Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-2"></i> About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+            href="#mobileLangMenu" role="button" aria-expanded="false" aria-controls="mobileLangMenu">
+            <span><i class="bi bi-translate me-2"></i> Language</span>
+            <i class="bi bi-chevron-down small"></i>
+          </a>
+          <div class="collapse" id="mobileLangMenu">
+            <ul class="nav flex-column bg-light ps-4">
+              <li class="nav-item">
+                <a class="nav-link py-2" href="#">
+                  <img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-2" href="#">
+                  <img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-2" href="#">
+                  <img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -218,11 +270,11 @@
         <div class="col-6 col-md-3 col-lg-2">
           <h5 class="footer-heading">Useful Info</h5>
           <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Gallery</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
 
