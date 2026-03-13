@@ -168,10 +168,6 @@
   <!-- Availability Bar (Home Style) -->
   <section class="hero-search-section">
     <div class="container relative-trigger-container">
-      <!-- Mobile Search Icon Trigger -->
-      <button class="btn btn-primary rounded-circle btn-mobile-search shadow d-flex d-md-none position-absolute" id="mobileSearchTriggerRooms" style="width: 50px; height: 50px; top: -25px; right: 15px; z-index: 10; align-items: center; justify-content: center;">
-        <i class="bi bi-search text-white"></i>
-      </button>
       <div class="hero-search-wrapper mx-auto mt-4 position-relative ">
         <div class="hero-search-overlay">
           <div class="hero-search-container d-flex align-items-center bg-white shadow-lg rounded-pill p-1 position-relative">
@@ -298,13 +294,16 @@
   </section>
 
   <!-- Main Content -->
-  <section class="container py-5">
+  <section class="container py-3 py-md-5">
     <div class="row">
       <!-- Sidebar Filters (Desktop) & Offcanvas Trigger (Mobile) -->
       <aside class="col-lg-3">
-        <div class="filter-header-actions ">
-          <button class="btn btn-primary d-lg-none w-100 rounded-3 py-2 fw-bold shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
+        <div class="filter-header-actions d-lg-none d-flex gap-2">
+          <button class="btn btn-primary w-100 rounded-3 py-0 fw-bold shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" style="height: 40px;">
             <i class="bi bi-filter-left me-2"></i> Filters
+          </button>
+          <button class="btn btn-primary ounded-3  btn-mobile-search shadow d-flex d-md-none" id="mobileSearchTriggerRooms" style="width: 50px; height: 40px; flex-shrink: 0; align-items: center; justify-content: center;">
+            <i class="bi bi-search text-white"></i>
           </button>
         </div>
         
@@ -512,11 +511,11 @@
       </aside>
 
       <!-- Room Grid -->
-      <main class="col-lg-9">
-        <div class="results-header">
-          <p class="mb-0 text-muted">Showing <strong>8</strong> results</p>
-          <div class="d-flex align-items-center gap-3">
-            <span class="small text-muted">Sort By:</span>
+      <main class="col-lg-9 mt-0 mt-lg-0">
+        <div class="results-header d-flex justify-content-between align-items-center mb-3">
+          <p class="mb-0 text-muted showing-text-mobile">Showing <strong>8</strong> results</p>
+          <div class="d-flex align-items-center gap-2 gap-md-3">
+            <span class="small text-muted d-none d-md-inline">Sort By:</span>
             <select class="sort-select" id="sortRooms">
               <option value="newest">Newest First</option>
               <option value="price-low">Price: Low to High</option>

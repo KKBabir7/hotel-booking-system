@@ -261,6 +261,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 instance.calendarContainer.classList.remove('flip-top-calendar');
             }
         },
+        onReady: function(selectedDates, dateStr, instance) {
+            // Initialize Select2 on the month dropdown for mobile views
+            if (window.innerWidth < 768) {
+                const $monthDropdowns = $(instance.calendarContainer).find('.flatpickr-monthDropdown-months');
+                if ($monthDropdowns.length && $.fn.select2) {
+                    $monthDropdowns.select2({
+                        minimumResultsForSearch: Infinity,
+                        dropdownParent: $(instance.calendarContainer),
+                        width: 'auto'
+                    });
+                    
+                    // Propagate Select2 changes back to Flatpickr
+                    $monthDropdowns.on('select2:select', function (e) {
+                        this.dispatchEvent(new Event('change'));
+                    });
+                }
+            }
+        },
+        onMonthChange: function(selectedDates, dateStr, instance) {
+            if (window.innerWidth < 768) {
+                const $monthDropdowns = $(instance.calendarContainer).find('.flatpickr-monthDropdown-months');
+                if ($monthDropdowns.length && $monthDropdowns.hasClass('select2-hidden-accessible')) {
+                    $monthDropdowns.val(instance.currentMonth).trigger('change.select2');
+                }
+            }
+        },
+        onYearChange: function(selectedDates, dateStr, instance) {
+            if (window.innerWidth < 768) {
+                const $monthDropdowns = $(instance.calendarContainer).find('.flatpickr-monthDropdown-months');
+                if ($monthDropdowns.length && $monthDropdowns.hasClass('select2-hidden-accessible')) {
+                    $monthDropdowns.val(instance.currentMonth).trigger('change.select2');
+                }
+            }
+        },
         onChange: function (selectedDates, dateStr, instance) {
             if (selectedDates.length === 2) {
                 const start = instance.formatDate(selectedDates[0], "M d");

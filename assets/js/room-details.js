@@ -19,6 +19,40 @@ document.addEventListener('DOMContentLoaded', function() {
         appendTo: bookingCard,
         positionElement: dateInput,
         position: "above",
+        onReady: function(selectedDates, dateStr, instance) {
+            // Initialize Select2 on the month dropdown for mobile views
+            if (window.innerWidth < 768) {
+                const $monthDropdowns = $(instance.calendarContainer).find('.flatpickr-monthDropdown-months');
+                if ($monthDropdowns.length && $.fn.select2) {
+                    $monthDropdowns.select2({
+                        minimumResultsForSearch: Infinity,
+                        dropdownParent: $(instance.calendarContainer),
+                        width: 'auto'
+                    });
+                    
+                    // Propagate Select2 changes back to Flatpickr
+                    $monthDropdowns.on('select2:select', function (e) {
+                        this.dispatchEvent(new Event('change'));
+                    });
+                }
+            }
+        },
+        onMonthChange: function(selectedDates, dateStr, instance) {
+            if (window.innerWidth < 768) {
+                const $monthDropdowns = $(instance.calendarContainer).find('.flatpickr-monthDropdown-months');
+                if ($monthDropdowns.length && $monthDropdowns.hasClass('select2-hidden-accessible')) {
+                    $monthDropdowns.val(instance.currentMonth).trigger('change.select2');
+                }
+            }
+        },
+        onYearChange: function(selectedDates, dateStr, instance) {
+            if (window.innerWidth < 768) {
+                const $monthDropdowns = $(instance.calendarContainer).find('.flatpickr-monthDropdown-months');
+                if ($monthDropdowns.length && $monthDropdowns.hasClass('select2-hidden-accessible')) {
+                    $monthDropdowns.val(instance.currentMonth).trigger('change.select2');
+                }
+            }
+        },
         onChange: function(selectedDates, dateStr, instance) {
             if (selectedDates.length === 2) {
                 const diffTime = Math.abs(selectedDates[1] - selectedDates[0]);
