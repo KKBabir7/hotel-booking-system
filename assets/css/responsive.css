@@ -153,9 +153,9 @@
         transform: translateX(-50%) !important;
         min-width: unset !important;
     }
-.flatpickr-calendar.open {
+/* .flatpickr-calendar.open {
     position: fixed !important;
-    top: 73px !important;}
+    top: 73px !important;} */
     .conference-icon {
         font-size: 3rem;
     }
