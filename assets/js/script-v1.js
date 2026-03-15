@@ -1,14 +1,14 @@
-// --- Hero Main Offer Slider (Slick) ---
+// --- Hero Text Slider (Slick) ---
 $(document).ready(function () {
-    $('#hero-main-slider').slick({
-        dots: false, // Disabled as requested
+    $('.hero-text-slider').slick({
+        dots: false,
         infinite: true,
-        speed: 1200,
+        speed: 1000,
         fade: true,
         cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
         autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: true, // Enabled as requested
+        autoplaySpeed: 6000,
+        arrows: false,
         draggable: true,
         swipe: true,
         pauseOnHover: false

@@ -79,260 +79,94 @@
     animation: pulse-gold 2s infinite;
 }
 
-/* ==================== New Hero Slider Styles ==================== */
+/* ==================== Hero Section Styles ==================== */
 .hero-section {
-    height: 50vh; /* Reduced to 50vh as requested */
-    min-height: 450px;
+    height: 100vh;
     width: 100%;
     position: relative;
-    background-color: #f8f9fa;
-    z-index: 100;
+    background-color: #000;
+    z-index: 99;
 }
 
-.hero-main-slider {
-    height: 100%;
-}
-
-.hero-slide-item {
-    height: 50vh;
-    min-height: 450px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex !important;
-    align-items: center;
-}
-
-.hero-slide-item::before {
-    content: '';
+.hero-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.2) 100%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
-.hero-offer-text {
-    position: relative;
-    z-index: 5;
-    color: #fff;
-}
-
-.btn-offer {
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    box-shadow: 0 10px 30px rgba(var(--primary-brand-rgb), 0.4);
-    transition: all 0.3s ease;
-}
-
-.btn-offer:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(var(--primary-brand-rgb), 0.6);
-}
-
-/* Offer Banner Tag - Right Side (Enhanced) */
-.offer-banner-tag {
-    position: relative;
-    z-index: 5;
-    width: 180px; 
-    height: 180px; 
-    background: var(--primary-brand);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    margin-left: auto;
-    box-shadow: 0 20px 50px rgba(var(--primary-brand-rgb, 247, 97, 86), 0.4);
-    border: none;
-    animation: floating 3s ease-in-out infinite;
-    backdrop-filter: blur(5px);
-}
-
-.offer-banner-tag::after {
-    content: '';
+.hero-diagonal-overlay {
     position: absolute;
-    width: 110%;
-    height: 110%;
-    border: 1px dashed rgba(255,255,255,0.3);
-    border-radius: 50%;
-    animation: rotate 10s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.tag-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1;
-}
-
-.tag-label {
-    font-size: 0.9rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-
-.tag-value {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 2px 0;
-}
-
-.tag-off {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-/* Variety styles for tags - Now using brand variations */
-.offer-banner-tag.style-2 { background: var(--primary-dark); }
-.offer-banner-tag.style-3 { background: var(--primary-brand); }
-
-/* Orbital Amenities */
-.orbital-amenities {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Slightly increased for better volume */
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    z-index: 2;
 }
 
-.amenity-dot {
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 1.2rem;
-    animation: orbit 15s linear infinite;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.amenity-dot:nth-child(1) { --orbit-angle: 0deg; animation-delay: 0s; }
-.amenity-dot:nth-child(2) { --orbit-angle: 120deg; animation-delay: -5s; }
-.amenity-dot:nth-child(3) { --orbit-angle: 240deg; animation-delay: -10s; }
-
-@keyframes orbit {
-    from { transform: rotate(0deg) translateX(130px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(130px) rotate(-360deg); }
-}
-
-/* Limited Time Tag */
-.limited-time-tag {
-    position: absolute;
-    top: -20px;
-    right: -10px;
-    background: #FFD700;
-    color: #000;
-    font-size: 0.75rem;
-    font-weight: 800;
-    padding: 5px 15px;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.hero-content {
     z-index: 10;
-    transform: rotate(15deg);
+    max-width: 1100px;
+    width: 90%;
 }
 
-@keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+.hero-text-slider {
+    margin-bottom: 1.5rem;
+    cursor: grab;
 }
 
-/* Staggered Reveal Animation for Slider Items */
-.hero-slide-item .animate-item-1,
-.hero-slide-item .animate-item-2,
-.hero-slide-item .animate-item-3 {
+.hero-text-slider:active {
+    cursor: grabbing;
+}
+
+.hero-slide {
+    outline: none !important;
+}
+
+/* Staggered Reveal Animation */
+.animate-item-1,
+.animate-item-2,
+.animate-item-3 {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.hero-slide-item.slick-active .animate-item-1 {
+/* Line 1 (2s transition feel) */
+.slick-active .animate-item-1 {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
 }
 
-.hero-slide-item.slick-active .animate-item-2 {
+/* Line 2 (4s transition feel - slower delay/reveal) */
+.slick-active .animate-item-2 {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.5s;
+    transition-delay: 0.6s;
 }
 
-.hero-slide-item.slick-active .animate-item-3 {
+/* Subtitle (5s transition feel - longest delay) */
+.slick-active .animate-item-3 {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.7s;
-}
-
-/* Slider Dots - Hidden */
-.hero-section .slick-dots {
-    display: none !important;
-}
-
-/* Slider Arrows */
-.hero-section .slick-prev,
-.hero-section .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-    width: 50px;
-    height: 50px;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 50%;
-    color: #fff;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.hero-section .slick-prev { left: 40px; }
-.hero-section .slick-next { right: 40px; }
-
-.hero-section .slick-prev:hover,
-.hero-section .slick-next:hover {
-    background: var(--primary-brand);
-    border-color: var(--primary-brand);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.hero-section .slick-prev::before,
-.hero-section .slick-next::before {
-    font-family: 'bootstrap-icons';
-    font-size: 1.2rem;
-}
-
-.hero-section .slick-prev::before { content: "\F284"; }
-.hero-section .slick-next::before { content: "\F285"; }
-
-/* ==================== Search Bar Overlap ==================== */
-.hero-search-wrapper {
-    bottom: -45px; /* Overlap 60px below hero */
-    z-index: 100;
-    width: 90%;
-    max-width: 1100px;
+    transition-delay: 1s;
 }
 
 /* Slick Slide Hiding (Exit) */
@@ -365,21 +199,28 @@
 /* ==================== Hero Search Bar ==================== */
 .hero-search-section {
     position: relative;
-    z-index: 1000;
+    z-index: 100;
+}
+
+.hero-search-wrapper {
+    max-width: 1170px;
+    /* Increased width to match hero content */
+    width: 100%;
+    /* margin-top: -65px !important; */
+    /* 50% overlap with hero section */
 }
 
 .hero-search-container {
     /* margin-top: 60px; */
-    padding: 20px 12px 20px 25px !important; /* Increased padding for more height */
+    padding: 12px 12px 12px 20px !important;
     background-color: var(--bg-white);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 10px !important; /* Reduced border radius */
 }
 
 .search-item {
     cursor: pointer;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 50px;
     transition: background-color 0.2s ease;
 }
 
@@ -415,109 +256,16 @@
     min-width: 52px;
     transform: scale(1);
     background-color: var(--primary-brand) !important;
-    border-radius: 8px !important;
+    border-radius: 100px !important;
     font-size: 1.2rem;
     transition: all 0.2s ease !important;
 }
 
 .search-submit-btn:hover {
-   background-color: var(--primary-dark) !important;
-    transform: scale(1.2) !important;
+    background-color: var(--primary-dark) !important;
+    transform: scale(1.6) !important;
     font-size: 14px;
-    color: #fff;
-    border-radius: 0px 10px 10px 0px !important;
-}
-
-/* ==================== Banner Offer Cards (Bento Grid) ==================== */
-.bento-grid-offers {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.bento-item.main-feature {
-    grid-column: span 2;
-}
-
-.bento-item.secondary-1,
-.bento-item.secondary-2 {
-    grid-column: span 1;
-}
-
-.banner-offer-card {
-    position: relative;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: pointer;
-    background-color: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    height: 100%;
-}
-
-/* Feature banner (Horizontal) */
-.main-feature .banner-offer-card {
-    aspect-ratio: 21 / 8;
-    background-color: #fdfdfd; /* Match the banner's white background */
-}
-
-/* Secondary posters (Square-ish) */
-.secondary-1 .banner-offer-card {
-    aspect-ratio: 1 / 1;
-    background-color: #1a1512; /* Match the room image dark tone */
-}
-
-.secondary-2 .banner-offer-card {
-    aspect-ratio: 1 / 1;
-    background-color: #0b0b0b; /* Match the food image black tone */
-}
-
-.banner-offer-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.18) !important;
-}
-
-.bento-img {
-    width: 100%;
-    height: 100%;
-    object-fit: unset; /* GUARANTEE no image is cut */
-    transition: transform 0.8s ease;
-    display: block;
-}
-
-.banner-offer-card:hover .bento-img {
-    transform: scale(1.05);
-}
-
-.banner-offer-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 50%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.banner-offer-card:hover .banner-offer-overlay {
-    opacity: 1;
-}
-
-/* Responsiveness for Bento Grid */
-@media (max-width: 768px) {
-    .bento-grid-offers {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .bento-item.main-feature,
-    .bento-item.secondary-1,
-    .bento-item.secondary-2 {
-        grid-column: span 1;
-    }
-    .main-feature .banner-offer-card {
-        aspect-ratio: 16 / 9;
-    }
+    border-radius: 0px 100px 100px 0px !important;
 }
 
 /* ==================== Functional Search Bar Styles ==================== */
@@ -525,7 +273,7 @@
 .search-item {
     cursor: pointer;
     padding: 12px 24px;
-    border-radius: 10px;
+    border-radius: 50px;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
     position: relative;
 }
