@@ -653,3 +653,107 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileSearchCloseRooms.addEventListener('click', closeSearchModal);
     }
 });
+
+// ==========================================================================
+// Google Translate Implementation
+// ==========================================================================
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,bn,hi',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+
+function changeLanguage(langCode) {
+    // Save selection to localStorage for persistence
+    localStorage.setItem('ngh_selected_lang', langCode);
+    
+    var select = document.querySelector('select.goog-te-combo');
+    if (select) {
+        select.value = langCode;
+        select.dispatchEvent(new Event('change'));
+    }
+    
+    // Cookie-based backup for persistence and reliability
+    // Setting both with and without domain for maximum compatibility
+    document.cookie = "googtrans=/en/" + langCode + "; path=/; domain=" + window.location.hostname;
+    document.cookie = "googtrans=/en/" + langCode + "; path=/";
+    
+    // If the select isn't found (widget not loaded yet), reload to let Google pick up the cookie
+    if (!select) {
+        window.location.reload();
+    }
+}
+
+// Auto-apply saved language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('ngh_selected_lang');
+    // Only auto-apply if it's NOT English (default)
+    if (savedLang && savedLang !== 'en') {
+        let attempts = 0;
+        const maxAttempts = 60; // Try for 6 seconds
+        const checkTranslateReady = setInterval(function() {
+            attempts++;
+            const select = document.querySelector('select.goog-te-combo');
+            if (select) {
+                clearInterval(checkTranslateReady);
+                // Extra small delay to ensure Google Translate API is fully ready to receive events
+                setTimeout(() => {
+                    select.value = savedLang;
+                    select.dispatchEvent(new Event('change'));
+                }, 100);
+            }
+            if (attempts >= maxAttempts) {
+                clearInterval(checkTranslateReady);
+            }
+        }, 100);
+    }
+});
+
+// Manage Google Translate UI visibility/premium look
+setInterval(function() {
+    var banner = document.querySelector('.goog-te-banner-frame');
+    if (banner) {
+        banner.style.display = 'none';
+        banner.style.visibility = 'hidden';
+    }
+    document.body.style.top = '0px';
+    
+    var skipTranslate = document.querySelectorAll('.skiptranslate');
+    skipTranslate.forEach(function(el) {
+        if (!el.querySelector('select')) {
+            el.style.display = 'none';
+        }
+    });
+}, 500);
+
+// ==========================================================================
+// Scroll to Top Logic
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollTop = document.querySelector('.scroll-top');
+    
+    if (scrollTop) {
+        const toggleScrollTop = function() {
+            if (window.scrollY > 200) {
+                scrollTop.classList.add('active');
+            } else {
+                scrollTop.classList.remove('active');
+            }
+        };
+
+        window.addEventListener('load', toggleScrollTop);
+        document.addEventListener('scroll', toggleScrollTop);
+
+        scrollTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});

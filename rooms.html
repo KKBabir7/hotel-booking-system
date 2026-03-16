@@ -59,6 +59,9 @@
     .hero-search-container{
       margin-top: -60px;
     }
+    .hero-search-wrapper {
+    bottom: 15px;
+  }
     @media (max-width: 991.98px) {
     .hero-search-wrapper
  {
@@ -138,11 +141,11 @@
                 <span><i class="bi bi-translate me-2"></i> Language</span>
               </a>
               <ul class="dropdown-menu shadow border-0 py-2 p-0">
-                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/gb.png" alt="English"
+                <li><a class="dropdown-item py-2 px-4" href="javascript:void(0);" onclick="changeLanguage('en')"><img src="https://flagcdn.com/w40/gb.png" alt="English"
                       class="lang-flag me-2"> English</a></li>
-                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali"
+                <li><a class="dropdown-item py-2 px-4" href="javascript:void(0);" onclick="changeLanguage('bn')"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali"
                       class="lang-flag me-2"> Bengali</a></li>
-                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/in.png" alt="Hindi"
+                <li><a class="dropdown-item py-2 px-4" href="javascript:void(0);" onclick="changeLanguage('hi')"><img src="https://flagcdn.com/w40/in.png" alt="Hindi"
                       class="lang-flag me-2"> Hindi</a></li>
               </ul>
             </li>
@@ -178,7 +181,7 @@
   </section>
 
   <!-- Availability Bar (Home Style) -->
-  <section class="hero-search-section">
+  <section class="hero-search-section hero-search-section-room">
     <div class="container relative-trigger-container">
       <div class="hero-search-wrapper mx-auto mt-4 position-relative ">
         <div class="hero-search-overlay">
@@ -546,19 +549,19 @@
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
                 <div class="offer-badge early-deal">Early 2026 Deal</div>
               </div>
-              <div class="offer-content p-3">
-                <h5 class="offer-title fw-bold mb-1">Oceanfront Infinity Villa</h5>
-                <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Maldives, Indian Ocean</p>
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
+                <h5 class="offer-title fw-bold mb-1">Super Deluxe</h5>
+                <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Uzzalpur, Maijdee Court</p>
                 <div class="card-review-row">
                   <div class="card-review-stars text-warning">
                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                   </div>
                   <div class="card-review-text">(9.8 · 120 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
-                  <span><i class="bi bi-people me-1"></i> 6 Sleeps</span>
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
+                  <span><i class="bi bi-door-open me-1"></i> Bed: 1 Queen-size</span>
                   <span>·</span>
-                  <span><i class="bi bi-door-open me-1"></i> 3 Bed</span>
+                  <span><i class="bi bi-people me-1"></i> Capacity: 2 Adults, 1 Child</span>
                 </div>
                 <div class="offer-footer d-flex justify-content-between align-items-end pt-3 border-top">
                   <div class="offer-action-left">
@@ -569,8 +572,8 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-old text-muted extra-small">$350</div>
-                      <div class="price-current fw-bold text-dark">$299</div>
+                      <div class="price-old text-muted extra-small">TK 350</div>
+                      <div class="price-current fw-bold text-dark">TK 299</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -582,7 +585,7 @@
           <!-- Room Card 2 (360 GENIUS) -->
           <div class="col-lg-4 col-md-6" data-room-type="business" data-price="450">
             <div class="offer-card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
-              <div class="offer-image-wrapper position-relative" onclick="open3DViewer('https://images.unsplash.com/photo-1596522354195-e84ae3c98731?q=80&w=887&auto=format&fit=crop', 'Metropolitan Sky Penthouse')">
+              <div class="offer-image-wrapper position-relative" onclick="open3DViewer('https://images.unsplash.com/photo-1596522354195-e84ae3c98731?q=80&w=887&auto=format&fit=crop', 'Classic Room')">
                 <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80" alt="Penthouse" class="offer-img w-100">
                 <div class="orbit-360-container">
                   <div class="orbit-360-outer"></div>
@@ -594,24 +597,24 @@
                 </div>
                 <div class="view-360-overlay"></div>
                 <button class="wishlist-btn" onclick="event.stopPropagation()"><i class="bi bi-heart"></i></button>
-                <button class="image-360-btn" onclick="event.stopPropagation(); open3DViewer('https://images.unsplash.com/photo-1596522354195-e84ae3c98731?q=80&w=887&auto=format&fit=crop', 'Metropolitan Sky Penthouse')">
+                <button class="image-360-btn" onclick="event.stopPropagation(); open3DViewer('https://images.unsplash.com/photo-1596522354195-e84ae3c98731?q=80&w=887&auto=format&fit=crop', 'Classic Room')">
                   <i class="bi bi-arrow-repeat"></i>
                 </button>
                 <div class="offer-badge genius">Genius Exclusive</div>
               </div>
-              <div class="offer-content p-3">
-                <h5 class="offer-title fw-bold mb-1">Metropolitan Sky Penthouse</h5>
-                <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> New York, USA</p>
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
+                <h5 class="offer-title fw-bold mb-1">Classic Room</h5>
+                <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Uzzalpur, Maijdee Court</p>
                 <div class="card-review-row">
                   <div class="card-review-stars text-warning">
                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
                   </div>
                   <div class="card-review-text">(4.8 · 85 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
-                  <span><i class="bi bi-people me-1"></i> 4 Sleeps</span>
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
+                  <span><i class="bi bi-door-open me-1"></i> Bed: 1 Couple</span>
                   <span>·</span>
-                  <span><i class="bi bi-door-open me-1"></i> 2 Bed</span>
+                  <span><i class="bi bi-people me-1"></i> Capacity: 2 Adults</span>
                 </div>
                 <div class="offer-footer d-flex justify-content-between align-items-end pt-3 border-top">
                   <div class="offer-action-left">
@@ -622,8 +625,8 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-old text-muted extra-small">$520</div>
-                      <div class="price-current fw-bold text-dark">$450</div>
+                      <div class="price-old text-muted extra-small">TK 520</div>
+                      <div class="price-current fw-bold text-dark">TK 450</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -640,19 +643,19 @@
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
                 <div class="offer-badge early-deal">Early 2026 Deal</div>
               </div>
-              <div class="offer-content p-3">
-                <h5 class="offer-title fw-bold mb-1">Alpine Peaks Luxury Chalet</h5>
-                <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Zermatt, Switzerland</p>
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
+                <h5 class="offer-title fw-bold mb-1">Business Class</h5>
+                <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Uzzalpur, Maijdee Court</p>
                 <div class="card-review-row">
                   <div class="card-review-stars text-warning">
                     <i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
                   </div>
                   <div class="card-review-text">(0.0 · 0 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
-                  <span><i class="bi bi-people me-1"></i> 8 Sleeps</span>
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
+                  <span><i class="bi bi-door-open me-1"></i> Bed: King Size</span>
                   <span>·</span>
-                  <span><i class="bi bi-door-open me-1"></i> 4 Bed</span>
+                  <span><i class="bi bi-people me-1"></i> Capacity: 2 Adults, 1 Child</span>
                 </div>
                 <div class="offer-footer d-flex justify-content-between align-items-end pt-3 border-top">
                   <div class="offer-action-left">
@@ -662,7 +665,7 @@
                     </div>
                   </div>
                   <div class="offer-pricing-area text-end">
-                    <div class="price-current fw-bold text-dark h5 mb-0">$320</div>
+                    <div class="price-current fw-bold text-dark h5 mb-0">TK 320</div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
                 </div>
@@ -690,7 +693,7 @@
                 </button>
                 <div class="offer-badge top-pick">Top Pick</div>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Cherry Blossom Suite</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Tokyo, Japan</p>
                 <div class="card-review-row">
@@ -699,7 +702,7 @@
                   </div>
                   <div class="card-review-text">(4.7 · 92 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -713,7 +716,7 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-current fw-bold text-dark">$180</div>
+                      <div class="price-current fw-bold text-dark">TK 180</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -742,7 +745,7 @@
                 </button>
                 <div class="offer-badge new-luxury">New Luxury</div>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Skyline Executive Haven</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> London, UK</p>
                 <div class="card-review-row">
@@ -751,7 +754,7 @@
                   </div>
                   <div class="card-review-text">(4.9 · 42 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 3 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -765,7 +768,7 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-current fw-bold text-dark">$250</div>
+                      <div class="price-current fw-bold text-dark">TK 250</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -794,7 +797,7 @@
                 </button>
                 <div class="offer-badge top-pick">Top Pick</div>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Urban Oasis Double</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Paris, France</p>
                 <div class="card-review-row">
@@ -803,7 +806,7 @@
                   </div>
                   <div class="card-review-text">(4.6 · 210 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-3">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-3">
                   <span><i class="bi bi-people me-1"></i> 4 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 2 Bed</span>
@@ -817,7 +820,7 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-current fw-bold text-dark">$210</div>
+                      <div class="price-current fw-bold text-dark">TK 210</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -846,19 +849,19 @@
                 </button>
                 <div class="offer-badge top-pick">Top Pick</div>
               </div>
-              <div class="offer-content p-3">
-                <h5 class="offer-title fw-bold mb-1">Nice Guest House VIP Room</h5>
-                <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Noakhali, Bangladesh</p>
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
+                <h5 class="offer-title fw-bold mb-1">Classic (Extension)</h5>
+                <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Uzzalpur, Maijdee Court</p>
                 <div class="card-review-row">
                   <div class="card-review-stars text-warning">
                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                   </div>
                   <div class="card-review-text">(4.9 · 450 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
-                  <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
+                  <span><i class="bi bi-door-open me-1"></i> Bed: 1 Single</span>
                   <span>·</span>
-                  <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
+                  <span><i class="bi bi-people me-1"></i> Capacity: 1 Adult</span>
                 </div>
                 <div class="offer-footer d-flex justify-content-between align-items-end pt-3 border-top">
                   <div class="offer-action-left">
@@ -869,7 +872,7 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-current fw-bold text-dark">$240</div>
+                      <div class="price-current fw-bold text-dark">TK 240</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -898,7 +901,7 @@
                 </button>
                 <div class="offer-badge genius">Genius Exclusive</div>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Coastal Sunset Suite</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Santorini, Greece</p>
                 <div class="card-review-row">
@@ -907,7 +910,7 @@
                   </div>
                   <div class="card-review-text">(4.8 · 180 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -921,8 +924,8 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-old text-muted extra-small">$400</div>
-                      <div class="price-current fw-bold text-dark">$310</div>
+                      <div class="price-old text-muted extra-small">TK 400</div>
+                      <div class="price-current fw-bold text-dark">TK 310</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -938,7 +941,7 @@
                 <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=800&q=80" alt="Business Room" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Executive Business Studio</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Singapore City</p>
                 <div class="card-review-row">
@@ -947,7 +950,7 @@
                   </div>
                   <div class="card-review-text">(4.5 · 310 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -961,8 +964,8 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-old text-muted extra-small">$200</div>
-                      <div class="price-current fw-bold text-dark">$150</div>
+                      <div class="price-old text-muted extra-small">TK 200</div>
+                      <div class="price-current fw-bold text-dark">TK 150</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -978,7 +981,7 @@
                 <img src="https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&w=800&q=80" alt="AC Deluxe" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Standard AC Deluxe</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Bangkok, Thailand</p>
                 <div class="card-review-row">
@@ -987,7 +990,7 @@
                   </div>
                   <div class="card-review-text">(4.2 · 156 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -1001,7 +1004,7 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-current fw-bold text-dark">$120</div>
+                      <div class="price-current fw-bold text-dark">TK 120</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1017,7 +1020,7 @@
                 <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80" alt="Family Room" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Grand Family Deluxe</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Orlando, USA</p>
                 <div class="card-review-row">
@@ -1026,7 +1029,7 @@
                   </div>
                   <div class="card-review-text">(4.8 · 94 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 6 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 3 Bed</span>
@@ -1040,7 +1043,7 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-current fw-bold text-dark">$350</div>
+                      <div class="price-current fw-bold text-dark">TK 350</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1056,7 +1059,7 @@
                 <img src="https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?auto=format&fit=crop&w=800&q=80" alt="Room" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Eco-Friendly Luxury Cabin</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Bali, Indonesia</p>
                 <div class="card-review-row">
@@ -1065,7 +1068,7 @@
                   </div>
                   <div class="card-review-text">(4.9 · 21 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -1079,8 +1082,8 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-old text-muted extra-small">$120</div>
-                      <div class="price-current fw-bold text-dark">$95</div>
+                      <div class="price-old text-muted extra-small">TK 120</div>
+                      <div class="price-current fw-bold text-dark">TK 95</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1096,7 +1099,7 @@
                 <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=800&q=80" alt="Super Deluxe" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Imperial Super Deluxe</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Las Vegas, USA</p>
                 <div class="card-review-row">
@@ -1105,7 +1108,7 @@
                   </div>
                   <div class="card-review-text">(5.0 · 12 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 4 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 2 Bed</span>
@@ -1119,8 +1122,8 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-old text-muted extra-small">$500</div>
-                      <div class="price-current fw-bold text-dark">$420</div>
+                      <div class="price-old text-muted extra-small">TK 500</div>
+                      <div class="price-current fw-bold text-dark">TK 420</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1136,7 +1139,7 @@
                 <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="VIP Room" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Presidencial VIP Haven</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Zurich, Switzerland</p>
                 <div class="card-review-row">
@@ -1145,7 +1148,7 @@
                   </div>
                   <div class="card-review-text">(5.0 · 3 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -1159,7 +1162,7 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-current fw-bold text-dark">$800</div>
+                      <div class="price-current fw-bold text-dark">TK 800</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1175,7 +1178,7 @@
                 <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Room" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Corporate Executive Suite</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Berlin, Germany</p>
                 <div class="card-review-row">
@@ -1184,7 +1187,7 @@
                   </div>
                   <div class="card-review-text">(4.7 · 112 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -1198,8 +1201,8 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-old text-muted extra-small">$300</div>
-                      <div class="price-current fw-bold text-dark">$260</div>
+                      <div class="price-old text-muted extra-small">TK 300</div>
+                      <div class="price-current fw-bold text-dark">TK 260</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1215,7 +1218,7 @@
                 <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80" alt="Room" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Coastal AC Deluxe</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Phuket, Thailand</p>
                 <div class="card-review-row">
@@ -1224,7 +1227,7 @@
                   </div>
                   <div class="card-review-text">(4.6 · 45 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -1238,7 +1241,7 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-current fw-bold text-dark">$190</div>
+                      <div class="price-current fw-bold text-dark">TK 190</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1254,7 +1257,7 @@
                 <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80" alt="Room" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Loft Business Suite</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Seoul, South Korea</p>
                 <div class="card-review-row">
@@ -1263,7 +1266,7 @@
                   </div>
                   <div class="card-review-text">(4.8 · 28 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -1277,8 +1280,8 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-old text-muted extra-small">$310</div>
-                      <div class="price-current fw-bold text-dark">$220</div>
+                      <div class="price-old text-muted extra-small">TK 310</div>
+                      <div class="price-current fw-bold text-dark">TK 220</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1294,7 +1297,7 @@
                 <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Room" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Modern Standard AC</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Hanoi, Vietnam</p>
                 <div class="card-review-row">
@@ -1303,7 +1306,7 @@
                   </div>
                   <div class="card-review-text">(0.0 · 0 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 2 Sleeps</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -1317,8 +1320,8 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-old text-muted extra-small">$180</div>
-                      <div class="price-current fw-bold text-dark">$135</div>
+                      <div class="price-old text-muted extra-small">TK 180</div>
+                      <div class="price-current fw-bold text-dark">TK 135</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1334,7 +1337,7 @@
                 <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80" alt="Room" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Quiet Garden Single</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Noakhali, Bangladesh</p>
                 <div class="card-review-row">
@@ -1343,7 +1346,7 @@
                   </div>
                   <div class="card-review-text">(0.0 · 0 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 1 Sleep</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -1357,7 +1360,7 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-current fw-bold text-dark">$85</div>
+                      <div class="price-current fw-bold text-dark">TK 85</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1373,7 +1376,7 @@
                 <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=800&q=80" alt="Room" class="offer-img w-100">
                 <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
               </div>
-              <div class="offer-content p-3">
+              <div class="offer-content p-3" onclick="window.location.href='room-details.html'">
                 <h5 class="offer-title fw-bold mb-1">Budget Essential Single</h5>
                 <p class="offer-location text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i> Dhaka, Bangladesh</p>
                 <div class="card-review-row">
@@ -1382,7 +1385,7 @@
                   </div>
                   <div class="card-review-text">(0.0 · 0 reviews)</div>
                 </div>
-                <div class="offer-features d-flex gap-2 text-muted extra-small mb-2">
+                <div class="offer-features d-flex gap-1 text-muted extra-small mb-2">
                   <span><i class="bi bi-people me-1"></i> 1 Sleep</span>
                   <span>·</span>
                   <span><i class="bi bi-door-open me-1"></i> 1 Bed</span>
@@ -1396,7 +1399,7 @@
                   </div>
                   <div class="offer-pricing-area d-flex flex-column align-items-end text-end">
                     <div class="pricing-flex">
-                      <div class="price-current fw-bold text-dark">$45</div>
+                      <div class="price-current fw-bold text-dark">TK 45</div>
                     </div>
                     <a href="#" class="view-deal-link text-decoration-none fw-bold extra-small text-danger">View deal <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1541,9 +1544,21 @@
           </a>
           <div class="collapse" id="mobileLangMenu">
             <ul class="nav flex-column bg-light ps-4">
-              <li class="nav-item"><a class="nav-link py-2" href="#"><img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English</a></li>
-              <li class="nav-item"><a class="nav-link py-2" href="#"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali</a></li>
-              <li class="nav-item"><a class="nav-link py-2" href="#"><img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi</a></li>
+              <li class="nav-item">
+                <a class="nav-link py-2" href="javascript:void(0);" onclick="changeLanguage('en')">
+                  <img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-2" href="javascript:void(0);" onclick="changeLanguage('bn')">
+                  <img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-2" href="javascript:void(0);" onclick="changeLanguage('hi')">
+                  <img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi
+                </a>
+              </li>
             </ul>
           </div>
         </li>
@@ -1596,6 +1611,11 @@
   <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
   <script src="assets/js/script.js"></script>
   <script src="assets/js/rooms.js"></script>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Google Translate -->
+  <div id="google_translate_element"></div>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

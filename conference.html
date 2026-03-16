@@ -102,11 +102,11 @@
                 <span><i class="bi bi-translate me-2"></i> Language</span>
               </a>
               <ul class="dropdown-menu shadow border-0 py-2 p-0">
-                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/gb.png" alt="English"
+                <li><a class="dropdown-item py-2 px-4" href="javascript:void(0);" onclick="changeLanguage('en')"><img src="https://flagcdn.com/w40/gb.png" alt="English"
                       class="lang-flag me-2"> English</a></li>
-                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali"
+                <li><a class="dropdown-item py-2 px-4" href="javascript:void(0);" onclick="changeLanguage('bn')"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali"
                       class="lang-flag me-2"> Bengali</a></li>
-                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/in.png" alt="Hindi"
+                <li><a class="dropdown-item py-2 px-4" href="javascript:void(0);" onclick="changeLanguage('hi')"><img src="https://flagcdn.com/w40/in.png" alt="Hindi"
                       class="lang-flag me-2"> Hindi</a></li>
               </ul>
             </li>
@@ -474,6 +474,11 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
   <script src="assets/js/script.js"></script>
+
+  <!-- Google Translate -->
+  <div id="google_translate_element"></div>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <script>
     // Initialize Select2
     $(document).ready(function() {
@@ -605,9 +610,9 @@
           </a>
           <div class="collapse" id="mobileLangMenu">
             <ul class="nav flex-column bg-light ps-4">
-              <li class="nav-item"><a class="nav-link py-2" href="#"><img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English</a></li>
-              <li class="nav-item"><a class="nav-link py-2" href="#"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali</a></li>
-              <li class="nav-item"><a class="nav-link py-2" href="#"><img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi</a></li>
+              <li class="nav-item"><a class="nav-link py-2" href="javascript:void(0);" onclick="changeLanguage('en')"><img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English</a></li>
+              <li class="nav-item"><a class="nav-link py-2" href="javascript:void(0);" onclick="changeLanguage('bn')"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali</a></li>
+              <li class="nav-item"><a class="nav-link py-2" href="javascript:void(0);" onclick="changeLanguage('hi')"><img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi</a></li>
             </ul>
           </div>
         </li>

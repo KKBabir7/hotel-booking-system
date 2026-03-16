@@ -66,9 +66,9 @@
                 <span><i class="bi bi-translate me-2"></i> Language</span>
               </a>
               <ul class="dropdown-menu shadow border-0 py-2 p-0">
-                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English</a></li>
-                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali</a></li>
-                <li><a class="dropdown-item py-2 px-4" href="#"><img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi</a></li>
+                <li><a class="dropdown-item py-2 px-4" href="javascript:void(0);" onclick="changeLanguage('en')"><img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English</a></li>
+                <li><a class="dropdown-item py-2 px-4" href="javascript:void(0);" onclick="changeLanguage('bn')"><img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali</a></li>
+                <li><a class="dropdown-item py-2 px-4" href="javascript:void(0);" onclick="changeLanguage('hi')"><img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi</a></li>
               </ul>
             </li>
           </ul>
@@ -179,7 +179,7 @@
                   </div>
                 </div>
                 <div class="text-sm-end mt-3 mt-sm-0">
-                  <h5 class="fw-bold mb-0" style="color:#f76156;">$240</h5>
+                  <h5 class="fw-bold mb-0" style="color:#f76156;">TK 240</h5>
                   <small class="text-muted">Total</small>
                 </div>
               </div>
@@ -214,7 +214,7 @@
                 <div class="flex-grow-1">
                   <h6 class="fw-bold mb-1">Presidential Suite</h6>
                   <p class="small text-muted mb-0"><i class="bi bi-geo-alt me-1"></i> Main Branch</p>
-                  <p class="small fw-bold mb-0" style="color:#f76156;">$450 / Night</p>
+                  <p class="small fw-bold mb-0" style="color:#f76156;">TK 450 / Night</p>
                 </div>
                 <div class="fav-actions">
                   <a href="room-details.html" class="btn btn-outline-primary btn-view-fav">View</a>
@@ -303,17 +303,17 @@
           <div class="collapse" id="mobileLangMenu">
             <ul class="nav flex-column bg-light ps-4">
               <li class="nav-item">
-                <a class="nav-link py-2" href="#">
+                <a class="nav-link py-2" href="javascript:void(0);" onclick="changeLanguage('en')">
                   <img src="https://flagcdn.com/w40/gb.png" alt="English" class="lang-flag me-2"> English
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link py-2" href="#">
+                <a class="nav-link py-2" href="javascript:void(0);" onclick="changeLanguage('bn')">
                   <img src="https://flagcdn.com/w40/bd.png" alt="Bengali" class="lang-flag me-2"> Bengali
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link py-2" href="#">
+                <a class="nav-link py-2" href="javascript:void(0);" onclick="changeLanguage('hi')">
                   <img src="https://flagcdn.com/w40/in.png" alt="Hindi" class="lang-flag me-2"> Hindi
                 </a>
               </li>
@@ -453,6 +453,11 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Google Translate -->
+  <div id="google_translate_element"></div>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
     // Populate user info from localStorage
     document.addEventListener('DOMContentLoaded', function() {
