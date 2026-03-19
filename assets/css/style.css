@@ -448,9 +448,9 @@
     position: relative;
     cursor: pointer;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 0px !important;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow:none !important;
     height: 100%;
 }
 
@@ -468,7 +468,7 @@
 
 .secondary-2 .banner-offer-card {
     aspect-ratio: 1 / 1;
-    background-color: #0b0b0b; /* Match the food image black tone */
+    background-color: #ffffff; /* Match the food image black tone */
 }
 
 /* Hover effects removed */
@@ -476,7 +476,7 @@
 .bento-img {
     width: 100%;
     height: 100%;
-    object-fit: unset; /* GUARANTEE no image is cut */
+    object-fit: contain; /* GUARANTEE no image is cut */
     display: block;
 }
 
