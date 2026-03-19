@@ -446,7 +446,6 @@
 
 .banner-offer-card {
     position: relative;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
     background-color: #fff;
     border-radius: 20px;
@@ -472,22 +471,16 @@
     background-color: #0b0b0b; /* Match the food image black tone */
 }
 
-.banner-offer-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.18) !important;
-}
+/* Hover effects removed */
 
 .bento-img {
     width: 100%;
     height: 100%;
     object-fit: unset; /* GUARANTEE no image is cut */
-    transition: transform 0.8s ease;
     display: block;
 }
 
-.banner-offer-card:hover .bento-img {
-    transform: scale(1.05);
-}
+/* Image hover scale removed */
 
 .banner-offer-overlay {
     position: absolute;
@@ -497,12 +490,9 @@
     height: 100%;
     background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 50%);
     opacity: 0;
-    transition: opacity 0.4s ease;
 }
 
-.banner-offer-card:hover .banner-offer-overlay {
-    opacity: 1;
-}
+/* Overlay hover removed */
 
 /* Responsiveness for Bento Grid */
 @media (max-width: 768px) {
@@ -1617,7 +1607,7 @@
     left: 0;
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     padding: 20px;
     color: var(--bg-white);
     transition: all 0.4s ease;
